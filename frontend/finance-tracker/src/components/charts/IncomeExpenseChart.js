@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowDownRight, ArrowUpRight, TrendingUp } from 'lucide-react';
 import { formatCurrency } from '../../utils/transactionUtils';
+import SharedBarChart from './SharedBarChart';
 import './Charts.css';
 
 const IncomeExpenseChart = ({ transactions }) => {
@@ -14,7 +15,6 @@ const IncomeExpenseChart = ({ transactions }) => {
   );
   const net = totals.income - totals.expense;
   const savingsRate = totals.income > 0 ? Math.max((net / totals.income) * 100, 0) : 0;
-  const maxAmount = Math.max(...chartData.flatMap(item => [item.income, item.expense]), 1);
 
   if (chartData.length === 0) {
     return (
@@ -55,65 +55,18 @@ const IncomeExpenseChart = ({ transactions }) => {
       </div>
 
       <div className="income-expense-chart">
-        <div className="cashflow-bars">
-          {chartData.map((data, index) => {
-            const incomeHeight = Math.max((data.income / maxAmount) * 100, data.income > 0 ? 8 : 0);
-            const expenseHeight = Math.max((data.expense / maxAmount) * 100, data.expense > 0 ? 8 : 0);
-            const monthNet = data.income - data.expense;
-
-            return (
-              <div key={data.month} className="cashflow-month">
-                <div className="cashflow-bars-container">
-                  <div className="cashflow-axis-lines" aria-hidden="true">
-                    <span />
-                    <span />
-                    <span />
-                  </div>
-                  <div className="cashflow-bar-group">
-                    <div
-                      className="cashflow-bar income"
-                      style={{
-                        height: `${incomeHeight}%`,
-                        animationDelay: `${index * 0.08}s`
-                      }}
-                      title={`Income: ${formatCurrency(data.income)}`}
-                    >
-                      <span>{data.income > 0 ? formatCompactCurrency(data.income) : ''}</span>
-                    </div>
-                    <div
-                      className="cashflow-bar expense"
-                      style={{
-                        height: `${expenseHeight}%`,
-                        animationDelay: `${index * 0.08 + 0.04}s`
-                      }}
-                      title={`Expenses: ${formatCurrency(data.expense)}`}
-                    >
-                      <span>{data.expense > 0 ? formatCompactCurrency(data.expense) : ''}</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="cashflow-month-footer">
-                  <strong>{formatMonth(data.month)}</strong>
-                  <span className={monthNet >= 0 ? 'positive' : 'negative'}>
-                    {formatSignedCurrency(monthNet)}
-                  </span>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
-        <div className="chart-legend horizontal cashflow-legend">
-          <div className="legend-item">
-            <div className="legend-color income-color" />
-            <span className="legend-label">Income</span>
-          </div>
-          <div className="legend-item">
-            <div className="legend-color expense-color" />
-            <span className="legend-label">Expenses</span>
-          </div>
-        </div>
+        <SharedBarChart
+          data={chartData.map(item => ({
+            ...item,
+            label: formatMonth(item.month)
+          }))}
+          series={[
+            { dataKey: 'income', label: 'Income', color: '#0f766e' },
+            { dataKey: 'expense', label: 'Expenses', color: '#ef4444' }
+          ]}
+          emptyMessage="No data available for comparison"
+          height={300}
+        />
       </div>
     </div>
   );
@@ -156,10 +109,6 @@ const formatSignedCurrency = (amount) => {
   return `${amount >= 0 ? '+' : '-'}${formatCurrency(Math.abs(amount))}`;
 };
 
-const formatCompactCurrency = (amount) => {
-  if (amount >= 100000) return `₹${(amount / 100000).toFixed(1)}L`;
-  if (amount >= 1000) return `₹${(amount / 1000).toFixed(amount >= 10000 ? 0 : 1)}k`;
-  return formatCurrency(amount);
-};
 
 export default IncomeExpenseChart;
+

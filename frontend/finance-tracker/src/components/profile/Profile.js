@@ -139,10 +139,11 @@ const Profile = () => {
 
   return (
     <div className="profile-page">
-      <div className="profile-header">
-        <div className="header-content">
-          <h1 className="page-title">Account Settings</h1>
-          <p className="page-subtitle">Manage your account information and preferences</p>
+      <div className="profile-header-card">
+        <div className="profile-header-content">
+          <p className="profile-kicker">Settings</p>
+          <h1 className="profile-title">Account Settings</h1>
+          <p className="profile-subtitle">Manage your account information and preferences.</p>
         </div>
 
         <div className="user-avatar-large">

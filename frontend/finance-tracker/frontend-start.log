@@ -391,3 +391,2607 @@ webpack compiled with [1m[33m1 warning[39m[22m
 Compiling...
 Compiled successfully!
 webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Failed to compile.
+
+[eslint] 
+src\components\analytics\Analytics.js
+  Line 411:14:  'Download' is not defined  react/jsx-no-undef
+  Line 415:14:  'FileText' is not defined  react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 2:35:  'FileSpreadsheet' is defined but never used  no-unused-vars
+  Line 2:62:  'Printer' is defined but never used          no-unused-vars
+
+[39m[22m
+
+[1m[31mERROR[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 411:14:  'Download' is not defined  react/jsx-no-undef
+  Line 415:14:  'FileText' is not defined  react/jsx-no-undef
+
+Search for the keywords to learn more about each [1m[31merror[39m[22m[1m.[39m[22m
+
+webpack compiled with [1m[31m1 error[39m[22m and [1m[33m1 warning[39m[22m
+Compiling...
+Failed to compile.
+
+[eslint] 
+src\components\analytics\Analytics.js
+  Line 411:14:  'Download' is not defined  react/jsx-no-undef
+  Line 415:14:  'FileText' is not defined  react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 2:35:  'FileSpreadsheet' is defined but never used  no-unused-vars
+  Line 2:62:  'Printer' is defined but never used          no-unused-vars
+
+[39m[22m
+
+[1m[31mERROR[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 411:14:  'Download' is not defined  react/jsx-no-undef
+  Line 415:14:  'FileText' is not defined  react/jsx-no-undef
+
+Search for the keywords to learn more about each [1m[31merror[39m[22m[1m.[39m[22m
+
+webpack compiled with [1m[31m1 error[39m[22m and [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\analytics\Analytics.js
+  Line 2:35:  'FileSpreadsheet' is defined but never used  no-unused-vars
+  Line 2:62:  'Printer' is defined but never used          no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 2:35:  'FileSpreadsheet' is defined but never used  no-unused-vars
+  Line 2:62:  'Printer' is defined but never used          no-unused-vars
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Failed to compile.
+
+[eslint] 
+src\components\analytics\Analytics.js
+  Line 619:18:  'BarChart' is not defined  react/jsx-no-undef
+  Line 639:20:  'Bar' is not defined       react/jsx-no-undef
+  Line 640:20:  'Bar' is not defined       react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 15:8:  'SharedBarChart' is defined but never used  no-unused-vars
+
+[39m[22m
+
+[1m[31mERROR[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 619:18:  'BarChart' is not defined  react/jsx-no-undef
+  Line 639:20:  'Bar' is not defined       react/jsx-no-undef
+  Line 640:20:  'Bar' is not defined       react/jsx-no-undef
+
+Search for the keywords to learn more about each [1m[31merror[39m[22m[1m.[39m[22m
+
+webpack compiled with [1m[31m1 error[39m[22m and [1m[33m1 warning[39m[22m
+Compiling...
+Failed to compile.
+
+[eslint] 
+src\components\analytics\Analytics.js
+  Line 619:18:  'BarChart' is not defined  react/jsx-no-undef
+  Line 639:20:  'Bar' is not defined       react/jsx-no-undef
+  Line 640:20:  'Bar' is not defined       react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 15:8:  'SharedBarChart' is defined but never used  no-unused-vars
+
+[39m[22m
+
+[1m[31mERROR[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 619:18:  'BarChart' is not defined  react/jsx-no-undef
+  Line 639:20:  'Bar' is not defined       react/jsx-no-undef
+  Line 640:20:  'Bar' is not defined       react/jsx-no-undef
+
+Search for the keywords to learn more about each [1m[31merror[39m[22m[1m.[39m[22m
+
+webpack compiled with [1m[31m1 error[39m[22m and [1m[33m1 warning[39m[22m
+Compiling...
+Failed to compile.
+
+[eslint] 
+src\components\analytics\Analytics.js
+  Line 626:18:  'BarChart' is not defined  react/jsx-no-undef
+  Line 646:20:  'Bar' is not defined       react/jsx-no-undef
+  Line 647:20:  'Bar' is not defined       react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+[1m[31mERROR[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 626:18:  'BarChart' is not defined  react/jsx-no-undef
+  Line 646:20:  'Bar' is not defined       react/jsx-no-undef
+  Line 647:20:  'Bar' is not defined       react/jsx-no-undef
+
+Search for the keywords to learn more about each [1m[31merror[39m[22m[1m.[39m[22m
+
+webpack compiled with [1m[31m1 error[39m[22m
+Compiling...
+Failed to compile.
+
+[eslint] 
+src\components\analytics\Analytics.js
+  Line 626:18:  'BarChart' is not defined  react/jsx-no-undef
+  Line 646:20:  'Bar' is not defined       react/jsx-no-undef
+  Line 647:20:  'Bar' is not defined       react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+[1m[31mERROR[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 626:18:  'BarChart' is not defined  react/jsx-no-undef
+  Line 646:20:  'Bar' is not defined       react/jsx-no-undef
+  Line 647:20:  'Bar' is not defined       react/jsx-no-undef
+
+Search for the keywords to learn more about each [1m[31merror[39m[22m[1m.[39m[22m
+
+webpack compiled with [1m[31m1 error[39m[22m
+Compiling...
+Failed to compile.
+
+[eslint] 
+src\components\analytics\Analytics.js
+Syntax error: Expected corresponding JSX closing tag for <div>. (645:16) (645:16)
+[1m[31mERROR[39m[22m in [1m./src/components/analytics/Analytics.js[39m[22m
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\src\components\analytics\Analytics.js: Expected corresponding JSX closing tag for <div>. (645:16)
+
+[0m [90m 643 |[39m                   [33m<[39m[33mBar[39m dataKey[33m=[39m[32m"income"[39m name[33m=[39m[32m"Income"[39m fill[33m=[39m[32m"#0f766e"[39m radius[33m=[39m{[[35m4[39m[33m,[39m [35m4[39m[33m,[39m [35m0[39m[33m,[39m [35m0[39m]} maxBarSize[33m=[39m{[35m40[39m} [33m/[39m[33m>[39m
+ [90m 644 |[39m                   [33m<[39m[33mBar[39m dataKey[33m=[39m[32m"expense"[39m name[33m=[39m[32m"Expenses"[39m fill[33m=[39m[32m"#ef4444"[39m radius[33m=[39m{[[35m4[39m[33m,[39m [35m4[39m[33m,[39m [35m0[39m[33m,[39m [35m0[39m]} maxBarSize[33m=[39m{[35m40[39m} [33m/[39m[33m>[39m
+[31m[1m>[22m[39m[90m 645 |[39m                 [33m<[39m[33m/[39m[33mBarChart[39m[33m>[39m
+ [90m     |[39m                 [31m[1m^[22m[39m
+ [90m 646 |[39m               [33m<[39m[33m/[39m[33mResponsiveContainer[39m[33m>[39m
+ [90m 647 |[39m             )}
+ [90m 648 |[39m           [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+    at constructor (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:367:19)
+    at FlowParserMixin.raise (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:6627:19)
+    at FlowParserMixin.jsxParseElementAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4757:16)
+    at FlowParserMixin.jsxParseElementAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4728:32)
+    at FlowParserMixin.jsxParseElementAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4728:32)
+    at FlowParserMixin.jsxParseElementAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4728:32)
+    at FlowParserMixin.jsxParseElement (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4779:17)
+    at FlowParserMixin.parseExprAtom (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4789:19)
+    at FlowParserMixin.parseExprSubscripts (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11076:23)
+    at FlowParserMixin.parseUpdate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11061:21)
+    at FlowParserMixin.parseMaybeUnary (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11041:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10894:61)
+    at FlowParserMixin.parseExprOps (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10899:23)
+    at FlowParserMixin.parseMaybeConditional (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10876:23)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10826:21)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3528:39
+    at FlowParserMixin.tryParse (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:6935:20)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3528:18)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10795:39
+    at FlowParserMixin.allowInAnd (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12427:12)
+    at FlowParserMixin.parseMaybeAssignAllowIn (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10795:17)
+    at FlowParserMixin.parseMaybeAssignAllowInOrVoidPattern (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12494:17)
+    at FlowParserMixin.parseParenAndDistinguishExpression (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11674:28)
+    at FlowParserMixin.parseParenAndDistinguishExpression (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3621:18)
+    at FlowParserMixin.parseExprAtom (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11326:23)
+    at FlowParserMixin.parseExprAtom (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4794:20)
+    at FlowParserMixin.parseExprSubscripts (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11076:23)
+    at FlowParserMixin.parseUpdate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11061:21)
+    at FlowParserMixin.parseMaybeUnary (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11041:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10894:61)
+    at FlowParserMixin.parseExprOps (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10899:23)
+    at FlowParserMixin.parseMaybeConditional (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10876:23)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10826:21)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3579:18)
+    at FlowParserMixin.parseExpressionBase (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10779:23)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10775:39
+    at FlowParserMixin.allowInAnd (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12422:16)
+    at FlowParserMixin.parseExpression (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10775:17)
+    at FlowParserMixin.parseReturnStatement (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13142:28)
+    at FlowParserMixin.parseStatementContent (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12798:21)
+    at FlowParserMixin.parseStatementLike (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12767:17)
+    at FlowParserMixin.parseStatementLike (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:2946:24)
+    at FlowParserMixin.parseStatementListItem (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12747:17)
+    at FlowParserMixin.parseBlockOrModuleBlockBody (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13316:61)
+    at FlowParserMixin.parseBlockBody (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13309:10)
+    at FlowParserMixin.parseBlock (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13297:10)
+    at FlowParserMixin.parseFunctionBody (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12101:24)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:2920:63
+    at FlowParserMixin.forwardNoArrowParamsConversionAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3096:16)
+    at FlowParserMixin.parseFunctionBody (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:2920:12)
+
+[1m[31mERROR[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 645:16:  Parsing [1m[31merror[39m[22m[1m: Expected corresponding JSX closing tag for <div>. (645:16)
+
+[39m[22m
+
+webpack compiled with [1m[31m2 errors[39m[22m
+Compiling...
+Failed to compile.
+
+[eslint] 
+src\components\analytics\Analytics.js
+Syntax error: Expected corresponding JSX closing tag for <div>. (644:16) (644:16)
+[1m[31mERROR[39m[22m in [1m./src/components/analytics/Analytics.js[39m[22m
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\src\components\analytics\Analytics.js: Expected corresponding JSX closing tag for <div>. (644:16)
+
+[0m [90m 642 |[39m                   [33m<[39m[33mBar[39m dataKey[33m=[39m[32m"income"[39m name[33m=[39m[32m"Income"[39m fill[33m=[39m[32m"#0f766e"[39m radius[33m=[39m{[[35m4[39m[33m,[39m [35m4[39m[33m,[39m [35m0[39m[33m,[39m [35m0[39m]} maxBarSize[33m=[39m{[35m40[39m} [33m/[39m[33m>[39m
+ [90m 643 |[39m                   [33m<[39m[33mBar[39m dataKey[33m=[39m[32m"expense"[39m name[33m=[39m[32m"Expenses"[39m fill[33m=[39m[32m"#ef4444"[39m radius[33m=[39m{[[35m4[39m[33m,[39m [35m4[39m[33m,[39m [35m0[39m[33m,[39m [35m0[39m]} maxBarSize[33m=[39m{[35m40[39m} [33m/[39m[33m>[39m
+[31m[1m>[22m[39m[90m 644 |[39m                 [33m<[39m[33m/[39m[33mBarChart[39m[33m>[39m
+ [90m     |[39m                 [31m[1m^[22m[39m
+ [90m 645 |[39m               [33m<[39m[33m/[39m[33mResponsiveContainer[39m[33m>[39m
+ [90m 646 |[39m             )}
+ [90m 647 |[39m           [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+    at constructor (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:367:19)
+    at FlowParserMixin.raise (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:6627:19)
+    at FlowParserMixin.jsxParseElementAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4757:16)
+    at FlowParserMixin.jsxParseElementAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4728:32)
+    at FlowParserMixin.jsxParseElementAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4728:32)
+    at FlowParserMixin.jsxParseElementAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4728:32)
+    at FlowParserMixin.jsxParseElement (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4779:17)
+    at FlowParserMixin.parseExprAtom (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4789:19)
+    at FlowParserMixin.parseExprSubscripts (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11076:23)
+    at FlowParserMixin.parseUpdate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11061:21)
+    at FlowParserMixin.parseMaybeUnary (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11041:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10894:61)
+    at FlowParserMixin.parseExprOps (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10899:23)
+    at FlowParserMixin.parseMaybeConditional (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10876:23)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10826:21)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3528:39
+    at FlowParserMixin.tryParse (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:6935:20)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3528:18)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10795:39
+    at FlowParserMixin.allowInAnd (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12427:12)
+    at FlowParserMixin.parseMaybeAssignAllowIn (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10795:17)
+    at FlowParserMixin.parseMaybeAssignAllowInOrVoidPattern (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12494:17)
+    at FlowParserMixin.parseParenAndDistinguishExpression (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11674:28)
+    at FlowParserMixin.parseParenAndDistinguishExpression (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3621:18)
+    at FlowParserMixin.parseExprAtom (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11326:23)
+    at FlowParserMixin.parseExprAtom (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4794:20)
+    at FlowParserMixin.parseExprSubscripts (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11076:23)
+    at FlowParserMixin.parseUpdate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11061:21)
+    at FlowParserMixin.parseMaybeUnary (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11041:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10894:61)
+    at FlowParserMixin.parseExprOps (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10899:23)
+    at FlowParserMixin.parseMaybeConditional (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10876:23)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10826:21)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3579:18)
+    at FlowParserMixin.parseExpressionBase (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10779:23)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10775:39
+    at FlowParserMixin.allowInAnd (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12422:16)
+    at FlowParserMixin.parseExpression (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10775:17)
+    at FlowParserMixin.parseReturnStatement (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13142:28)
+    at FlowParserMixin.parseStatementContent (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12798:21)
+    at FlowParserMixin.parseStatementLike (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12767:17)
+    at FlowParserMixin.parseStatementLike (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:2946:24)
+    at FlowParserMixin.parseStatementListItem (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12747:17)
+    at FlowParserMixin.parseBlockOrModuleBlockBody (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13316:61)
+    at FlowParserMixin.parseBlockBody (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13309:10)
+    at FlowParserMixin.parseBlock (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13297:10)
+    at FlowParserMixin.parseFunctionBody (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12101:24)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:2920:63
+    at FlowParserMixin.forwardNoArrowParamsConversionAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3096:16)
+    at FlowParserMixin.parseFunctionBody (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:2920:12)
+
+[1m[31mERROR[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 644:16:  Parsing [1m[31merror[39m[22m[1m: Expected corresponding JSX closing tag for <div>. (644:16)
+
+[39m[22m
+
+webpack compiled with [1m[31m2 errors[39m[22m
+Compiling...
+Failed to compile.
+
+[eslint] 
+src\components\analytics\Analytics.js
+Syntax error: Expected corresponding JSX closing tag for <div>. (634:16) (634:16)
+[1m[31mERROR[39m[22m in [1m./src/components/analytics/Analytics.js[39m[22m
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\src\components\analytics\Analytics.js: Expected corresponding JSX closing tag for <div>. (634:16)
+
+[0m [90m 632 |[39m                   [33m<[39m[33mBar[39m dataKey[33m=[39m[32m"income"[39m name[33m=[39m[32m"Income"[39m fill[33m=[39m[32m"#0f766e"[39m radius[33m=[39m{[[35m4[39m[33m,[39m [35m4[39m[33m,[39m [35m0[39m[33m,[39m [35m0[39m]} maxBarSize[33m=[39m{[35m40[39m} [33m/[39m[33m>[39m
+ [90m 633 |[39m                   [33m<[39m[33mBar[39m dataKey[33m=[39m[32m"expense"[39m name[33m=[39m[32m"Expenses"[39m fill[33m=[39m[32m"#ef4444"[39m radius[33m=[39m{[[35m4[39m[33m,[39m [35m4[39m[33m,[39m [35m0[39m[33m,[39m [35m0[39m]} maxBarSize[33m=[39m{[35m40[39m} [33m/[39m[33m>[39m
+[31m[1m>[22m[39m[90m 634 |[39m                 [33m<[39m[33m/[39m[33mBarChart[39m[33m>[39m
+ [90m     |[39m                 [31m[1m^[22m[39m
+ [90m 635 |[39m               [33m<[39m[33m/[39m[33mResponsiveContainer[39m[33m>[39m
+ [90m 636 |[39m             )}
+ [90m 637 |[39m           [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+    at constructor (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:367:19)
+    at FlowParserMixin.raise (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:6627:19)
+    at FlowParserMixin.jsxParseElementAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4757:16)
+    at FlowParserMixin.jsxParseElementAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4728:32)
+    at FlowParserMixin.jsxParseElementAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4728:32)
+    at FlowParserMixin.jsxParseElementAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4728:32)
+    at FlowParserMixin.jsxParseElement (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4779:17)
+    at FlowParserMixin.parseExprAtom (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4789:19)
+    at FlowParserMixin.parseExprSubscripts (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11076:23)
+    at FlowParserMixin.parseUpdate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11061:21)
+    at FlowParserMixin.parseMaybeUnary (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11041:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10894:61)
+    at FlowParserMixin.parseExprOps (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10899:23)
+    at FlowParserMixin.parseMaybeConditional (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10876:23)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10826:21)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3528:39
+    at FlowParserMixin.tryParse (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:6935:20)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3528:18)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10795:39
+    at FlowParserMixin.allowInAnd (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12427:12)
+    at FlowParserMixin.parseMaybeAssignAllowIn (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10795:17)
+    at FlowParserMixin.parseMaybeAssignAllowInOrVoidPattern (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12494:17)
+    at FlowParserMixin.parseParenAndDistinguishExpression (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11674:28)
+    at FlowParserMixin.parseParenAndDistinguishExpression (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3621:18)
+    at FlowParserMixin.parseExprAtom (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11326:23)
+    at FlowParserMixin.parseExprAtom (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4794:20)
+    at FlowParserMixin.parseExprSubscripts (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11076:23)
+    at FlowParserMixin.parseUpdate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11061:21)
+    at FlowParserMixin.parseMaybeUnary (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11041:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10894:61)
+    at FlowParserMixin.parseExprOps (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10899:23)
+    at FlowParserMixin.parseMaybeConditional (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10876:23)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10826:21)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3579:18)
+    at FlowParserMixin.parseExpressionBase (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10779:23)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10775:39
+    at FlowParserMixin.allowInAnd (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12422:16)
+    at FlowParserMixin.parseExpression (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10775:17)
+    at FlowParserMixin.parseReturnStatement (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13142:28)
+    at FlowParserMixin.parseStatementContent (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12798:21)
+    at FlowParserMixin.parseStatementLike (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12767:17)
+    at FlowParserMixin.parseStatementLike (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:2946:24)
+    at FlowParserMixin.parseStatementListItem (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12747:17)
+    at FlowParserMixin.parseBlockOrModuleBlockBody (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13316:61)
+    at FlowParserMixin.parseBlockBody (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13309:10)
+    at FlowParserMixin.parseBlock (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13297:10)
+    at FlowParserMixin.parseFunctionBody (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12101:24)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:2920:63
+    at FlowParserMixin.forwardNoArrowParamsConversionAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3096:16)
+    at FlowParserMixin.parseFunctionBody (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:2920:12)
+
+[1m[31mERROR[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 634:16:  Parsing [1m[31merror[39m[22m[1m: Expected corresponding JSX closing tag for <div>. (634:16)
+
+[39m[22m
+
+webpack compiled with [1m[31m2 errors[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\analytics\Analytics.js
+  Line 11:3:  'YAxis' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 11:3:  'YAxis' is defined but never used  no-unused-vars
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\analytics\Analytics.js
+  Line 4:3:   'CartesianGrid' is defined but never used  no-unused-vars
+  Line 10:3:  'XAxis' is defined but never used          no-unused-vars
+  Line 11:3:  'YAxis' is defined but never used          no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 4:3:   'CartesianGrid' is defined but never used  no-unused-vars
+  Line 10:3:  'XAxis' is defined but never used          no-unused-vars
+  Line 11:3:  'YAxis' is defined but never used          no-unused-vars
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\analytics\Analytics.js
+  Line 4:3:   'CartesianGrid' is defined but never used  no-unused-vars
+  Line 10:3:  'XAxis' is defined but never used          no-unused-vars
+  Line 11:3:  'YAxis' is defined but never used          no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 4:3:   'CartesianGrid' is defined but never used  no-unused-vars
+  Line 10:3:  'XAxis' is defined but never used          no-unused-vars
+  Line 11:3:  'YAxis' is defined but never used          no-unused-vars
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\analytics\Analytics.js
+  Line 4:3:   'CartesianGrid' is defined but never used  no-unused-vars
+  Line 10:3:  'XAxis' is defined but never used          no-unused-vars
+  Line 11:3:  'YAxis' is defined but never used          no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 4:3:   'CartesianGrid' is defined but never used  no-unused-vars
+  Line 10:3:  'XAxis' is defined but never used          no-unused-vars
+  Line 11:3:  'YAxis' is defined but never used          no-unused-vars
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Failed to compile.
+
+[eslint] 
+src\components\charts\IncomeExpenseChart.js
+  Line 60:58:  'maxAmount' is not defined  no-undef
+  Line 61:60:  'maxAmount' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 4:3:   'CartesianGrid' is defined but never used  no-unused-vars
+  Line 10:3:  'XAxis' is defined but never used          no-unused-vars
+  Line 11:3:  'YAxis' is defined but never used          no-unused-vars
+
+src\components\charts\IncomeExpenseChart.js
+  Line 4:8:  'SharedBarChart' is defined but never used  no-unused-vars
+
+[39m[22m
+
+[1m[31mERROR[39m[22m in [1m[eslint] 
+src\components\charts\IncomeExpenseChart.js
+  Line 60:58:  'maxAmount' is not defined  no-undef
+  Line 61:60:  'maxAmount' is not defined  no-undef
+
+Search for the keywords to learn more about each [1m[31merror[39m[22m[1m.[39m[22m
+
+webpack compiled with [1m[31m1 error[39m[22m and [1m[33m1 warning[39m[22m
+Compiling...
+Failed to compile.
+
+[eslint] 
+src\components\charts\IncomeExpenseChart.js
+  Line 73:58:  'maxAmount' is not defined  no-undef
+  Line 74:60:  'maxAmount' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 4:3:   'CartesianGrid' is defined but never used  no-unused-vars
+  Line 10:3:  'XAxis' is defined but never used          no-unused-vars
+  Line 11:3:  'YAxis' is defined but never used          no-unused-vars
+
+[39m[22m
+
+[1m[31mERROR[39m[22m in [1m[eslint] 
+src\components\charts\IncomeExpenseChart.js
+  Line 73:58:  'maxAmount' is not defined  no-undef
+  Line 74:60:  'maxAmount' is not defined  no-undef
+
+Search for the keywords to learn more about each [1m[31merror[39m[22m[1m.[39m[22m
+
+webpack compiled with [1m[31m1 error[39m[22m and [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\analytics\Analytics.js
+  Line 4:3:   'CartesianGrid' is defined but never used  no-unused-vars
+  Line 10:3:  'XAxis' is defined but never used          no-unused-vars
+  Line 11:3:  'YAxis' is defined but never used          no-unused-vars
+
+src\components\charts\IncomeExpenseChart.js
+  Line 112:7:  'formatCompactCurrency' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 4:3:   'CartesianGrid' is defined but never used  no-unused-vars
+  Line 10:3:  'XAxis' is defined but never used          no-unused-vars
+  Line 11:3:  'YAxis' is defined but never used          no-unused-vars
+
+src\components\charts\IncomeExpenseChart.js
+  Line 112:7:  'formatCompactCurrency' is assigned a value but never used  no-unused-vars
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\analytics\Analytics.js
+  Line 4:3:   'CartesianGrid' is defined but never used  no-unused-vars
+  Line 10:3:  'XAxis' is defined but never used          no-unused-vars
+  Line 11:3:  'YAxis' is defined but never used          no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 4:3:   'CartesianGrid' is defined but never used  no-unused-vars
+  Line 10:3:  'XAxis' is defined but never used          no-unused-vars
+  Line 11:3:  'YAxis' is defined but never used          no-unused-vars
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\analytics\Analytics.js
+  Line 287:9:  'incomeShare' is assigned a value but never used   no-unused-vars
+  Line 288:9:  'expenseShare' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 287:9:  'incomeShare' is assigned a value but never used   no-unused-vars
+  Line 288:9:  'expenseShare' is assigned a value but never used  no-unused-vars
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\dashboard\Dashboard.js
+  Line 14:8:  'MaterialCard' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\dashboard\Dashboard.js
+  Line 14:8:  'MaterialCard' is defined but never used  no-unused-vars
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\analytics\Analytics.js
+  Line 15:8:  'MaterialCard' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 15:8:  'MaterialCard' is defined but never used  no-unused-vars
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Failed to compile.
+
+[eslint] 
+src\components\analytics\Analytics.js
+Syntax error: Expected corresponding JSX closing tag for <MaterialCard>. (497:8) (497:8)
+[1m[31mERROR[39m[22m in [1m./src/components/analytics/Analytics.js[39m[22m
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\src\components\analytics\Analytics.js: Expected corresponding JSX closing tag for <MaterialCard>. (497:8)
+
+[0m [90m 495 |[39m             [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 496 |[39m           [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+[31m[1m>[22m[39m[90m 497 |[39m         [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m     |[39m         [31m[1m^[22m[39m
+ [90m 498 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 499 |[39m
+ [90m 500 |[39m       [33m<[39m[33mdiv[39m className[33m=[39m[32m"analytics-stats"[39m[33m>[39m[0m
+    at constructor (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:367:19)
+    at FlowParserMixin.raise (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:6627:19)
+    at FlowParserMixin.jsxParseElementAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4757:16)
+    at FlowParserMixin.jsxParseElementAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4728:32)
+    at FlowParserMixin.jsxParseElementAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4728:32)
+    at FlowParserMixin.jsxParseElement (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4779:17)
+    at FlowParserMixin.parseExprAtom (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4789:19)
+    at FlowParserMixin.parseExprSubscripts (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11076:23)
+    at FlowParserMixin.parseUpdate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11061:21)
+    at FlowParserMixin.parseMaybeUnary (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11041:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10894:61)
+    at FlowParserMixin.parseExprOps (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10899:23)
+    at FlowParserMixin.parseMaybeConditional (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10876:23)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10826:21)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3528:39
+    at FlowParserMixin.tryParse (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:6935:20)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3528:18)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10795:39
+    at FlowParserMixin.allowInAnd (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12427:12)
+    at FlowParserMixin.parseMaybeAssignAllowIn (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10795:17)
+    at FlowParserMixin.parseMaybeAssignAllowInOrVoidPattern (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12494:17)
+    at FlowParserMixin.parseParenAndDistinguishExpression (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11674:28)
+    at FlowParserMixin.parseParenAndDistinguishExpression (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3621:18)
+    at FlowParserMixin.parseExprAtom (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11326:23)
+    at FlowParserMixin.parseExprAtom (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4794:20)
+    at FlowParserMixin.parseExprSubscripts (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11076:23)
+    at FlowParserMixin.parseUpdate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11061:21)
+    at FlowParserMixin.parseMaybeUnary (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11041:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10894:61)
+    at FlowParserMixin.parseExprOps (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10899:23)
+    at FlowParserMixin.parseMaybeConditional (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10876:23)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10826:21)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3579:18)
+    at FlowParserMixin.parseExpressionBase (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10779:23)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10775:39
+    at FlowParserMixin.allowInAnd (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12422:16)
+    at FlowParserMixin.parseExpression (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10775:17)
+    at FlowParserMixin.parseReturnStatement (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13142:28)
+    at FlowParserMixin.parseStatementContent (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12798:21)
+    at FlowParserMixin.parseStatementLike (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12767:17)
+    at FlowParserMixin.parseStatementLike (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:2946:24)
+    at FlowParserMixin.parseStatementListItem (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12747:17)
+    at FlowParserMixin.parseBlockOrModuleBlockBody (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13316:61)
+    at FlowParserMixin.parseBlockBody (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13309:10)
+    at FlowParserMixin.parseBlock (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13297:10)
+    at FlowParserMixin.parseFunctionBody (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12101:24)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:2920:63
+    at FlowParserMixin.forwardNoArrowParamsConversionAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3096:16)
+    at FlowParserMixin.parseFunctionBody (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:2920:12)
+    at FlowParserMixin.parseArrowExpression (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12076:10)
+
+[1m[31mERROR[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 497:8:  Parsing [1m[31merror[39m[22m[1m: Expected corresponding JSX closing tag for <MaterialCard>. (497:8)
+
+[39m[22m
+
+webpack compiled with [1m[31m2 errors[39m[22m
+Compiling...
+Failed to compile.
+
+[eslint] 
+src\components\analytics\Analytics.js
+Syntax error: Expected corresponding JSX closing tag for <MaterialCard>. (497:8) (497:8)
+[1m[31mERROR[39m[22m in [1m./src/components/analytics/Analytics.js[39m[22m
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\src\components\analytics\Analytics.js: Expected corresponding JSX closing tag for <MaterialCard>. (497:8)
+
+[0m [90m 495 |[39m             [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 496 |[39m           [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+[31m[1m>[22m[39m[90m 497 |[39m         [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m     |[39m         [31m[1m^[22m[39m
+ [90m 498 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 499 |[39m
+ [90m 500 |[39m       [33m<[39m[33mdiv[39m className[33m=[39m[32m"analytics-stats"[39m[33m>[39m[0m
+    at constructor (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:367:19)
+    at FlowParserMixin.raise (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:6627:19)
+    at FlowParserMixin.jsxParseElementAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4757:16)
+    at FlowParserMixin.jsxParseElementAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4728:32)
+    at FlowParserMixin.jsxParseElementAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4728:32)
+    at FlowParserMixin.jsxParseElement (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4779:17)
+    at FlowParserMixin.parseExprAtom (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4789:19)
+    at FlowParserMixin.parseExprSubscripts (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11076:23)
+    at FlowParserMixin.parseUpdate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11061:21)
+    at FlowParserMixin.parseMaybeUnary (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11041:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10894:61)
+    at FlowParserMixin.parseExprOps (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10899:23)
+    at FlowParserMixin.parseMaybeConditional (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10876:23)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10826:21)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3528:39
+    at FlowParserMixin.tryParse (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:6935:20)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3528:18)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10795:39
+    at FlowParserMixin.allowInAnd (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12427:12)
+    at FlowParserMixin.parseMaybeAssignAllowIn (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10795:17)
+    at FlowParserMixin.parseMaybeAssignAllowInOrVoidPattern (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12494:17)
+    at FlowParserMixin.parseParenAndDistinguishExpression (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11674:28)
+    at FlowParserMixin.parseParenAndDistinguishExpression (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3621:18)
+    at FlowParserMixin.parseExprAtom (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11326:23)
+    at FlowParserMixin.parseExprAtom (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4794:20)
+    at FlowParserMixin.parseExprSubscripts (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11076:23)
+    at FlowParserMixin.parseUpdate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11061:21)
+    at FlowParserMixin.parseMaybeUnary (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11041:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10894:61)
+    at FlowParserMixin.parseExprOps (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10899:23)
+    at FlowParserMixin.parseMaybeConditional (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10876:23)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10826:21)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3579:18)
+    at FlowParserMixin.parseExpressionBase (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10779:23)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10775:39
+    at FlowParserMixin.allowInAnd (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12422:16)
+    at FlowParserMixin.parseExpression (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10775:17)
+    at FlowParserMixin.parseReturnStatement (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13142:28)
+    at FlowParserMixin.parseStatementContent (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12798:21)
+    at FlowParserMixin.parseStatementLike (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12767:17)
+    at FlowParserMixin.parseStatementLike (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:2946:24)
+    at FlowParserMixin.parseStatementListItem (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12747:17)
+    at FlowParserMixin.parseBlockOrModuleBlockBody (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13316:61)
+    at FlowParserMixin.parseBlockBody (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13309:10)
+    at FlowParserMixin.parseBlock (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13297:10)
+    at FlowParserMixin.parseFunctionBody (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12101:24)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:2920:63
+    at FlowParserMixin.forwardNoArrowParamsConversionAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3096:16)
+    at FlowParserMixin.parseFunctionBody (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:2920:12)
+    at FlowParserMixin.parseArrowExpression (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12076:10)
+
+[1m[31mERROR[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 497:8:  Parsing [1m[31merror[39m[22m[1m: Expected corresponding JSX closing tag for <MaterialCard>. (497:8)
+
+[39m[22m
+
+webpack compiled with [1m[31m2 errors[39m[22m
+Compiling...
+Failed to compile.
+
+[eslint] 
+src\components\analytics\Analytics.js
+Syntax error: Expected corresponding JSX closing tag for <MaterialCard>. (497:8) (497:8)
+[1m[31mERROR[39m[22m in [1m./src/components/analytics/Analytics.js[39m[22m
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\src\components\analytics\Analytics.js: Expected corresponding JSX closing tag for <MaterialCard>. (497:8)
+
+[0m [90m 495 |[39m             [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 496 |[39m           [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+[31m[1m>[22m[39m[90m 497 |[39m         [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m     |[39m         [31m[1m^[22m[39m
+ [90m 498 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 499 |[39m
+ [90m 500 |[39m       [33m<[39m[33mdiv[39m className[33m=[39m[32m"analytics-stats"[39m[33m>[39m[0m
+    at constructor (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:367:19)
+    at FlowParserMixin.raise (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:6627:19)
+    at FlowParserMixin.jsxParseElementAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4757:16)
+    at FlowParserMixin.jsxParseElementAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4728:32)
+    at FlowParserMixin.jsxParseElementAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4728:32)
+    at FlowParserMixin.jsxParseElement (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4779:17)
+    at FlowParserMixin.parseExprAtom (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4789:19)
+    at FlowParserMixin.parseExprSubscripts (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11076:23)
+    at FlowParserMixin.parseUpdate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11061:21)
+    at FlowParserMixin.parseMaybeUnary (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11041:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10894:61)
+    at FlowParserMixin.parseExprOps (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10899:23)
+    at FlowParserMixin.parseMaybeConditional (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10876:23)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10826:21)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3528:39
+    at FlowParserMixin.tryParse (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:6935:20)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3528:18)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10795:39
+    at FlowParserMixin.allowInAnd (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12427:12)
+    at FlowParserMixin.parseMaybeAssignAllowIn (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10795:17)
+    at FlowParserMixin.parseMaybeAssignAllowInOrVoidPattern (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12494:17)
+    at FlowParserMixin.parseParenAndDistinguishExpression (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11674:28)
+    at FlowParserMixin.parseParenAndDistinguishExpression (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3621:18)
+    at FlowParserMixin.parseExprAtom (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11326:23)
+    at FlowParserMixin.parseExprAtom (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4794:20)
+    at FlowParserMixin.parseExprSubscripts (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11076:23)
+    at FlowParserMixin.parseUpdate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11061:21)
+    at FlowParserMixin.parseMaybeUnary (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11041:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10894:61)
+    at FlowParserMixin.parseExprOps (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10899:23)
+    at FlowParserMixin.parseMaybeConditional (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10876:23)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10826:21)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3579:18)
+    at FlowParserMixin.parseExpressionBase (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10779:23)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10775:39
+    at FlowParserMixin.allowInAnd (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12422:16)
+    at FlowParserMixin.parseExpression (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10775:17)
+    at FlowParserMixin.parseReturnStatement (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13142:28)
+    at FlowParserMixin.parseStatementContent (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12798:21)
+    at FlowParserMixin.parseStatementLike (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12767:17)
+    at FlowParserMixin.parseStatementLike (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:2946:24)
+    at FlowParserMixin.parseStatementListItem (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12747:17)
+    at FlowParserMixin.parseBlockOrModuleBlockBody (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13316:61)
+    at FlowParserMixin.parseBlockBody (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13309:10)
+    at FlowParserMixin.parseBlock (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13297:10)
+    at FlowParserMixin.parseFunctionBody (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12101:24)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:2920:63
+    at FlowParserMixin.forwardNoArrowParamsConversionAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3096:16)
+    at FlowParserMixin.parseFunctionBody (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:2920:12)
+    at FlowParserMixin.parseArrowExpression (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12076:10)
+
+[1m[31mERROR[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 497:8:  Parsing [1m[31merror[39m[22m[1m: Expected corresponding JSX closing tag for <MaterialCard>. (497:8)
+
+[39m[22m
+
+webpack compiled with [1m[31m2 errors[39m[22m
+Compiling...
+Failed to compile.
+
+[eslint] 
+src\components\analytics\Analytics.js
+Syntax error: Expected corresponding JSX closing tag for <div>. (389:8) (389:8)
+[1m[31mERROR[39m[22m in [1m./src/components/analytics/Analytics.js[39m[22m
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\src\components\analytics\Analytics.js: Expected corresponding JSX closing tag for <div>. (389:8)
+
+[0m [90m 387 |[39m           [33m<[39m[33mdiv[39m className[33m=[39m[32m"spinner"[39m[33m>[39m[33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 388 |[39m           [33m<[39m[33mp[39m[33m>[39m[33mLoading[39m analytics[33m...[39m[33m<[39m[33m/[39m[33mp[39m[33m>[39m
+[31m[1m>[22m[39m[90m 389 |[39m         [33m<[39m[33m/[39m[33mMaterialCard[39m[33m>[39m
+ [90m     |[39m         [31m[1m^[22m[39m
+ [90m 390 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 391 |[39m     )[33m;[39m
+ [90m 392 |[39m   }[0m
+    at constructor (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:367:19)
+    at FlowParserMixin.raise (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:6627:19)
+    at FlowParserMixin.jsxParseElementAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4757:16)
+    at FlowParserMixin.jsxParseElementAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4728:32)
+    at FlowParserMixin.jsxParseElement (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4779:17)
+    at FlowParserMixin.parseExprAtom (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4789:19)
+    at FlowParserMixin.parseExprSubscripts (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11076:23)
+    at FlowParserMixin.parseUpdate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11061:21)
+    at FlowParserMixin.parseMaybeUnary (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11041:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10894:61)
+    at FlowParserMixin.parseExprOps (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10899:23)
+    at FlowParserMixin.parseMaybeConditional (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10876:23)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10826:21)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3528:39
+    at FlowParserMixin.tryParse (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:6935:20)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3528:18)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10795:39
+    at FlowParserMixin.allowInAnd (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12427:12)
+    at FlowParserMixin.parseMaybeAssignAllowIn (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10795:17)
+    at FlowParserMixin.parseMaybeAssignAllowInOrVoidPattern (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12494:17)
+    at FlowParserMixin.parseParenAndDistinguishExpression (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11674:28)
+    at FlowParserMixin.parseParenAndDistinguishExpression (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3621:18)
+    at FlowParserMixin.parseExprAtom (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11326:23)
+    at FlowParserMixin.parseExprAtom (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4794:20)
+    at FlowParserMixin.parseExprSubscripts (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11076:23)
+    at FlowParserMixin.parseUpdate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11061:21)
+    at FlowParserMixin.parseMaybeUnary (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11041:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10894:61)
+    at FlowParserMixin.parseExprOps (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10899:23)
+    at FlowParserMixin.parseMaybeConditional (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10876:23)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10826:21)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3579:18)
+    at FlowParserMixin.parseExpressionBase (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10779:23)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10775:39
+    at FlowParserMixin.allowInAnd (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12422:16)
+    at FlowParserMixin.parseExpression (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10775:17)
+    at FlowParserMixin.parseReturnStatement (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13142:28)
+    at FlowParserMixin.parseStatementContent (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12798:21)
+    at FlowParserMixin.parseStatementLike (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12767:17)
+    at FlowParserMixin.parseStatementLike (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:2946:24)
+    at FlowParserMixin.parseStatementListItem (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12747:17)
+    at FlowParserMixin.parseBlockOrModuleBlockBody (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13316:61)
+    at FlowParserMixin.parseBlockBody (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13309:10)
+    at FlowParserMixin.parseBlock (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13297:10)
+    at FlowParserMixin.parseStatementContent (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12858:21)
+    at FlowParserMixin.parseStatementLike (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12767:17)
+    at FlowParserMixin.parseStatementLike (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:2946:24)
+    at FlowParserMixin.parseStatementOrSloppyAnnexBFunctionDeclaration (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12757:17)
+    at FlowParserMixin.parseIfStatement (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13130:28)
+    at FlowParserMixin.parseStatementContent (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12796:21)
+
+[1m[31mERROR[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 389:8:  Parsing [1m[31merror[39m[22m[1m: Expected corresponding JSX closing tag for <div>. (389:8)
+
+[39m[22m
+
+webpack compiled with [1m[31m2 errors[39m[22m
+Compiling...
+Failed to compile.
+
+[eslint] 
+src\components\analytics\Analytics.js
+Syntax error: Expected corresponding JSX closing tag for <MaterialCard>. (497:8) (497:8)
+[1m[31mERROR[39m[22m in [1m./src/components/analytics/Analytics.js[39m[22m
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\src\components\analytics\Analytics.js: Expected corresponding JSX closing tag for <MaterialCard>. (497:8)
+
+[0m [90m 495 |[39m             [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 496 |[39m           [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+[31m[1m>[22m[39m[90m 497 |[39m         [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m     |[39m         [31m[1m^[22m[39m
+ [90m 498 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 499 |[39m
+ [90m 500 |[39m       [33m<[39m[33mdiv[39m className[33m=[39m[32m"analytics-stats"[39m[33m>[39m[0m
+    at constructor (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:367:19)
+    at FlowParserMixin.raise (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:6627:19)
+    at FlowParserMixin.jsxParseElementAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4757:16)
+    at FlowParserMixin.jsxParseElementAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4728:32)
+    at FlowParserMixin.jsxParseElementAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4728:32)
+    at FlowParserMixin.jsxParseElement (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4779:17)
+    at FlowParserMixin.parseExprAtom (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4789:19)
+    at FlowParserMixin.parseExprSubscripts (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11076:23)
+    at FlowParserMixin.parseUpdate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11061:21)
+    at FlowParserMixin.parseMaybeUnary (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11041:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10894:61)
+    at FlowParserMixin.parseExprOps (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10899:23)
+    at FlowParserMixin.parseMaybeConditional (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10876:23)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10826:21)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3528:39
+    at FlowParserMixin.tryParse (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:6935:20)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3528:18)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10795:39
+    at FlowParserMixin.allowInAnd (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12427:12)
+    at FlowParserMixin.parseMaybeAssignAllowIn (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10795:17)
+    at FlowParserMixin.parseMaybeAssignAllowInOrVoidPattern (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12494:17)
+    at FlowParserMixin.parseParenAndDistinguishExpression (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11674:28)
+    at FlowParserMixin.parseParenAndDistinguishExpression (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3621:18)
+    at FlowParserMixin.parseExprAtom (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11326:23)
+    at FlowParserMixin.parseExprAtom (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4794:20)
+    at FlowParserMixin.parseExprSubscripts (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11076:23)
+    at FlowParserMixin.parseUpdate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11061:21)
+    at FlowParserMixin.parseMaybeUnary (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11041:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10894:61)
+    at FlowParserMixin.parseExprOps (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10899:23)
+    at FlowParserMixin.parseMaybeConditional (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10876:23)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10826:21)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3579:18)
+    at FlowParserMixin.parseExpressionBase (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10779:23)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10775:39
+    at FlowParserMixin.allowInAnd (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12422:16)
+    at FlowParserMixin.parseExpression (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10775:17)
+    at FlowParserMixin.parseReturnStatement (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13142:28)
+    at FlowParserMixin.parseStatementContent (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12798:21)
+    at FlowParserMixin.parseStatementLike (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12767:17)
+    at FlowParserMixin.parseStatementLike (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:2946:24)
+    at FlowParserMixin.parseStatementListItem (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12747:17)
+    at FlowParserMixin.parseBlockOrModuleBlockBody (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13316:61)
+    at FlowParserMixin.parseBlockBody (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13309:10)
+    at FlowParserMixin.parseBlock (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13297:10)
+    at FlowParserMixin.parseFunctionBody (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12101:24)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:2920:63
+    at FlowParserMixin.forwardNoArrowParamsConversionAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3096:16)
+    at FlowParserMixin.parseFunctionBody (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:2920:12)
+    at FlowParserMixin.parseArrowExpression (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12076:10)
+
+[1m[31mERROR[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 497:8:  Parsing [1m[31merror[39m[22m[1m: Expected corresponding JSX closing tag for <MaterialCard>. (497:8)
+
+[39m[22m
+
+webpack compiled with [1m[31m2 errors[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\analytics\Analytics.js
+  Line 1:17:   'useEffect' is defined but never used   no-unused-vars
+  Line 4:50:   'Divider' is defined but never used     no-unused-vars
+  Line 5:11:   'TextField' is defined but never used   no-unused-vars
+  Line 5:44:   'useTheme' is defined but never used    no-unused-vars
+  Line 7:14:   'MuiTooltip' is defined but never used  no-unused-vars
+  Line 7:26:   'IconButton' is defined but never used  no-unused-vars
+  Line 12:52:  'Flag' is defined but never used        no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 1:17:   'useEffect' is defined but never used   no-unused-vars
+  Line 4:50:   'Divider' is defined but never used     no-unused-vars
+  Line 5:11:   'TextField' is defined but never used   no-unused-vars
+  Line 5:44:   'useTheme' is defined but never used    no-unused-vars
+  Line 7:14:   'MuiTooltip' is defined but never used  no-unused-vars
+  Line 7:26:   'IconButton' is defined but never used  no-unused-vars
+  Line 12:52:  'Flag' is defined but never used        no-unused-vars
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\analytics\Analytics.js
+  Line 2:99:   'AlertCircle' is defined but never used       no-unused-vars
+  Line 14:3:   'Box' is defined but never used               no-unused-vars
+  Line 15:3:   'Button' is defined but never used            no-unused-vars
+  Line 16:3:   'Card' is defined but never used              no-unused-vars
+  Line 17:3:   'CardContent' is defined but never used       no-unused-vars
+  Line 18:3:   'CardHeader' is defined but never used        no-unused-vars
+  Line 19:3:   'Chip' is defined but never used              no-unused-vars
+  Line 20:3:   'CircularProgress' is defined but never used  no-unused-vars
+  Line 21:3:   'Container' is defined but never used         no-unused-vars
+  Line 22:3:   'Grid' is defined but never used              no-unused-vars
+  Line 23:3:   'LinearProgress' is defined but never used    no-unused-vars
+  Line 24:3:   'MenuItem' is defined but never used          no-unused-vars
+  Line 25:3:   'Paper' is defined but never used             no-unused-vars
+  Line 26:3:   'Select' is defined but never used            no-unused-vars
+  Line 27:3:   'Stack' is defined but never used             no-unused-vars
+  Line 28:3:   'Tab' is defined but never used               no-unused-vars
+  Line 29:3:   'Tabs' is defined but never used              no-unused-vars
+  Line 30:3:   'TextField' is defined but never used         no-unused-vars
+  Line 31:14:  'MuiTooltip' is defined but never used        no-unused-vars
+  Line 32:3:   'Typography' is defined but never used        no-unused-vars
+  Line 33:3:   'useTheme' is defined but never used          no-unused-vars
+  Line 34:3:   'useMediaQuery' is defined but never used     no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 2:99:   'AlertCircle' is defined but never used       no-unused-vars
+  Line 14:3:   'Box' is defined but never used               no-unused-vars
+  Line 15:3:   'Button' is defined but never used            no-unused-vars
+  Line 16:3:   'Card' is defined but never used              no-unused-vars
+  Line 17:3:   'CardContent' is defined but never used       no-unused-vars
+  Line 18:3:   'CardHeader' is defined but never used        no-unused-vars
+  Line 19:3:   'Chip' is defined but never used              no-unused-vars
+  Line 20:3:   'CircularProgress' is defined but never used  no-unused-vars
+  Line 21:3:   'Container' is defined but never used         no-unused-vars
+  Line 22:3:   'Grid' is defined but never used              no-unused-vars
+  Line 23:3:   'LinearProgress' is defined but never used    no-unused-vars
+  Line 24:3:   'MenuItem' is defined but never used          no-unused-vars
+  Line 25:3:   'Paper' is defined but never used             no-unused-vars
+  Line 26:3:   'Select' is defined but never used            no-unused-vars
+  Line 27:3:   'Stack' is defined but never used             no-unused-vars
+  Line 28:3:   'Tab' is defined but never used               no-unused-vars
+  Line 29:3:   'Tabs' is defined but never used              no-unused-vars
+  Line 30:3:   'TextField' is defined but never used         no-unused-vars
+  Line 31:14:  'MuiTooltip' is defined but never used        no-unused-vars
+  Line 32:3:   'Typography' is defined but never used        no-unused-vars
+  Line 33:3:   'useTheme' is defined but never used          no-unused-vars
+  Line 34:3:   'useMediaQuery' is defined but never used     no-unused-vars
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\analytics\Analytics.js
+  Line 2:99:   'AlertCircle' is defined but never used             no-unused-vars
+  Line 14:3:   'Box' is defined but never used                     no-unused-vars
+  Line 15:3:   'Button' is defined but never used                  no-unused-vars
+  Line 16:3:   'Card' is defined but never used                    no-unused-vars
+  Line 17:3:   'CardContent' is defined but never used             no-unused-vars
+  Line 18:3:   'CardHeader' is defined but never used              no-unused-vars
+  Line 19:3:   'Chip' is defined but never used                    no-unused-vars
+  Line 20:3:   'CircularProgress' is defined but never used        no-unused-vars
+  Line 21:3:   'Container' is defined but never used               no-unused-vars
+  Line 22:3:   'Grid' is defined but never used                    no-unused-vars
+  Line 23:3:   'LinearProgress' is defined but never used          no-unused-vars
+  Line 24:3:   'MenuItem' is defined but never used                no-unused-vars
+  Line 25:3:   'Paper' is defined but never used                   no-unused-vars
+  Line 26:3:   'Select' is defined but never used                  no-unused-vars
+  Line 27:3:   'Stack' is defined but never used                   no-unused-vars
+  Line 28:3:   'Tab' is defined but never used                     no-unused-vars
+  Line 29:3:   'Tabs' is defined but never used                    no-unused-vars
+  Line 30:3:   'TextField' is defined but never used               no-unused-vars
+  Line 31:14:  'MuiTooltip' is defined but never used              no-unused-vars
+  Line 32:3:   'Typography' is defined but never used              no-unused-vars
+  Line 62:9:   'isMobile' is assigned a value but never used       no-unused-vars
+  Line 63:9:   'isSmallScreen' is assigned a value but never used  no-unused-vars
+  Line 67:10:  'tabValue' is assigned a value but never used       no-unused-vars
+  Line 67:20:  'setTabValue' is assigned a value but never used    no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 2:99:   'AlertCircle' is defined but never used             no-unused-vars
+  Line 14:3:   'Box' is defined but never used                     no-unused-vars
+  Line 15:3:   'Button' is defined but never used                  no-unused-vars
+  Line 16:3:   'Card' is defined but never used                    no-unused-vars
+  Line 17:3:   'CardContent' is defined but never used             no-unused-vars
+  Line 18:3:   'CardHeader' is defined but never used              no-unused-vars
+  Line 19:3:   'Chip' is defined but never used                    no-unused-vars
+  Line 20:3:   'CircularProgress' is defined but never used        no-unused-vars
+  Line 21:3:   'Container' is defined but never used               no-unused-vars
+  Line 22:3:   'Grid' is defined but never used                    no-unused-vars
+  Line 23:3:   'LinearProgress' is defined but never used          no-unused-vars
+  Line 24:3:   'MenuItem' is defined but never used                no-unused-vars
+  Line 25:3:   'Paper' is defined but never used                   no-unused-vars
+  Line 26:3:   'Select' is defined but never used                  no-unused-vars
+  Line 27:3:   'Stack' is defined but never used                   no-unused-vars
+  Line 28:3:   'Tab' is defined but never used                     no-unused-vars
+  Line 29:3:   'Tabs' is defined but never used                    no-unused-vars
+  Line 30:3:   'TextField' is defined but never used               no-unused-vars
+  Line 31:14:  'MuiTooltip' is defined but never used              no-unused-vars
+  Line 32:3:   'Typography' is defined but never used              no-unused-vars
+  Line 62:9:   'isMobile' is assigned a value but never used       no-unused-vars
+  Line 63:9:   'isSmallScreen' is assigned a value but never used  no-unused-vars
+  Line 67:10:  'tabValue' is assigned a value but never used       no-unused-vars
+  Line 67:20:  'setTabValue' is assigned a value but never used    no-unused-vars
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\analytics\Analytics.js
+  Line 31:14:  'MuiTooltip' is defined but never used              no-unused-vars
+  Line 38:8:   'MaterialCard' is defined but never used            no-unused-vars
+  Line 62:9:   'isMobile' is assigned a value but never used       no-unused-vars
+  Line 63:9:   'isSmallScreen' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 31:14:  'MuiTooltip' is defined but never used              no-unused-vars
+  Line 38:8:   'MaterialCard' is defined but never used            no-unused-vars
+  Line 62:9:   'isMobile' is assigned a value but never used       no-unused-vars
+  Line 63:9:   'isSmallScreen' is assigned a value but never used  no-unused-vars
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\analytics\Analytics.js
+  Line 31:14:  'MuiTooltip' is defined but never used              no-unused-vars
+  Line 38:8:   'MaterialCard' is defined but never used            no-unused-vars
+  Line 62:9:   'isMobile' is assigned a value but never used       no-unused-vars
+  Line 63:9:   'isSmallScreen' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 31:14:  'MuiTooltip' is defined but never used              no-unused-vars
+  Line 38:8:   'MaterialCard' is defined but never used            no-unused-vars
+  Line 62:9:   'isMobile' is assigned a value but never used       no-unused-vars
+  Line 63:9:   'isSmallScreen' is assigned a value but never used  no-unused-vars
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\analytics\Analytics.js
+  Line 31:14:  'MuiTooltip' is defined but never used              no-unused-vars
+  Line 38:8:   'MaterialCard' is defined but never used            no-unused-vars
+  Line 62:9:   'isMobile' is assigned a value but never used       no-unused-vars
+  Line 63:9:   'isSmallScreen' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 31:14:  'MuiTooltip' is defined but never used              no-unused-vars
+  Line 38:8:   'MaterialCard' is defined but never used            no-unused-vars
+  Line 62:9:   'isMobile' is assigned a value but never used       no-unused-vars
+  Line 63:9:   'isSmallScreen' is assigned a value but never used  no-unused-vars
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\analytics\Analytics.js
+  Line 31:14:  'MuiTooltip' is defined but never used              no-unused-vars
+  Line 38:8:   'MaterialCard' is defined but never used            no-unused-vars
+  Line 62:9:   'isMobile' is assigned a value but never used       no-unused-vars
+  Line 63:9:   'isSmallScreen' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 31:14:  'MuiTooltip' is defined but never used              no-unused-vars
+  Line 38:8:   'MaterialCard' is defined but never used            no-unused-vars
+  Line 62:9:   'isMobile' is assigned a value but never used       no-unused-vars
+  Line 63:9:   'isSmallScreen' is assigned a value but never used  no-unused-vars
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Failed to compile.
+
+[eslint] 
+src\components\analytics\Analytics.js
+  Line 36:17:    'useTheme' is not defined          no-undef
+  Line 37:20:    'useMediaQuery' is not defined     no-undef
+  Line 38:25:    'useMediaQuery' is not defined     no-undef
+  Line 388:8:    'Box' is not defined               react/jsx-no-undef
+  Line 399:10:   'CircularProgress' is not defined  react/jsx-no-undef
+  Line 400:10:   'Typography' is not defined        react/jsx-no-undef
+  Line 408:6:    'Box' is not defined               react/jsx-no-undef
+  Line 416:8:    'Container' is not defined         react/jsx-no-undef
+  Line 417:10:   'Stack' is not defined             react/jsx-no-undef
+  Line 419:12:   'Box' is not defined               react/jsx-no-undef
+  Line 420:14:   'Typography' is not defined        react/jsx-no-undef
+  Line 430:14:   'Typography' is not defined        react/jsx-no-undef
+  Line 440:14:   'Typography' is not defined        react/jsx-no-undef
+  Line 445:14:   'Stack' is not defined             react/jsx-no-undef
+  Line 450:16:   'Button' is not defined            react/jsx-no-undef
+  Line 461:16:   'Button' is not defined            react/jsx-no-undef
+  Line 476:12:   'Card' is not defined              react/jsx-no-undef
+  Line 483:14:   'CardContent' is not defined       react/jsx-no-undef
+  Line 484:16:   'Stack' is not defined             react/jsx-no-undef
+  Line 485:18:   'Box' is not defined               react/jsx-no-undef
+  Line 494:20:   'Typography' is not defined        react/jsx-no-undef
+  Line 499:18:   'Grid' is not defined              react/jsx-no-undef
+  Line 500:20:   'Grid' is not defined              react/jsx-no-undef
+  Line 501:22:   'Select' is not defined            react/jsx-no-undef
+  Line 513:26:   'MenuItem' is not defined          react/jsx-no-undef
+  Line 522:24:   'Grid' is not defined              react/jsx-no-undef
+  Line 523:26:   'TextField' is not defined         react/jsx-no-undef
+  Line 533:24:   'Grid' is not defined              react/jsx-no-undef
+  Line 534:26:   'TextField' is not defined         react/jsx-no-undef
+  Line 548:18:   'Chip' is not defined              react/jsx-no-undef
+  Line 559:12:   'Card' is not defined              react/jsx-no-undef
+  Line 567:14:   'CardContent' is not defined       react/jsx-no-undef
+  Line 568:16:   'Stack' is not defined             react/jsx-no-undef
+  Line 569:18:   'Box' is not defined               react/jsx-no-undef
+  Line 576:20:   'Box' is not defined               react/jsx-no-undef
+  Line 578:22:   'Typography' is not defined        react/jsx-no-undef
+  Line 582:20:   'Chip' is not defined              react/jsx-no-undef
+  Line 589:18:   'LinearProgress' is not defined    react/jsx-no-undef
+  Line 599:18:   'Grid' is not defined              react/jsx-no-undef
+  Line 600:20:   'Grid' is not defined              react/jsx-no-undef
+  Line 601:22:   'Box' is not defined               react/jsx-no-undef
+  Line 602:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 605:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 610:20:   'Grid' is not defined              react/jsx-no-undef
+  Line 611:22:   'Box' is not defined               react/jsx-no-undef
+  Line 612:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 615:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 620:20:   'Grid' is not defined              react/jsx-no-undef
+  Line 621:22:   'Box' is not defined               react/jsx-no-undef
+  Line 622:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 625:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 630:20:   'Grid' is not defined              react/jsx-no-undef
+  Line 631:22:   'Box' is not defined               react/jsx-no-undef
+  Line 632:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 635:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 646:12:   'Box' is not defined               react/jsx-no-undef
+  Line 647:14:   'Typography' is not defined        react/jsx-no-undef
+  Line 656:14:   'Grid' is not defined              react/jsx-no-undef
+  Line 657:16:   'Grid' is not defined              react/jsx-no-undef
+  Line 658:18:   'StatsCard' is not defined         react/jsx-no-undef
+  Line 667:16:   'Grid' is not defined              react/jsx-no-undef
+  Line 668:18:   'StatsCard' is not defined         react/jsx-no-undef
+  Line 677:16:   'Grid' is not defined              react/jsx-no-undef
+  Line 678:18:   'StatsCard' is not defined         react/jsx-no-undef
+  Line 687:16:   'Grid' is not defined              react/jsx-no-undef
+  Line 688:18:   'StatsCard' is not defined         react/jsx-no-undef
+  Line 700:12:   'Paper' is not defined             react/jsx-no-undef
+  Line 707:14:   'Tabs' is not defined              react/jsx-no-undef
+  Line 724:16:   'Tab' is not defined               react/jsx-no-undef
+  Line 725:16:   'Tab' is not defined               react/jsx-no-undef
+  Line 726:16:   'Tab' is not defined               react/jsx-no-undef
+  Line 731:12:   'Box' is not defined               react/jsx-no-undef
+  Line 734:16:   'Stack' is not defined             react/jsx-no-undef
+  Line 735:18:   'Card' is not defined              react/jsx-no-undef
+  Line 736:20:   'CardHeader' is not defined        react/jsx-no-undef
+  Line 741:20:   'CardContent' is not defined       react/jsx-no-undef
+  Line 743:24:   'Box' is not defined               react/jsx-no-undef
+  Line 754:26:   'Typography' is not defined        react/jsx-no-undef
+  Line 816:18:   'Card' is not defined              react/jsx-no-undef
+  Line 817:20:   'CardHeader' is not defined        react/jsx-no-undef
+  Line 822:20:   'CardContent' is not defined       react/jsx-no-undef
+  Line 839:16:   'Grid' is not defined              react/jsx-no-undef
+  Line 840:18:   'Grid' is not defined              react/jsx-no-undef
+  Line 841:20:   'Card' is not defined              react/jsx-no-undef
+  Line 842:22:   'CardHeader' is not defined        react/jsx-no-undef
+  Line 847:22:   'CardContent' is not defined       react/jsx-no-undef
+  Line 858:18:   'Grid' is not defined              react/jsx-no-undef
+  Line 859:20:   'Card' is not defined              react/jsx-no-undef
+  Line 860:22:   'CardHeader' is not defined        react/jsx-no-undef
+  Line 865:22:   'CardContent' is not defined       react/jsx-no-undef
+  Line 882:16:   'Stack' is not defined             react/jsx-no-undef
+  Line 883:18:   'Card' is not defined              react/jsx-no-undef
+  Line 884:20:   'CardHeader' is not defined        react/jsx-no-undef
+  Line 889:20:   'CardContent' is not defined       react/jsx-no-undef
+  Line 906:18:   'Card' is not defined              react/jsx-no-undef
+  Line 907:20:   'CardHeader' is not defined        react/jsx-no-undef
+  Line 912:20:   'CardContent' is not defined       react/jsx-no-undef
+  Line 914:24:   'Box' is not defined               react/jsx-no-undef
+  Line 925:26:   'Typography' is not defined        react/jsx-no-undef
+  Line 928:24:   'Grid' is not defined              react/jsx-no-undef
+  Line 930:28:   'Grid' is not defined              react/jsx-no-undef
+  Line 931:30:   'Card' is not defined              react/jsx-no-undef
+  Line 943:32:   'Stack' is not defined             react/jsx-no-undef
+  Line 944:34:   'Box' is not defined               react/jsx-no-undef
+  Line 951:36:   'Typography' is not defined        react/jsx-no-undef
+  Line 954:36:   'Chip' is not defined              react/jsx-no-undef
+  Line 960:34:   'Stack' is not defined             react/jsx-no-undef
+  Line 962:38:   'Chip' is not defined              react/jsx-no-undef
+  Line 970:38:   'Chip' is not defined              react/jsx-no-undef
+  Line 991:12:   'Box' is not defined               react/jsx-no-undef
+  Line 992:14:   'Typography' is not defined        react/jsx-no-undef
+  Line 995:14:   'Grid' is not defined              react/jsx-no-undef
+  Line 996:16:   'Grid' is not defined              react/jsx-no-undef
+  Line 997:18:   'Card' is not defined              react/jsx-no-undef
+  Line 1004:20:  'CardContent' is not defined       react/jsx-no-undef
+  Line 1005:22:  'Stack' is not defined             react/jsx-no-undef
+  Line 1006:24:  'Typography' is not defined        react/jsx-no-undef
+  Line 1009:24:  'Typography' is not defined        react/jsx-no-undef
+  Line 1019:16:  'Grid' is not defined              react/jsx-no-undef
+  Line 1020:18:  'Card' is not defined              react/jsx-no-undef
+  Line 1027:20:  'CardContent' is not defined       react/jsx-no-undef
+  Line 1028:22:  'Stack' is not defined             react/jsx-no-undef
+  Line 1029:24:  'Typography' is not defined        react/jsx-no-undef
+  Line 1032:24:  'Typography' is not defined        react/jsx-no-undef
+  Line 1040:16:  'Grid' is not defined              react/jsx-no-undef
+  Line 1041:18:  'Card' is not defined              react/jsx-no-undef
+  Line 1048:20:  'CardContent' is not defined       react/jsx-no-undef
+  Line 1049:22:  'Stack' is not defined             react/jsx-no-undef
+  Line 1050:24:  'Typography' is not defined        react/jsx-no-undef
+  Line 1053:24:  'Typography' is not defined        react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 2:112:  'ChevronDown' is defined but never used             no-unused-vars
+  Line 37:9:   'isMobile' is assigned a value but never used       no-unused-vars
+  Line 38:9:   'isSmallScreen' is assigned a value but never used  no-unused-vars
+
+[39m[22m
+
+[1m[31mERROR[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 36:17:    'useTheme' is not defined          no-undef
+  Line 37:20:    'useMediaQuery' is not defined     no-undef
+  Line 38:25:    'useMediaQuery' is not defined     no-undef
+  Line 388:8:    'Box' is not defined               react/jsx-no-undef
+  Line 399:10:   'CircularProgress' is not defined  react/jsx-no-undef
+  Line 400:10:   'Typography' is not defined        react/jsx-no-undef
+  Line 408:6:    'Box' is not defined               react/jsx-no-undef
+  Line 416:8:    'Container' is not defined         react/jsx-no-undef
+  Line 417:10:   'Stack' is not defined             react/jsx-no-undef
+  Line 419:12:   'Box' is not defined               react/jsx-no-undef
+  Line 420:14:   'Typography' is not defined        react/jsx-no-undef
+  Line 430:14:   'Typography' is not defined        react/jsx-no-undef
+  Line 440:14:   'Typography' is not defined        react/jsx-no-undef
+  Line 445:14:   'Stack' is not defined             react/jsx-no-undef
+  Line 450:16:   'Button' is not defined            react/jsx-no-undef
+  Line 461:16:   'Button' is not defined            react/jsx-no-undef
+  Line 476:12:   'Card' is not defined              react/jsx-no-undef
+  Line 483:14:   'CardContent' is not defined       react/jsx-no-undef
+  Line 484:16:   'Stack' is not defined             react/jsx-no-undef
+  Line 485:18:   'Box' is not defined               react/jsx-no-undef
+  Line 494:20:   'Typography' is not defined        react/jsx-no-undef
+  Line 499:18:   'Grid' is not defined              react/jsx-no-undef
+  Line 500:20:   'Grid' is not defined              react/jsx-no-undef
+  Line 501:22:   'Select' is not defined            react/jsx-no-undef
+  Line 513:26:   'MenuItem' is not defined          react/jsx-no-undef
+  Line 522:24:   'Grid' is not defined              react/jsx-no-undef
+  Line 523:26:   'TextField' is not defined         react/jsx-no-undef
+  Line 533:24:   'Grid' is not defined              react/jsx-no-undef
+  Line 534:26:   'TextField' is not defined         react/jsx-no-undef
+  Line 548:18:   'Chip' is not defined              react/jsx-no-undef
+  Line 559:12:   'Card' is not defined              react/jsx-no-undef
+  Line 567:14:   'CardContent' is not defined       react/jsx-no-undef
+  Line 568:16:   'Stack' is not defined             react/jsx-no-undef
+  Line 569:18:   'Box' is not defined               react/jsx-no-undef
+  Line 576:20:   'Box' is not defined               react/jsx-no-undef
+  Line 578:22:   'Typography' is not defined        react/jsx-no-undef
+  Line 582:20:   'Chip' is not defined              react/jsx-no-undef
+  Line 589:18:   'LinearProgress' is not defined    react/jsx-no-undef
+  Line 599:18:   'Grid' is not defined              react/jsx-no-undef
+  Line 600:20:   'Grid' is not defined              react/jsx-no-undef
+  Line 601:22:   'Box' is not defined               react/jsx-no-undef
+  Line 602:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 605:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 610:20:   'Grid' is not defined              react/jsx-no-undef
+  Line 611:22:   'Box' is not defined               react/jsx-no-undef
+  Line 612:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 615:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 620:20:   'Grid' is not defined              react/jsx-no-undef
+  Line 621:22:   'Box' is not defined               react/jsx-no-undef
+  Line 622:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 625:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 630:20:   'Grid' is not defined              react/jsx-no-undef
+  Line 631:22:   'Box' is not defined               react/jsx-no-undef
+  Line 632:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 635:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 646:12:   'Box' is not defined               react/jsx-no-undef
+  Line 647:14:   'Typography' is not defined        react/jsx-no-undef
+  Line 656:14:   'Grid' is not defined              react/jsx-no-undef
+  Line 657:16:   'Grid' is not defined              react/jsx-no-undef
+  Line 658:18:   'StatsCard' is not defined         react/jsx-no-undef
+  Line 667:16:   'Grid' is not defined              react/jsx-no-undef
+  Line 668:18:   'StatsCard' is not defined         react/jsx-no-undef
+  Line 677:16:   'Grid' is not defined              react/jsx-no-undef
+  Line 678:18:   'StatsCard' is not defined         react/jsx-no-undef
+  Line 687:16:   'Grid' is not defined              react/jsx-no-undef
+  Line 688:18:   'StatsCard' is not defined         react/jsx-no-undef
+  Line 700:12:   'Paper' is not defined             react/jsx-no-undef
+  Line 707:14:   'Tabs' is not defined              react/jsx-no-undef
+  Line 724:16:   'Tab' is not defined               react/jsx-no-undef
+  Line 725:16:   'Tab' is not defined               react/jsx-no-undef
+  Line 726:16:   'Tab' is not defined               react/jsx-no-undef
+  Line 731:12:   'Box' is not defined               react/jsx-no-undef
+  Line 734:16:   'Stack' is not defined             react/jsx-no-undef
+  Line 735:18:   'Card' is not defined              react/jsx-no-undef
+  Line 736:20:   'CardHeader' is not defined        react/jsx-no-undef
+  Line 741:20:   'CardContent' is not defined       react/jsx-no-undef
+  Line 743:24:   'Box' is not defined               react/jsx-no-undef
+  Line 754:26:   'Typography' is not defined        react/jsx-no-undef
+  Line 816:18:   'Card' is not defined              react/jsx-no-undef
+  Line 817:20:   'CardHeader' is not defined        react/jsx-no-undef
+  Line 822:20:   'CardContent' is not defined       react/jsx-no-undef
+  Line 839:16:   'Grid' is not defined              react/jsx-no-undef
+  Line 840:18:   'Grid' is not defined              react/jsx-no-undef
+  Line 841:20:   'Card' is not defined              react/jsx-no-undef
+  Line 842:22:   'CardHeader' is not defined        react/jsx-no-undef
+  Line 847:22:   'CardContent' is not defined       react/jsx-no-undef
+  Line 858:18:   'Grid' is not defined              react/jsx-no-undef
+  Line 859:20:   'Card' is not defined              react/jsx-no-undef
+  Line 860:22:   'CardHeader' is not defined        react/jsx-no-undef
+  Line 865:22:   'CardContent' is not defined       react/jsx-no-undef
+  Line 882:16:   'Stack' is not defined             react/jsx-no-undef
+  Line 883:18:   'Card' is not defined              react/jsx-no-undef
+  Line 884:20:   'CardHeader' is not defined        react/jsx-no-undef
+  Line 889:20:   'CardContent' is not defined       react/jsx-no-undef
+  Line 906:18:   'Card' is not defined              react/jsx-no-undef
+  Line 907:20:   'CardHeader' is not defined        react/jsx-no-undef
+  Line 912:20:   'CardContent' is not defined       react/jsx-no-undef
+  Line 914:24:   'Box' is not defined               react/jsx-no-undef
+  Line 925:26:   'Typography' is not defined        react/jsx-no-undef
+  Line 928:24:   'Grid' is not defined              react/jsx-no-undef
+  Line 930:28:   'Grid' is not defined              react/jsx-no-undef
+  Line 931:30:   'Card' is not defined              react/jsx-no-undef
+  Line 943:32:   'Stack' is not defined             react/jsx-no-undef
+  Line 944:34:   'Box' is not defined               react/jsx-no-undef
+  Line 951:36:   'Typography' is not defined        react/jsx-no-undef
+  Line 954:36:   'Chip' is not defined              react/jsx-no-undef
+  Line 960:34:   'Stack' is not defined             react/jsx-no-undef
+  Line 962:38:   'Chip' is not defined              react/jsx-no-undef
+  Line 970:38:   'Chip' is not defined              react/jsx-no-undef
+  Line 991:12:   'Box' is not defined               react/jsx-no-undef
+  Line 992:14:   'Typography' is not defined        react/jsx-no-undef
+  Line 995:14:   'Grid' is not defined              react/jsx-no-undef
+  Line 996:16:   'Grid' is not defined              react/jsx-no-undef
+  Line 997:18:   'Card' is not defined              react/jsx-no-undef
+  Line 1004:20:  'CardContent' is not defined       react/jsx-no-undef
+  Line 1005:22:  'Stack' is not defined             react/jsx-no-undef
+  Line 1006:24:  'Typography' is not defined        react/jsx-no-undef
+  Line 1009:24:  'Typography' is not defined        react/jsx-no-undef
+  Line 1019:16:  'Grid' is not defined              react/jsx-no-undef
+  Line 1020:18:  'Card' is not defined              react/jsx-no-undef
+  Line 1027:20:  'CardContent' is not defined       react/jsx-no-undef
+  Line 1028:22:  'Stack' is not defined             react/jsx-no-undef
+  Line 1029:24:  'Typography' is not defined        react/jsx-no-undef
+  Line 1032:24:  'Typography' is not defined        react/jsx-no-undef
+  Line 1040:16:  'Grid' is not defined              react/jsx-no-undef
+  Line 1041:18:  'Card' is not defined              react/jsx-no-undef
+  Line 1048:20:  'CardContent' is not defined       react/jsx-no-undef
+  Line 1049:22:  'Stack' is not defined             react/jsx-no-undef
+  Line 1050:24:  'Typography' is not defined        react/jsx-no-undef
+  Line 1053:24:  'Typography' is not defined        react/jsx-no-undef
+
+Search for the keywords to learn more about each [1m[31merror[39m[22m[1m.[39m[22m
+
+webpack compiled with [1m[31m1 error[39m[22m and [1m[33m1 warning[39m[22m
+Compiling...
+Failed to compile.
+
+[eslint] 
+src\components\analytics\Analytics.js
+  Line 384:8:    'Box' is not defined               react/jsx-no-undef
+  Line 395:10:   'CircularProgress' is not defined  react/jsx-no-undef
+  Line 396:10:   'Typography' is not defined        react/jsx-no-undef
+  Line 404:6:    'Box' is not defined               react/jsx-no-undef
+  Line 412:8:    'Container' is not defined         react/jsx-no-undef
+  Line 413:10:   'Stack' is not defined             react/jsx-no-undef
+  Line 415:12:   'Box' is not defined               react/jsx-no-undef
+  Line 416:14:   'Typography' is not defined        react/jsx-no-undef
+  Line 426:14:   'Typography' is not defined        react/jsx-no-undef
+  Line 436:14:   'Typography' is not defined        react/jsx-no-undef
+  Line 441:14:   'Stack' is not defined             react/jsx-no-undef
+  Line 446:16:   'Button' is not defined            react/jsx-no-undef
+  Line 457:16:   'Button' is not defined            react/jsx-no-undef
+  Line 472:12:   'Card' is not defined              react/jsx-no-undef
+  Line 475:36:   'theme' is not defined             no-undef
+  Line 479:14:   'CardContent' is not defined       react/jsx-no-undef
+  Line 480:16:   'Stack' is not defined             react/jsx-no-undef
+  Line 481:18:   'Box' is not defined               react/jsx-no-undef
+  Line 490:20:   'Typography' is not defined        react/jsx-no-undef
+  Line 495:18:   'Grid' is not defined              react/jsx-no-undef
+  Line 496:20:   'Grid' is not defined              react/jsx-no-undef
+  Line 497:22:   'Select' is not defined            react/jsx-no-undef
+  Line 509:26:   'MenuItem' is not defined          react/jsx-no-undef
+  Line 518:24:   'Grid' is not defined              react/jsx-no-undef
+  Line 519:26:   'TextField' is not defined         react/jsx-no-undef
+  Line 529:24:   'Grid' is not defined              react/jsx-no-undef
+  Line 530:26:   'TextField' is not defined         react/jsx-no-undef
+  Line 544:18:   'Chip' is not defined              react/jsx-no-undef
+  Line 555:12:   'Card' is not defined              react/jsx-no-undef
+  Line 558:36:   'theme' is not defined             no-undef
+  Line 560:54:   'theme' is not defined             no-undef
+  Line 560:90:   'theme' is not defined             no-undef
+  Line 563:14:   'CardContent' is not defined       react/jsx-no-undef
+  Line 564:16:   'Stack' is not defined             react/jsx-no-undef
+  Line 565:18:   'Box' is not defined               react/jsx-no-undef
+  Line 572:20:   'Box' is not defined               react/jsx-no-undef
+  Line 574:22:   'Typography' is not defined        react/jsx-no-undef
+  Line 578:20:   'Chip' is not defined              react/jsx-no-undef
+  Line 585:18:   'LinearProgress' is not defined    react/jsx-no-undef
+  Line 591:38:   'theme' is not defined             no-undef
+  Line 595:18:   'Grid' is not defined              react/jsx-no-undef
+  Line 596:20:   'Grid' is not defined              react/jsx-no-undef
+  Line 597:22:   'Box' is not defined               react/jsx-no-undef
+  Line 598:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 601:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 606:20:   'Grid' is not defined              react/jsx-no-undef
+  Line 607:22:   'Box' is not defined               react/jsx-no-undef
+  Line 608:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 611:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 616:20:   'Grid' is not defined              react/jsx-no-undef
+  Line 617:22:   'Box' is not defined               react/jsx-no-undef
+  Line 618:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 621:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 626:20:   'Grid' is not defined              react/jsx-no-undef
+  Line 627:22:   'Box' is not defined               react/jsx-no-undef
+  Line 628:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 631:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 642:12:   'Box' is not defined               react/jsx-no-undef
+  Line 643:14:   'Typography' is not defined        react/jsx-no-undef
+  Line 652:14:   'Grid' is not defined              react/jsx-no-undef
+  Line 653:16:   'Grid' is not defined              react/jsx-no-undef
+  Line 654:18:   'StatsCard' is not defined         react/jsx-no-undef
+  Line 663:16:   'Grid' is not defined              react/jsx-no-undef
+  Line 664:18:   'StatsCard' is not defined         react/jsx-no-undef
+  Line 673:16:   'Grid' is not defined              react/jsx-no-undef
+  Line 674:18:   'StatsCard' is not defined         react/jsx-no-undef
+  Line 683:16:   'Grid' is not defined              react/jsx-no-undef
+  Line 684:18:   'StatsCard' is not defined         react/jsx-no-undef
+  Line 696:12:   'Paper' is not defined             react/jsx-no-undef
+  Line 699:42:   'theme' is not defined             no-undef
+  Line 703:14:   'Tabs' is not defined              react/jsx-no-undef
+  Line 704:22:   'tabValue' is not defined          no-undef
+  Line 705:42:   'setTabValue' is not defined       no-undef
+  Line 720:16:   'Tab' is not defined               react/jsx-no-undef
+  Line 721:16:   'Tab' is not defined               react/jsx-no-undef
+  Line 722:16:   'Tab' is not defined               react/jsx-no-undef
+  Line 727:12:   'Box' is not defined               react/jsx-no-undef
+  Line 729:14:   'tabValue' is not defined          no-undef
+  Line 730:16:   'Stack' is not defined             react/jsx-no-undef
+  Line 731:18:   'Card' is not defined              react/jsx-no-undef
+  Line 731:64:   'theme' is not defined             no-undef
+  Line 732:20:   'CardHeader' is not defined        react/jsx-no-undef
+  Line 733:67:   'theme' is not defined             no-undef
+  Line 737:20:   'CardContent' is not defined       react/jsx-no-undef
+  Line 739:24:   'Box' is not defined               react/jsx-no-undef
+  Line 750:26:   'Typography' is not defined        react/jsx-no-undef
+  Line 755:89:   'theme' is not defined             no-undef
+  Line 760:43:   'theme' is not defined             no-undef
+  Line 765:43:   'theme' is not defined             no-undef
+  Line 774:52:   'theme' is not defined             no-undef
+  Line 775:42:   'theme' is not defined             no-undef
+  Line 783:37:   'theme' is not defined             no-undef
+  Line 792:37:   'theme' is not defined             no-undef
+  Line 801:37:   'theme' is not defined             no-undef
+  Line 812:18:   'Card' is not defined              react/jsx-no-undef
+  Line 812:64:   'theme' is not defined             no-undef
+  Line 813:20:   'CardHeader' is not defined        react/jsx-no-undef
+  Line 814:66:   'theme' is not defined             no-undef
+  Line 818:20:   'CardContent' is not defined       react/jsx-no-undef
+  Line 822:70:   'theme' is not defined             no-undef
+  Line 823:73:   'theme' is not defined             no-undef
+  Line 834:14:   'tabValue' is not defined          no-undef
+  Line 835:16:   'Grid' is not defined              react/jsx-no-undef
+  Line 836:18:   'Grid' is not defined              react/jsx-no-undef
+  Line 837:20:   'Card' is not defined              react/jsx-no-undef
+  Line 837:66:   'theme' is not defined             no-undef
+  Line 838:22:   'CardHeader' is not defined        react/jsx-no-undef
+  Line 839:67:   'theme' is not defined             no-undef
+  Line 843:22:   'CardContent' is not defined       react/jsx-no-undef
+  Line 854:18:   'Grid' is not defined              react/jsx-no-undef
+  Line 855:20:   'Card' is not defined              react/jsx-no-undef
+  Line 855:66:   'theme' is not defined             no-undef
+  Line 856:22:   'CardHeader' is not defined        react/jsx-no-undef
+  Line 857:69:   'theme' is not defined             no-undef
+  Line 861:22:   'CardContent' is not defined       react/jsx-no-undef
+  Line 867:79:   'theme' is not defined             no-undef
+  Line 877:14:   'tabValue' is not defined          no-undef
+  Line 878:16:   'Stack' is not defined             react/jsx-no-undef
+  Line 879:18:   'Card' is not defined              react/jsx-no-undef
+  Line 879:64:   'theme' is not defined             no-undef
+  Line 880:20:   'CardHeader' is not defined        react/jsx-no-undef
+  Line 881:69:   'theme' is not defined             no-undef
+  Line 885:20:   'CardContent' is not defined       react/jsx-no-undef
+  Line 892:70:   'theme' is not defined             no-undef
+  Line 893:74:   'theme' is not defined             no-undef
+  Line 902:18:   'Card' is not defined              react/jsx-no-undef
+  Line 902:64:   'theme' is not defined             no-undef
+  Line 903:20:   'CardHeader' is not defined        react/jsx-no-undef
+  Line 904:66:   'theme' is not defined             no-undef
+  Line 908:20:   'CardContent' is not defined       react/jsx-no-undef
+  Line 910:24:   'Box' is not defined               react/jsx-no-undef
+  Line 921:26:   'Typography' is not defined        react/jsx-no-undef
+  Line 924:24:   'Grid' is not defined              react/jsx-no-undef
+  Line 926:28:   'Grid' is not defined              react/jsx-no-undef
+  Line 927:30:   'Card' is not defined              react/jsx-no-undef
+  Line 930:54:   'theme' is not defined             no-undef
+  Line 934:46:   'theme' is not defined             no-undef
+  Line 939:32:   'Stack' is not defined             react/jsx-no-undef
+  Line 940:34:   'Box' is not defined               react/jsx-no-undef
+  Line 947:36:   'Typography' is not defined        react/jsx-no-undef
+  Line 950:36:   'Chip' is not defined              react/jsx-no-undef
+  Line 956:34:   'Stack' is not defined             react/jsx-no-undef
+  Line 958:38:   'Chip' is not defined              react/jsx-no-undef
+  Line 966:38:   'Chip' is not defined              react/jsx-no-undef
+  Line 987:12:   'Box' is not defined               react/jsx-no-undef
+  Line 988:14:   'Typography' is not defined        react/jsx-no-undef
+  Line 991:14:   'Grid' is not defined              react/jsx-no-undef
+  Line 992:16:   'Grid' is not defined              react/jsx-no-undef
+  Line 993:18:   'Card' is not defined              react/jsx-no-undef
+  Line 996:42:   'theme' is not defined             no-undef
+  Line 997:60:   'theme' is not defined             no-undef
+  Line 997:93:   'theme' is not defined             no-undef
+  Line 1000:20:  'CardContent' is not defined       react/jsx-no-undef
+  Line 1001:22:  'Stack' is not defined             react/jsx-no-undef
+  Line 1002:24:  'Typography' is not defined        react/jsx-no-undef
+  Line 1005:24:  'Typography' is not defined        react/jsx-no-undef
+  Line 1015:16:  'Grid' is not defined              react/jsx-no-undef
+  Line 1016:18:  'Card' is not defined              react/jsx-no-undef
+  Line 1019:42:  'theme' is not defined             no-undef
+  Line 1020:60:  'theme' is not defined             no-undef
+  Line 1020:96:  'theme' is not defined             no-undef
+  Line 1023:20:  'CardContent' is not defined       react/jsx-no-undef
+  Line 1024:22:  'Stack' is not defined             react/jsx-no-undef
+  Line 1025:24:  'Typography' is not defined        react/jsx-no-undef
+  Line 1028:24:  'Typography' is not defined        react/jsx-no-undef
+  Line 1036:16:  'Grid' is not defined              react/jsx-no-undef
+  Line 1037:18:  'Card' is not defined              react/jsx-no-undef
+  Line 1040:42:  'theme' is not defined             no-undef
+  Line 1041:60:  'theme' is not defined             no-undef
+  Line 1041:96:  'theme' is not defined             no-undef
+  Line 1044:20:  'CardContent' is not defined       react/jsx-no-undef
+  Line 1045:22:  'Stack' is not defined             react/jsx-no-undef
+  Line 1046:24:  'Typography' is not defined        react/jsx-no-undef
+  Line 1049:24:  'Typography' is not defined        react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 2:112:  'ChevronDown' is defined but never used            no-unused-vars
+  Line 38:10:  'activeTab' is assigned a value but never used     no-unused-vars
+  Line 38:21:  'setActiveTab' is assigned a value but never used  no-unused-vars
+
+[39m[22m
+
+[1m[31mERROR[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 384:8:    'Box' is not defined               react/jsx-no-undef
+  Line 395:10:   'CircularProgress' is not defined  react/jsx-no-undef
+  Line 396:10:   'Typography' is not defined        react/jsx-no-undef
+  Line 404:6:    'Box' is not defined               react/jsx-no-undef
+  Line 412:8:    'Container' is not defined         react/jsx-no-undef
+  Line 413:10:   'Stack' is not defined             react/jsx-no-undef
+  Line 415:12:   'Box' is not defined               react/jsx-no-undef
+  Line 416:14:   'Typography' is not defined        react/jsx-no-undef
+  Line 426:14:   'Typography' is not defined        react/jsx-no-undef
+  Line 436:14:   'Typography' is not defined        react/jsx-no-undef
+  Line 441:14:   'Stack' is not defined             react/jsx-no-undef
+  Line 446:16:   'Button' is not defined            react/jsx-no-undef
+  Line 457:16:   'Button' is not defined            react/jsx-no-undef
+  Line 472:12:   'Card' is not defined              react/jsx-no-undef
+  Line 475:36:   'theme' is not defined             no-undef
+  Line 479:14:   'CardContent' is not defined       react/jsx-no-undef
+  Line 480:16:   'Stack' is not defined             react/jsx-no-undef
+  Line 481:18:   'Box' is not defined               react/jsx-no-undef
+  Line 490:20:   'Typography' is not defined        react/jsx-no-undef
+  Line 495:18:   'Grid' is not defined              react/jsx-no-undef
+  Line 496:20:   'Grid' is not defined              react/jsx-no-undef
+  Line 497:22:   'Select' is not defined            react/jsx-no-undef
+  Line 509:26:   'MenuItem' is not defined          react/jsx-no-undef
+  Line 518:24:   'Grid' is not defined              react/jsx-no-undef
+  Line 519:26:   'TextField' is not defined         react/jsx-no-undef
+  Line 529:24:   'Grid' is not defined              react/jsx-no-undef
+  Line 530:26:   'TextField' is not defined         react/jsx-no-undef
+  Line 544:18:   'Chip' is not defined              react/jsx-no-undef
+  Line 555:12:   'Card' is not defined              react/jsx-no-undef
+  Line 558:36:   'theme' is not defined             no-undef
+  Line 560:54:   'theme' is not defined             no-undef
+  Line 560:90:   'theme' is not defined             no-undef
+  Line 563:14:   'CardContent' is not defined       react/jsx-no-undef
+  Line 564:16:   'Stack' is not defined             react/jsx-no-undef
+  Line 565:18:   'Box' is not defined               react/jsx-no-undef
+  Line 572:20:   'Box' is not defined               react/jsx-no-undef
+  Line 574:22:   'Typography' is not defined        react/jsx-no-undef
+  Line 578:20:   'Chip' is not defined              react/jsx-no-undef
+  Line 585:18:   'LinearProgress' is not defined    react/jsx-no-undef
+  Line 591:38:   'theme' is not defined             no-undef
+  Line 595:18:   'Grid' is not defined              react/jsx-no-undef
+  Line 596:20:   'Grid' is not defined              react/jsx-no-undef
+  Line 597:22:   'Box' is not defined               react/jsx-no-undef
+  Line 598:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 601:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 606:20:   'Grid' is not defined              react/jsx-no-undef
+  Line 607:22:   'Box' is not defined               react/jsx-no-undef
+  Line 608:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 611:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 616:20:   'Grid' is not defined              react/jsx-no-undef
+  Line 617:22:   'Box' is not defined               react/jsx-no-undef
+  Line 618:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 621:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 626:20:   'Grid' is not defined              react/jsx-no-undef
+  Line 627:22:   'Box' is not defined               react/jsx-no-undef
+  Line 628:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 631:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 642:12:   'Box' is not defined               react/jsx-no-undef
+  Line 643:14:   'Typography' is not defined        react/jsx-no-undef
+  Line 652:14:   'Grid' is not defined              react/jsx-no-undef
+  Line 653:16:   'Grid' is not defined              react/jsx-no-undef
+  Line 654:18:   'StatsCard' is not defined         react/jsx-no-undef
+  Line 663:16:   'Grid' is not defined              react/jsx-no-undef
+  Line 664:18:   'StatsCard' is not defined         react/jsx-no-undef
+  Line 673:16:   'Grid' is not defined              react/jsx-no-undef
+  Line 674:18:   'StatsCard' is not defined         react/jsx-no-undef
+  Line 683:16:   'Grid' is not defined              react/jsx-no-undef
+  Line 684:18:   'StatsCard' is not defined         react/jsx-no-undef
+  Line 696:12:   'Paper' is not defined             react/jsx-no-undef
+  Line 699:42:   'theme' is not defined             no-undef
+  Line 703:14:   'Tabs' is not defined              react/jsx-no-undef
+  Line 704:22:   'tabValue' is not defined          no-undef
+  Line 705:42:   'setTabValue' is not defined       no-undef
+  Line 720:16:   'Tab' is not defined               react/jsx-no-undef
+  Line 721:16:   'Tab' is not defined               react/jsx-no-undef
+  Line 722:16:   'Tab' is not defined               react/jsx-no-undef
+  Line 727:12:   'Box' is not defined               react/jsx-no-undef
+  Line 729:14:   'tabValue' is not defined          no-undef
+  Line 730:16:   'Stack' is not defined             react/jsx-no-undef
+  Line 731:18:   'Card' is not defined              react/jsx-no-undef
+  Line 731:64:   'theme' is not defined             no-undef
+  Line 732:20:   'CardHeader' is not defined        react/jsx-no-undef
+  Line 733:67:   'theme' is not defined             no-undef
+  Line 737:20:   'CardContent' is not defined       react/jsx-no-undef
+  Line 739:24:   'Box' is not defined               react/jsx-no-undef
+  Line 750:26:   'Typography' is not defined        react/jsx-no-undef
+  Line 755:89:   'theme' is not defined             no-undef
+  Line 760:43:   'theme' is not defined             no-undef
+  Line 765:43:   'theme' is not defined             no-undef
+  Line 774:52:   'theme' is not defined             no-undef
+  Line 775:42:   'theme' is not defined             no-undef
+  Line 783:37:   'theme' is not defined             no-undef
+  Line 792:37:   'theme' is not defined             no-undef
+  Line 801:37:   'theme' is not defined             no-undef
+  Line 812:18:   'Card' is not defined              react/jsx-no-undef
+  Line 812:64:   'theme' is not defined             no-undef
+  Line 813:20:   'CardHeader' is not defined        react/jsx-no-undef
+  Line 814:66:   'theme' is not defined             no-undef
+  Line 818:20:   'CardContent' is not defined       react/jsx-no-undef
+  Line 822:70:   'theme' is not defined             no-undef
+  Line 823:73:   'theme' is not defined             no-undef
+  Line 834:14:   'tabValue' is not defined          no-undef
+  Line 835:16:   'Grid' is not defined              react/jsx-no-undef
+  Line 836:18:   'Grid' is not defined              react/jsx-no-undef
+  Line 837:20:   'Card' is not defined              react/jsx-no-undef
+  Line 837:66:   'theme' is not defined             no-undef
+  Line 838:22:   'CardHeader' is not defined        react/jsx-no-undef
+  Line 839:67:   'theme' is not defined             no-undef
+  Line 843:22:   'CardContent' is not defined       react/jsx-no-undef
+  Line 854:18:   'Grid' is not defined              react/jsx-no-undef
+  Line 855:20:   'Card' is not defined              react/jsx-no-undef
+  Line 855:66:   'theme' is not defined             no-undef
+  Line 856:22:   'CardHeader' is not defined        react/jsx-no-undef
+  Line 857:69:   'theme' is not defined             no-undef
+  Line 861:22:   'CardContent' is not defined       react/jsx-no-undef
+  Line 867:79:   'theme' is not defined             no-undef
+  Line 877:14:   'tabValue' is not defined          no-undef
+  Line 878:16:   'Stack' is not defined             react/jsx-no-undef
+  Line 879:18:   'Card' is not defined              react/jsx-no-undef
+  Line 879:64:   'theme' is not defined             no-undef
+  Line 880:20:   'CardHeader' is not defined        react/jsx-no-undef
+  Line 881:69:   'theme' is not defined             no-undef
+  Line 885:20:   'CardContent' is not defined       react/jsx-no-undef
+  Line 892:70:   'theme' is not defined             no-undef
+  Line 893:74:   'theme' is not defined             no-undef
+  Line 902:18:   'Card' is not defined              react/jsx-no-undef
+  Line 902:64:   'theme' is not defined             no-undef
+  Line 903:20:   'CardHeader' is not defined        react/jsx-no-undef
+  Line 904:66:   'theme' is not defined             no-undef
+  Line 908:20:   'CardContent' is not defined       react/jsx-no-undef
+  Line 910:24:   'Box' is not defined               react/jsx-no-undef
+  Line 921:26:   'Typography' is not defined        react/jsx-no-undef
+  Line 924:24:   'Grid' is not defined              react/jsx-no-undef
+  Line 926:28:   'Grid' is not defined              react/jsx-no-undef
+  Line 927:30:   'Card' is not defined              react/jsx-no-undef
+  Line 930:54:   'theme' is not defined             no-undef
+  Line 934:46:   'theme' is not defined             no-undef
+  Line 939:32:   'Stack' is not defined             react/jsx-no-undef
+  Line 940:34:   'Box' is not defined               react/jsx-no-undef
+  Line 947:36:   'Typography' is not defined        react/jsx-no-undef
+  Line 950:36:   'Chip' is not defined              react/jsx-no-undef
+  Line 956:34:   'Stack' is not defined             react/jsx-no-undef
+  Line 958:38:   'Chip' is not defined              react/jsx-no-undef
+  Line 966:38:   'Chip' is not defined              react/jsx-no-undef
+  Line 987:12:   'Box' is not defined               react/jsx-no-undef
+  Line 988:14:   'Typography' is not defined        react/jsx-no-undef
+  Line 991:14:   'Grid' is not defined              react/jsx-no-undef
+  Line 992:16:   'Grid' is not defined              react/jsx-no-undef
+  Line 993:18:   'Card' is not defined              react/jsx-no-undef
+  Line 996:42:   'theme' is not defined             no-undef
+  Line 997:60:   'theme' is not defined             no-undef
+  Line 997:93:   'theme' is not defined             no-undef
+  Line 1000:20:  'CardContent' is not defined       react/jsx-no-undef
+  Line 1001:22:  'Stack' is not defined             react/jsx-no-undef
+  Line 1002:24:  'Typography' is not defined        react/jsx-no-undef
+  Line 1005:24:  'Typography' is not defined        react/jsx-no-undef
+  Line 1015:16:  'Grid' is not defined              react/jsx-no-undef
+  Line 1016:18:  'Card' is not defined              react/jsx-no-undef
+  Line 1019:42:  'theme' is not defined             no-undef
+  Line 1020:60:  'theme' is not defined             no-undef
+  Line 1020:96:  'theme' is not defined             no-undef
+  Line 1023:20:  'CardContent' is not defined       react/jsx-no-undef
+  Line 1024:22:  'Stack' is not defined             react/jsx-no-undef
+  Line 1025:24:  'Typography' is not defined        react/jsx-no-undef
+  Line 1028:24:  'Typography' is not defined        react/jsx-no-undef
+  Line 1036:16:  'Grid' is not defined              react/jsx-no-undef
+  Line 1037:18:  'Card' is not defined              react/jsx-no-undef
+  Line 1040:42:  'theme' is not defined             no-undef
+  Line 1041:60:  'theme' is not defined             no-undef
+  Line 1041:96:  'theme' is not defined             no-undef
+  Line 1044:20:  'CardContent' is not defined       react/jsx-no-undef
+  Line 1045:22:  'Stack' is not defined             react/jsx-no-undef
+  Line 1046:24:  'Typography' is not defined        react/jsx-no-undef
+  Line 1049:24:  'Typography' is not defined        react/jsx-no-undef
+
+Search for the keywords to learn more about each [1m[31merror[39m[22m[1m.[39m[22m
+
+webpack compiled with [1m[31m1 error[39m[22m and [1m[33m1 warning[39m[22m
+Compiling...
+Failed to compile.
+
+[eslint] 
+src\components\analytics\Analytics.js
+  Line 384:8:    'Box' is not defined               react/jsx-no-undef
+  Line 395:10:   'CircularProgress' is not defined  react/jsx-no-undef
+  Line 396:10:   'Typography' is not defined        react/jsx-no-undef
+  Line 404:6:    'Box' is not defined               react/jsx-no-undef
+  Line 412:8:    'Container' is not defined         react/jsx-no-undef
+  Line 413:10:   'Stack' is not defined             react/jsx-no-undef
+  Line 415:12:   'Box' is not defined               react/jsx-no-undef
+  Line 416:14:   'Typography' is not defined        react/jsx-no-undef
+  Line 426:14:   'Typography' is not defined        react/jsx-no-undef
+  Line 436:14:   'Typography' is not defined        react/jsx-no-undef
+  Line 441:14:   'Stack' is not defined             react/jsx-no-undef
+  Line 446:16:   'Button' is not defined            react/jsx-no-undef
+  Line 457:16:   'Button' is not defined            react/jsx-no-undef
+  Line 472:12:   'Card' is not defined              react/jsx-no-undef
+  Line 475:36:   'theme' is not defined             no-undef
+  Line 479:14:   'CardContent' is not defined       react/jsx-no-undef
+  Line 480:16:   'Stack' is not defined             react/jsx-no-undef
+  Line 481:18:   'Box' is not defined               react/jsx-no-undef
+  Line 490:20:   'Typography' is not defined        react/jsx-no-undef
+  Line 495:18:   'Grid' is not defined              react/jsx-no-undef
+  Line 496:20:   'Grid' is not defined              react/jsx-no-undef
+  Line 497:22:   'Select' is not defined            react/jsx-no-undef
+  Line 509:26:   'MenuItem' is not defined          react/jsx-no-undef
+  Line 518:24:   'Grid' is not defined              react/jsx-no-undef
+  Line 519:26:   'TextField' is not defined         react/jsx-no-undef
+  Line 529:24:   'Grid' is not defined              react/jsx-no-undef
+  Line 530:26:   'TextField' is not defined         react/jsx-no-undef
+  Line 544:18:   'Chip' is not defined              react/jsx-no-undef
+  Line 555:12:   'Card' is not defined              react/jsx-no-undef
+  Line 558:36:   'theme' is not defined             no-undef
+  Line 560:54:   'theme' is not defined             no-undef
+  Line 560:90:   'theme' is not defined             no-undef
+  Line 563:14:   'CardContent' is not defined       react/jsx-no-undef
+  Line 564:16:   'Stack' is not defined             react/jsx-no-undef
+  Line 565:18:   'Box' is not defined               react/jsx-no-undef
+  Line 572:20:   'Box' is not defined               react/jsx-no-undef
+  Line 574:22:   'Typography' is not defined        react/jsx-no-undef
+  Line 578:20:   'Chip' is not defined              react/jsx-no-undef
+  Line 585:18:   'LinearProgress' is not defined    react/jsx-no-undef
+  Line 591:38:   'theme' is not defined             no-undef
+  Line 595:18:   'Grid' is not defined              react/jsx-no-undef
+  Line 596:20:   'Grid' is not defined              react/jsx-no-undef
+  Line 597:22:   'Box' is not defined               react/jsx-no-undef
+  Line 598:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 601:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 606:20:   'Grid' is not defined              react/jsx-no-undef
+  Line 607:22:   'Box' is not defined               react/jsx-no-undef
+  Line 608:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 611:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 616:20:   'Grid' is not defined              react/jsx-no-undef
+  Line 617:22:   'Box' is not defined               react/jsx-no-undef
+  Line 618:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 621:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 626:20:   'Grid' is not defined              react/jsx-no-undef
+  Line 627:22:   'Box' is not defined               react/jsx-no-undef
+  Line 628:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 631:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 642:12:   'Box' is not defined               react/jsx-no-undef
+  Line 643:14:   'Typography' is not defined        react/jsx-no-undef
+  Line 652:14:   'Grid' is not defined              react/jsx-no-undef
+  Line 653:16:   'Grid' is not defined              react/jsx-no-undef
+  Line 654:18:   'StatsCard' is not defined         react/jsx-no-undef
+  Line 663:16:   'Grid' is not defined              react/jsx-no-undef
+  Line 664:18:   'StatsCard' is not defined         react/jsx-no-undef
+  Line 673:16:   'Grid' is not defined              react/jsx-no-undef
+  Line 674:18:   'StatsCard' is not defined         react/jsx-no-undef
+  Line 683:16:   'Grid' is not defined              react/jsx-no-undef
+  Line 684:18:   'StatsCard' is not defined         react/jsx-no-undef
+  Line 696:12:   'Paper' is not defined             react/jsx-no-undef
+  Line 699:42:   'theme' is not defined             no-undef
+  Line 703:14:   'Tabs' is not defined              react/jsx-no-undef
+  Line 704:22:   'tabValue' is not defined          no-undef
+  Line 705:42:   'setTabValue' is not defined       no-undef
+  Line 720:16:   'Tab' is not defined               react/jsx-no-undef
+  Line 721:16:   'Tab' is not defined               react/jsx-no-undef
+  Line 722:16:   'Tab' is not defined               react/jsx-no-undef
+  Line 727:12:   'Box' is not defined               react/jsx-no-undef
+  Line 729:14:   'tabValue' is not defined          no-undef
+  Line 730:16:   'Stack' is not defined             react/jsx-no-undef
+  Line 731:18:   'Card' is not defined              react/jsx-no-undef
+  Line 731:64:   'theme' is not defined             no-undef
+  Line 732:20:   'CardHeader' is not defined        react/jsx-no-undef
+  Line 733:67:   'theme' is not defined             no-undef
+  Line 737:20:   'CardContent' is not defined       react/jsx-no-undef
+  Line 739:24:   'Box' is not defined               react/jsx-no-undef
+  Line 750:26:   'Typography' is not defined        react/jsx-no-undef
+  Line 755:89:   'theme' is not defined             no-undef
+  Line 760:43:   'theme' is not defined             no-undef
+  Line 765:43:   'theme' is not defined             no-undef
+  Line 774:52:   'theme' is not defined             no-undef
+  Line 775:42:   'theme' is not defined             no-undef
+  Line 783:37:   'theme' is not defined             no-undef
+  Line 792:37:   'theme' is not defined             no-undef
+  Line 801:37:   'theme' is not defined             no-undef
+  Line 812:18:   'Card' is not defined              react/jsx-no-undef
+  Line 812:64:   'theme' is not defined             no-undef
+  Line 813:20:   'CardHeader' is not defined        react/jsx-no-undef
+  Line 814:66:   'theme' is not defined             no-undef
+  Line 818:20:   'CardContent' is not defined       react/jsx-no-undef
+  Line 822:70:   'theme' is not defined             no-undef
+  Line 823:73:   'theme' is not defined             no-undef
+  Line 834:14:   'tabValue' is not defined          no-undef
+  Line 835:16:   'Grid' is not defined              react/jsx-no-undef
+  Line 836:18:   'Grid' is not defined              react/jsx-no-undef
+  Line 837:20:   'Card' is not defined              react/jsx-no-undef
+  Line 837:66:   'theme' is not defined             no-undef
+  Line 838:22:   'CardHeader' is not defined        react/jsx-no-undef
+  Line 839:67:   'theme' is not defined             no-undef
+  Line 843:22:   'CardContent' is not defined       react/jsx-no-undef
+  Line 854:18:   'Grid' is not defined              react/jsx-no-undef
+  Line 855:20:   'Card' is not defined              react/jsx-no-undef
+  Line 855:66:   'theme' is not defined             no-undef
+  Line 856:22:   'CardHeader' is not defined        react/jsx-no-undef
+  Line 857:69:   'theme' is not defined             no-undef
+  Line 861:22:   'CardContent' is not defined       react/jsx-no-undef
+  Line 867:79:   'theme' is not defined             no-undef
+  Line 877:14:   'tabValue' is not defined          no-undef
+  Line 878:16:   'Stack' is not defined             react/jsx-no-undef
+  Line 879:18:   'Card' is not defined              react/jsx-no-undef
+  Line 879:64:   'theme' is not defined             no-undef
+  Line 880:20:   'CardHeader' is not defined        react/jsx-no-undef
+  Line 881:69:   'theme' is not defined             no-undef
+  Line 885:20:   'CardContent' is not defined       react/jsx-no-undef
+  Line 892:70:   'theme' is not defined             no-undef
+  Line 893:74:   'theme' is not defined             no-undef
+  Line 902:18:   'Card' is not defined              react/jsx-no-undef
+  Line 902:64:   'theme' is not defined             no-undef
+  Line 903:20:   'CardHeader' is not defined        react/jsx-no-undef
+  Line 904:66:   'theme' is not defined             no-undef
+  Line 908:20:   'CardContent' is not defined       react/jsx-no-undef
+  Line 910:24:   'Box' is not defined               react/jsx-no-undef
+  Line 921:26:   'Typography' is not defined        react/jsx-no-undef
+  Line 924:24:   'Grid' is not defined              react/jsx-no-undef
+  Line 926:28:   'Grid' is not defined              react/jsx-no-undef
+  Line 927:30:   'Card' is not defined              react/jsx-no-undef
+  Line 930:54:   'theme' is not defined             no-undef
+  Line 934:46:   'theme' is not defined             no-undef
+  Line 939:32:   'Stack' is not defined             react/jsx-no-undef
+  Line 940:34:   'Box' is not defined               react/jsx-no-undef
+  Line 947:36:   'Typography' is not defined        react/jsx-no-undef
+  Line 950:36:   'Chip' is not defined              react/jsx-no-undef
+  Line 956:34:   'Stack' is not defined             react/jsx-no-undef
+  Line 958:38:   'Chip' is not defined              react/jsx-no-undef
+  Line 966:38:   'Chip' is not defined              react/jsx-no-undef
+  Line 987:12:   'Box' is not defined               react/jsx-no-undef
+  Line 988:14:   'Typography' is not defined        react/jsx-no-undef
+  Line 991:14:   'Grid' is not defined              react/jsx-no-undef
+  Line 992:16:   'Grid' is not defined              react/jsx-no-undef
+  Line 993:18:   'Card' is not defined              react/jsx-no-undef
+  Line 996:42:   'theme' is not defined             no-undef
+  Line 997:60:   'theme' is not defined             no-undef
+  Line 997:93:   'theme' is not defined             no-undef
+  Line 1000:20:  'CardContent' is not defined       react/jsx-no-undef
+  Line 1001:22:  'Stack' is not defined             react/jsx-no-undef
+  Line 1002:24:  'Typography' is not defined        react/jsx-no-undef
+  Line 1005:24:  'Typography' is not defined        react/jsx-no-undef
+  Line 1015:16:  'Grid' is not defined              react/jsx-no-undef
+  Line 1016:18:  'Card' is not defined              react/jsx-no-undef
+  Line 1019:42:  'theme' is not defined             no-undef
+  Line 1020:60:  'theme' is not defined             no-undef
+  Line 1020:96:  'theme' is not defined             no-undef
+  Line 1023:20:  'CardContent' is not defined       react/jsx-no-undef
+  Line 1024:22:  'Stack' is not defined             react/jsx-no-undef
+  Line 1025:24:  'Typography' is not defined        react/jsx-no-undef
+  Line 1028:24:  'Typography' is not defined        react/jsx-no-undef
+  Line 1036:16:  'Grid' is not defined              react/jsx-no-undef
+  Line 1037:18:  'Card' is not defined              react/jsx-no-undef
+  Line 1040:42:  'theme' is not defined             no-undef
+  Line 1041:60:  'theme' is not defined             no-undef
+  Line 1041:96:  'theme' is not defined             no-undef
+  Line 1044:20:  'CardContent' is not defined       react/jsx-no-undef
+  Line 1045:22:  'Stack' is not defined             react/jsx-no-undef
+  Line 1046:24:  'Typography' is not defined        react/jsx-no-undef
+  Line 1049:24:  'Typography' is not defined        react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 2:112:  'ChevronDown' is defined but never used            no-unused-vars
+  Line 38:10:  'activeTab' is assigned a value but never used     no-unused-vars
+  Line 38:21:  'setActiveTab' is assigned a value but never used  no-unused-vars
+
+[39m[22m
+
+[1m[31mERROR[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 384:8:    'Box' is not defined               react/jsx-no-undef
+  Line 395:10:   'CircularProgress' is not defined  react/jsx-no-undef
+  Line 396:10:   'Typography' is not defined        react/jsx-no-undef
+  Line 404:6:    'Box' is not defined               react/jsx-no-undef
+  Line 412:8:    'Container' is not defined         react/jsx-no-undef
+  Line 413:10:   'Stack' is not defined             react/jsx-no-undef
+  Line 415:12:   'Box' is not defined               react/jsx-no-undef
+  Line 416:14:   'Typography' is not defined        react/jsx-no-undef
+  Line 426:14:   'Typography' is not defined        react/jsx-no-undef
+  Line 436:14:   'Typography' is not defined        react/jsx-no-undef
+  Line 441:14:   'Stack' is not defined             react/jsx-no-undef
+  Line 446:16:   'Button' is not defined            react/jsx-no-undef
+  Line 457:16:   'Button' is not defined            react/jsx-no-undef
+  Line 472:12:   'Card' is not defined              react/jsx-no-undef
+  Line 475:36:   'theme' is not defined             no-undef
+  Line 479:14:   'CardContent' is not defined       react/jsx-no-undef
+  Line 480:16:   'Stack' is not defined             react/jsx-no-undef
+  Line 481:18:   'Box' is not defined               react/jsx-no-undef
+  Line 490:20:   'Typography' is not defined        react/jsx-no-undef
+  Line 495:18:   'Grid' is not defined              react/jsx-no-undef
+  Line 496:20:   'Grid' is not defined              react/jsx-no-undef
+  Line 497:22:   'Select' is not defined            react/jsx-no-undef
+  Line 509:26:   'MenuItem' is not defined          react/jsx-no-undef
+  Line 518:24:   'Grid' is not defined              react/jsx-no-undef
+  Line 519:26:   'TextField' is not defined         react/jsx-no-undef
+  Line 529:24:   'Grid' is not defined              react/jsx-no-undef
+  Line 530:26:   'TextField' is not defined         react/jsx-no-undef
+  Line 544:18:   'Chip' is not defined              react/jsx-no-undef
+  Line 555:12:   'Card' is not defined              react/jsx-no-undef
+  Line 558:36:   'theme' is not defined             no-undef
+  Line 560:54:   'theme' is not defined             no-undef
+  Line 560:90:   'theme' is not defined             no-undef
+  Line 563:14:   'CardContent' is not defined       react/jsx-no-undef
+  Line 564:16:   'Stack' is not defined             react/jsx-no-undef
+  Line 565:18:   'Box' is not defined               react/jsx-no-undef
+  Line 572:20:   'Box' is not defined               react/jsx-no-undef
+  Line 574:22:   'Typography' is not defined        react/jsx-no-undef
+  Line 578:20:   'Chip' is not defined              react/jsx-no-undef
+  Line 585:18:   'LinearProgress' is not defined    react/jsx-no-undef
+  Line 591:38:   'theme' is not defined             no-undef
+  Line 595:18:   'Grid' is not defined              react/jsx-no-undef
+  Line 596:20:   'Grid' is not defined              react/jsx-no-undef
+  Line 597:22:   'Box' is not defined               react/jsx-no-undef
+  Line 598:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 601:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 606:20:   'Grid' is not defined              react/jsx-no-undef
+  Line 607:22:   'Box' is not defined               react/jsx-no-undef
+  Line 608:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 611:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 616:20:   'Grid' is not defined              react/jsx-no-undef
+  Line 617:22:   'Box' is not defined               react/jsx-no-undef
+  Line 618:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 621:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 626:20:   'Grid' is not defined              react/jsx-no-undef
+  Line 627:22:   'Box' is not defined               react/jsx-no-undef
+  Line 628:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 631:24:   'Typography' is not defined        react/jsx-no-undef
+  Line 642:12:   'Box' is not defined               react/jsx-no-undef
+  Line 643:14:   'Typography' is not defined        react/jsx-no-undef
+  Line 652:14:   'Grid' is not defined              react/jsx-no-undef
+  Line 653:16:   'Grid' is not defined              react/jsx-no-undef
+  Line 654:18:   'StatsCard' is not defined         react/jsx-no-undef
+  Line 663:16:   'Grid' is not defined              react/jsx-no-undef
+  Line 664:18:   'StatsCard' is not defined         react/jsx-no-undef
+  Line 673:16:   'Grid' is not defined              react/jsx-no-undef
+  Line 674:18:   'StatsCard' is not defined         react/jsx-no-undef
+  Line 683:16:   'Grid' is not defined              react/jsx-no-undef
+  Line 684:18:   'StatsCard' is not defined         react/jsx-no-undef
+  Line 696:12:   'Paper' is not defined             react/jsx-no-undef
+  Line 699:42:   'theme' is not defined             no-undef
+  Line 703:14:   'Tabs' is not defined              react/jsx-no-undef
+  Line 704:22:   'tabValue' is not defined          no-undef
+  Line 705:42:   'setTabValue' is not defined       no-undef
+  Line 720:16:   'Tab' is not defined               react/jsx-no-undef
+  Line 721:16:   'Tab' is not defined               react/jsx-no-undef
+  Line 722:16:   'Tab' is not defined               react/jsx-no-undef
+  Line 727:12:   'Box' is not defined               react/jsx-no-undef
+  Line 729:14:   'tabValue' is not defined          no-undef
+  Line 730:16:   'Stack' is not defined             react/jsx-no-undef
+  Line 731:18:   'Card' is not defined              react/jsx-no-undef
+  Line 731:64:   'theme' is not defined             no-undef
+  Line 732:20:   'CardHeader' is not defined        react/jsx-no-undef
+  Line 733:67:   'theme' is not defined             no-undef
+  Line 737:20:   'CardContent' is not defined       react/jsx-no-undef
+  Line 739:24:   'Box' is not defined               react/jsx-no-undef
+  Line 750:26:   'Typography' is not defined        react/jsx-no-undef
+  Line 755:89:   'theme' is not defined             no-undef
+  Line 760:43:   'theme' is not defined             no-undef
+  Line 765:43:   'theme' is not defined             no-undef
+  Line 774:52:   'theme' is not defined             no-undef
+  Line 775:42:   'theme' is not defined             no-undef
+  Line 783:37:   'theme' is not defined             no-undef
+  Line 792:37:   'theme' is not defined             no-undef
+  Line 801:37:   'theme' is not defined             no-undef
+  Line 812:18:   'Card' is not defined              react/jsx-no-undef
+  Line 812:64:   'theme' is not defined             no-undef
+  Line 813:20:   'CardHeader' is not defined        react/jsx-no-undef
+  Line 814:66:   'theme' is not defined             no-undef
+  Line 818:20:   'CardContent' is not defined       react/jsx-no-undef
+  Line 822:70:   'theme' is not defined             no-undef
+  Line 823:73:   'theme' is not defined             no-undef
+  Line 834:14:   'tabValue' is not defined          no-undef
+  Line 835:16:   'Grid' is not defined              react/jsx-no-undef
+  Line 836:18:   'Grid' is not defined              react/jsx-no-undef
+  Line 837:20:   'Card' is not defined              react/jsx-no-undef
+  Line 837:66:   'theme' is not defined             no-undef
+  Line 838:22:   'CardHeader' is not defined        react/jsx-no-undef
+  Line 839:67:   'theme' is not defined             no-undef
+  Line 843:22:   'CardContent' is not defined       react/jsx-no-undef
+  Line 854:18:   'Grid' is not defined              react/jsx-no-undef
+  Line 855:20:   'Card' is not defined              react/jsx-no-undef
+  Line 855:66:   'theme' is not defined             no-undef
+  Line 856:22:   'CardHeader' is not defined        react/jsx-no-undef
+  Line 857:69:   'theme' is not defined             no-undef
+  Line 861:22:   'CardContent' is not defined       react/jsx-no-undef
+  Line 867:79:   'theme' is not defined             no-undef
+  Line 877:14:   'tabValue' is not defined          no-undef
+  Line 878:16:   'Stack' is not defined             react/jsx-no-undef
+  Line 879:18:   'Card' is not defined              react/jsx-no-undef
+  Line 879:64:   'theme' is not defined             no-undef
+  Line 880:20:   'CardHeader' is not defined        react/jsx-no-undef
+  Line 881:69:   'theme' is not defined             no-undef
+  Line 885:20:   'CardContent' is not defined       react/jsx-no-undef
+  Line 892:70:   'theme' is not defined             no-undef
+  Line 893:74:   'theme' is not defined             no-undef
+  Line 902:18:   'Card' is not defined              react/jsx-no-undef
+  Line 902:64:   'theme' is not defined             no-undef
+  Line 903:20:   'CardHeader' is not defined        react/jsx-no-undef
+  Line 904:66:   'theme' is not defined             no-undef
+  Line 908:20:   'CardContent' is not defined       react/jsx-no-undef
+  Line 910:24:   'Box' is not defined               react/jsx-no-undef
+  Line 921:26:   'Typography' is not defined        react/jsx-no-undef
+  Line 924:24:   'Grid' is not defined              react/jsx-no-undef
+  Line 926:28:   'Grid' is not defined              react/jsx-no-undef
+  Line 927:30:   'Card' is not defined              react/jsx-no-undef
+  Line 930:54:   'theme' is not defined             no-undef
+  Line 934:46:   'theme' is not defined             no-undef
+  Line 939:32:   'Stack' is not defined             react/jsx-no-undef
+  Line 940:34:   'Box' is not defined               react/jsx-no-undef
+  Line 947:36:   'Typography' is not defined        react/jsx-no-undef
+  Line 950:36:   'Chip' is not defined              react/jsx-no-undef
+  Line 956:34:   'Stack' is not defined             react/jsx-no-undef
+  Line 958:38:   'Chip' is not defined              react/jsx-no-undef
+  Line 966:38:   'Chip' is not defined              react/jsx-no-undef
+  Line 987:12:   'Box' is not defined               react/jsx-no-undef
+  Line 988:14:   'Typography' is not defined        react/jsx-no-undef
+  Line 991:14:   'Grid' is not defined              react/jsx-no-undef
+  Line 992:16:   'Grid' is not defined              react/jsx-no-undef
+  Line 993:18:   'Card' is not defined              react/jsx-no-undef
+  Line 996:42:   'theme' is not defined             no-undef
+  Line 997:60:   'theme' is not defined             no-undef
+  Line 997:93:   'theme' is not defined             no-undef
+  Line 1000:20:  'CardContent' is not defined       react/jsx-no-undef
+  Line 1001:22:  'Stack' is not defined             react/jsx-no-undef
+  Line 1002:24:  'Typography' is not defined        react/jsx-no-undef
+  Line 1005:24:  'Typography' is not defined        react/jsx-no-undef
+  Line 1015:16:  'Grid' is not defined              react/jsx-no-undef
+  Line 1016:18:  'Card' is not defined              react/jsx-no-undef
+  Line 1019:42:  'theme' is not defined             no-undef
+  Line 1020:60:  'theme' is not defined             no-undef
+  Line 1020:96:  'theme' is not defined             no-undef
+  Line 1023:20:  'CardContent' is not defined       react/jsx-no-undef
+  Line 1024:22:  'Stack' is not defined             react/jsx-no-undef
+  Line 1025:24:  'Typography' is not defined        react/jsx-no-undef
+  Line 1028:24:  'Typography' is not defined        react/jsx-no-undef
+  Line 1036:16:  'Grid' is not defined              react/jsx-no-undef
+  Line 1037:18:  'Card' is not defined              react/jsx-no-undef
+  Line 1040:42:  'theme' is not defined             no-undef
+  Line 1041:60:  'theme' is not defined             no-undef
+  Line 1041:96:  'theme' is not defined             no-undef
+  Line 1044:20:  'CardContent' is not defined       react/jsx-no-undef
+  Line 1045:22:  'Stack' is not defined             react/jsx-no-undef
+  Line 1046:24:  'Typography' is not defined        react/jsx-no-undef
+  Line 1049:24:  'Typography' is not defined        react/jsx-no-undef
+
+Search for the keywords to learn more about each [1m[31merror[39m[22m[1m.[39m[22m
+
+webpack compiled with [1m[31m1 error[39m[22m and [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\analytics\Analytics.js
+  Line 1:17:   'useEffect' is defined but never used   no-unused-vars
+  Line 4:50:   'Divider' is defined but never used     no-unused-vars
+  Line 5:11:   'TextField' is defined but never used   no-unused-vars
+  Line 5:44:   'useTheme' is defined but never used    no-unused-vars
+  Line 7:14:   'MuiTooltip' is defined but never used  no-unused-vars
+  Line 7:26:   'IconButton' is defined but never used  no-unused-vars
+  Line 12:52:  'Flag' is defined but never used        no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 1:17:   'useEffect' is defined but never used   no-unused-vars
+  Line 4:50:   'Divider' is defined but never used     no-unused-vars
+  Line 5:11:   'TextField' is defined but never used   no-unused-vars
+  Line 5:44:   'useTheme' is defined but never used    no-unused-vars
+  Line 7:14:   'MuiTooltip' is defined but never used  no-unused-vars
+  Line 7:26:   'IconButton' is defined but never used  no-unused-vars
+  Line 12:52:  'Flag' is defined but never used        no-unused-vars
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\analytics\Analytics.js
+  Line 176:9:  'isMd' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 176:9:  'isMd' is assigned a value but never used  no-unused-vars
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Failed to compile.
+
+[eslint] 
+src\components\analytics\Analytics.js
+  Line 395:8:   'MaterialCard' is not defined  react/jsx-no-undef
+  Line 416:10:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 467:10:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 500:10:  'StatsCard' is not defined     react/jsx-no-undef
+  Line 508:10:  'StatsCard' is not defined     react/jsx-no-undef
+  Line 516:10:  'StatsCard' is not defined     react/jsx-no-undef
+  Line 524:10:  'StatsCard' is not defined     react/jsx-no-undef
+  Line 534:10:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 604:10:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 624:10:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 639:10:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 656:10:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 679:10:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 688:18:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 711:10:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 714:14:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 727:14:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 738:14:  'MaterialCard' is not defined  react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 2:99:   'AlertCircle' is defined but never used            no-unused-vars
+  Line 38:10:  'activeTab' is assigned a value but never used     no-unused-vars
+  Line 38:21:  'setActiveTab' is assigned a value but never used  no-unused-vars
+
+[39m[22m
+
+[1m[31mERROR[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 395:8:   'MaterialCard' is not defined  react/jsx-no-undef
+  Line 416:10:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 467:10:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 500:10:  'StatsCard' is not defined     react/jsx-no-undef
+  Line 508:10:  'StatsCard' is not defined     react/jsx-no-undef
+  Line 516:10:  'StatsCard' is not defined     react/jsx-no-undef
+  Line 524:10:  'StatsCard' is not defined     react/jsx-no-undef
+  Line 534:10:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 604:10:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 624:10:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 639:10:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 656:10:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 679:10:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 688:18:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 711:10:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 714:14:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 727:14:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 738:14:  'MaterialCard' is not defined  react/jsx-no-undef
+
+Search for the keywords to learn more about each [1m[31merror[39m[22m[1m.[39m[22m
+
+webpack compiled with [1m[31m1 error[39m[22m and [1m[33m1 warning[39m[22m
+Compiling...
+Failed to compile.
+
+[eslint] 
+src\components\analytics\Analytics.js
+  Line 395:8:   'MaterialCard' is not defined  react/jsx-no-undef
+  Line 416:10:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 467:10:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 500:10:  'StatsCard' is not defined     react/jsx-no-undef
+  Line 508:10:  'StatsCard' is not defined     react/jsx-no-undef
+  Line 516:10:  'StatsCard' is not defined     react/jsx-no-undef
+  Line 524:10:  'StatsCard' is not defined     react/jsx-no-undef
+  Line 534:10:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 604:10:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 624:10:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 639:10:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 656:10:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 679:10:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 688:18:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 711:10:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 714:14:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 727:14:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 738:14:  'MaterialCard' is not defined  react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 2:99:   'AlertCircle' is defined but never used            no-unused-vars
+  Line 38:10:  'activeTab' is assigned a value but never used     no-unused-vars
+  Line 38:21:  'setActiveTab' is assigned a value but never used  no-unused-vars
+
+[39m[22m
+
+[1m[31mERROR[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 395:8:   'MaterialCard' is not defined  react/jsx-no-undef
+  Line 416:10:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 467:10:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 500:10:  'StatsCard' is not defined     react/jsx-no-undef
+  Line 508:10:  'StatsCard' is not defined     react/jsx-no-undef
+  Line 516:10:  'StatsCard' is not defined     react/jsx-no-undef
+  Line 524:10:  'StatsCard' is not defined     react/jsx-no-undef
+  Line 534:10:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 604:10:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 624:10:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 639:10:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 656:10:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 679:10:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 688:18:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 711:10:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 714:14:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 727:14:  'MaterialCard' is not defined  react/jsx-no-undef
+  Line 738:14:  'MaterialCard' is not defined  react/jsx-no-undef
+
+Search for the keywords to learn more about each [1m[31merror[39m[22m[1m.[39m[22m
+
+webpack compiled with [1m[31m1 error[39m[22m and [1m[33m1 warning[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Failed to compile.
+
+[eslint] 
+src\components\analytics\Analytics.js
+  Line 529:35:  'activeTab' is not defined     no-undef
+  Line 530:28:  'setActiveTab' is not defined  no-undef
+  Line 536:35:  'activeTab' is not defined     no-undef
+  Line 537:28:  'setActiveTab' is not defined  no-undef
+  Line 543:35:  'activeTab' is not defined     no-undef
+  Line 544:28:  'setActiveTab' is not defined  no-undef
+  Line 554:12:  'activeTab' is not defined     no-undef
+  Line 565:22:  'AlertCircle' is not defined   react/jsx-no-undef
+  Line 607:12:  'activeTab' is not defined     no-undef
+  Line 646:12:  'activeTab' is not defined     no-undef
+  Line 678:22:  'AlertCircle' is not defined   react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 14:8:  'StatsCard' is defined but never used     no-unused-vars
+  Line 15:8:  'MaterialCard' is defined but never used  no-unused-vars
+
+[39m[22m
+
+[1m[31mERROR[39m[22m in [1m[eslint] 
+src\components\analytics\Analytics.js
+  Line 529:35:  'activeTab' is not defined     no-undef
+  Line 530:28:  'setActiveTab' is not defined  no-undef
+  Line 536:35:  'activeTab' is not defined     no-undef
+  Line 537:28:  'setActiveTab' is not defined  no-undef
+  Line 543:35:  'activeTab' is not defined     no-undef
+  Line 544:28:  'setActiveTab' is not defined  no-undef
+  Line 554:12:  'activeTab' is not defined     no-undef
+  Line 565:22:  'AlertCircle' is not defined   react/jsx-no-undef
+  Line 607:12:  'activeTab' is not defined     no-undef
+  Line 646:12:  'activeTab' is not defined     no-undef
+  Line 678:22:  'AlertCircle' is not defined   react/jsx-no-undef
+
+Search for the keywords to learn more about each [1m[31merror[39m[22m[1m.[39m[22m
+
+webpack compiled with [1m[31m1 error[39m[22m and [1m[33m1 warning[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '@mui/icons-material/Person' in 'E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\src\components\profile'
+[1m[31mERROR[39m[22m in [1m./src/components/profile/Profile.js[39m[22m [1m[32m13:0-52[39m[22m
+[1mModule [1m[31mnot found[39m[22m[1m: [1m[31mError[39m[22m[1m: Can't resolve '@mui/icons-material/Person' in 'E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\src\components\profile'[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./src/components/profile/Profile.js[39m[22m [1m[32m14:0-48[39m[22m
+[1mModule [1m[31mnot found[39m[22m[1m: [1m[31mError[39m[22m[1m: Can't resolve '@mui/icons-material/Lock' in 'E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\src\components\profile'[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./src/components/profile/Profile.js[39m[22m [1m[32m15:0-56[39m[22m
+[1mModule [1m[31mnot found[39m[22m[1m: [1m[31mError[39m[22m[1m: Can't resolve '@mui/icons-material/Settings' in 'E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\src\components\profile'[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./src/components/profile/Profile.js[39m[22m [1m[32m16:0-54[39m[22m
+[1mModule [1m[31mnot found[39m[22m[1m: [1m[31mError[39m[22m[1m: Can't resolve '@mui/icons-material/Warning' in 'E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\src\components\profile'[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./src/components/profile/Profile.js[39m[22m [1m[32m17:0-54[39m[22m
+[1mModule [1m[31mnot found[39m[22m[1m: [1m[31mError[39m[22m[1m: Can't resolve '@mui/icons-material/Security' in 'E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\src\components\profile'[39m[22m
+
+webpack compiled with [1m[31m5 errors[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\categories\Categories.js
+  Line 22:3:  'Divider' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\categories\Categories.js
+  Line 22:3:  'Divider' is defined but never used  no-unused-vars
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m

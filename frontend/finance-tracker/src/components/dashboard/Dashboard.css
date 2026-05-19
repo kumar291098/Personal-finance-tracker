@@ -185,7 +185,7 @@
 
 .expense-intelligence-grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.85fr) minmax(170px, 0.9fr) minmax(0, 1.35fr);
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 2fr);
   gap: var(--spacing-lg);
   align-items: center;
   min-width: 0;
@@ -227,9 +227,7 @@
 }
 
 .category-donut-panel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  min-width: 0;
 }
 
 .category-donut {

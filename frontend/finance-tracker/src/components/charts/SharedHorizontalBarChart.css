@@ -1,0 +1,46 @@
+.shared-horizontal-bar {
+  width: 100%;
+  min-width: 0;
+}
+
+.shared-horizontal-bar .MuiChartsAxis-line,
+.shared-horizontal-bar .MuiChartsAxis-tick {
+  stroke: transparent;
+}
+
+.shared-horizontal-bar .MuiChartsGrid-line {
+  stroke: #e2e8f0;
+  stroke-dasharray: 3 3;
+}
+
+.shared-horizontal-bar .MuiChartsLegend-series text {
+  fill: var(--gray-700);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-semibold);
+}
+
+.shared-horizontal-bar-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shared-horizontal-bar-message {
+  width: 100%;
+  padding: var(--spacing-lg);
+  border: 1px dashed var(--gray-300);
+  border-radius: var(--radius-lg);
+  background: var(--gray-50);
+  color: var(--gray-600);
+  font-size: var(--font-size-sm);
+  text-align: center;
+}
+
+:root[data-theme='dark'] .shared-horizontal-bar .MuiChartsGrid-line {
+  stroke: #334155;
+}
+
+:root[data-theme='dark'] .shared-horizontal-bar-message {
+  background: #1e293b;
+  border-color: #334155;
+}

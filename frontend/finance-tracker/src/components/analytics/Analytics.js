@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BarChart3, CalendarDays, FileSpreadsheet, PieChart, Printer, TrendingDown, TrendingUp, Target } from 'lucide-react';
+import { BarChart3, CalendarDays, PieChart, TrendingDown, TrendingUp, Target, Download, FileText } from 'lucide-react';
 import {
   CartesianGrid,
   Legend,
@@ -407,12 +407,12 @@ const Analytics = () => {
           </p>
         </div>
         <div className="header-actions">
-          <button className="btn btn-secondary export-btn" onClick={exportCsv}>
-            <FileSpreadsheet size={18} />
+          <button className="export-btn" onClick={exportCsv}>
+            <Download size={18} />
             Export CSV
           </button>
-          <button className="btn btn-primary export-btn" onClick={exportPdf}>
-            <Printer size={18} />
+          <button className="export-btn pdf-btn" onClick={exportPdf}>
+            <FileText size={18} />
             Export PDF
           </button>
         </div>

@@ -1,0 +1,120 @@
+.shared-pie-chart {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.9fr) minmax(0, 1fr);
+  align-items: center;
+  gap: var(--spacing-lg);
+  width: 100%;
+  min-width: 0;
+}
+
+.shared-pie-visual {
+  position: relative;
+  min-width: 0;
+}
+
+.shared-pie-visual svg {
+  overflow: visible;
+}
+
+.shared-pie-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: grid;
+  width: 118px;
+  min-height: 78px;
+  place-items: center;
+  gap: 4px;
+  padding: 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+  text-align: center;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.shared-pie-center span {
+  color: var(--gray-500);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-semibold);
+}
+
+.shared-pie-center strong {
+  max-width: 100%;
+  color: var(--gray-900);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-bold);
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.shared-pie-legend {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  min-width: 0;
+}
+
+.shared-pie-legend-item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--spacing-sm);
+  min-width: 0;
+}
+
+.shared-pie-swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+}
+
+.shared-pie-name {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--gray-700);
+  font-size: var(--font-size-sm);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.shared-pie-value {
+  color: var(--gray-900);
+  font-size: var(--font-size-sm);
+}
+
+.shared-pie-chart-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shared-pie-empty {
+  width: 100%;
+  padding: var(--spacing-lg);
+  border: 1px dashed var(--gray-300);
+  border-radius: var(--radius-lg);
+  background: var(--gray-50);
+  color: var(--gray-600);
+  font-size: var(--font-size-sm);
+  text-align: center;
+}
+
+:root[data-theme='dark'] .shared-pie-center {
+  background: rgba(15, 23, 42, 0.94);
+  border-color: #334155;
+  box-shadow: none;
+}
+
+:root[data-theme='dark'] .shared-pie-empty {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+@media (max-width: 768px) {
+  .shared-pie-chart {
+    grid-template-columns: 1fr;
+  }
+}

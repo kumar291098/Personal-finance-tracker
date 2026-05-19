@@ -1,3 +1,155 @@
+/* Analytics Page Styles */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Card Animations */
+.MuiCard-root {
+  animation: fadeIn 0.3s ease-out;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Smooth Transitions */
+.MuiButton-root {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.MuiButton-root:hover {
+  transform: translateY(-2px);
+}
+
+/* Tab Styles */
+.MuiTabs-root {
+  border-bottom: 1px solid;
+  border-bottom-color: rgba(0, 0, 0, 0.12);
+}
+
+.MuiTab-root {
+  transition: all 0.2s ease;
+  min-height: 48px;
+}
+
+.MuiTab-root.Mui-selected {
+  color: var(--color-primary, #1976d2);
+}
+
+/* Chip Styles */
+.MuiChip-root {
+  transition: all 0.2s ease;
+}
+
+.MuiChip-root:hover {
+  transform: translateY(-2px);
+}
+
+/* Grid Responsive */
+@media (max-width: 600px) {
+  .MuiGrid-item {
+    padding: 8px;
+  }
+}
+
+/* Category Cards */
+.category-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Progress Bar Animation */
+.MuiLinearProgress-bar {
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Stat Cards */
+.stats-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.stats-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.1) 100%);
+  pointer-events: none;
+}
+
+/* Empty State */
+.empty-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+/* Insight Cards */
+.insight-card {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.insight-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.1) 100%);
+  pointer-events: none;
+}
+
+.insight-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Chart Container */
+.chart-container {
+  position: relative;
+  width: 100%;
+}
+
+.line-chart-wrap {
+  padding: 16px 0;
+}
+
+/* Loading State */
+.analytics-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
 .analytics-page {
   max-width: 1400px;
   margin: 0 auto;
@@ -66,8 +218,56 @@
   align-items: center;
   gap: 8px;
   font-weight: 600;
-  padding: 10px 18px;
-  border-radius: var(--radius-lg);
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  transition: all var(--transition-normal);
+  background: white;
+  border: 1px solid var(--gray-200);
+  color: var(--gray-700);
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.export-btn:hover {
+  background: var(--gray-50);
+  border-color: var(--gray-300);
+  color: var(--gray-900);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.export-btn.pdf-btn {
+  background: var(--primary-50);
+  border-color: var(--primary-200);
+  color: var(--primary-700);
+}
+
+.export-btn.pdf-btn:hover {
+  background: var(--primary-100);
+  border-color: var(--primary-300);
+  color: var(--primary-800);
+}
+
+:root[data-theme='dark'] .export-btn {
+  background: #1e293b;
+  border-color: #334155;
+  color: #cbd5e1;
+}
+:root[data-theme='dark'] .export-btn:hover {
+  background: #334155;
+  border-color: #475569;
+  color: #f8fafc;
+}
+:root[data-theme='dark'] .export-btn.pdf-btn {
+  background: rgba(14, 165, 233, 0.1);
+  border-color: rgba(14, 165, 233, 0.3);
+  color: #7dd3fc;
+}
+:root[data-theme='dark'] .export-btn.pdf-btn:hover {
+  background: rgba(14, 165, 233, 0.2);
+  border-color: rgba(14, 165, 233, 0.4);
+  color: #bae6fd;
 }
 
 .analytics-controls-grid {

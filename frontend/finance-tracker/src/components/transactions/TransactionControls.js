@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Search } from 'lucide-react';
+import MaterialCard from '../shared/MaterialCard';
 import { DEFAULT_FILTERS } from './transactionConstants';
 
 const TransactionControls = ({
@@ -29,7 +30,7 @@ const TransactionControls = ({
   };
 
   return (
-    <div className="transactions-controls">
+    <MaterialCard className="transactions-controls">
       <form className="search-section" onSubmit={submitSearch}>
         <div className="search-box">
           <span className="search-icon" aria-hidden="true">
@@ -104,7 +105,7 @@ const TransactionControls = ({
           {sortOrder === 'asc' ? 'Up' : 'Down'}
         </button>
       </div>
-    </div>
+    </MaterialCard>
   );
 };
 

@@ -9,6 +9,9 @@ import TransactionForm from '../transactions/TransactionForm';
 import RecentTransactions from '../transactions/RecentTransactions';
 import ExpenseChart from '../charts/ExpenseChart';
 import IncomeExpenseChart from '../charts/IncomeExpenseChart';
+import SharedBarChart from '../charts/SharedBarChart';
+import SharedPieChart from '../charts/SharedPieChart';
+import MaterialCard from '../shared/MaterialCard';
 import './Dashboard.css';
 
 const Dashboard = () => {
@@ -212,7 +215,6 @@ const Dashboard = () => {
   const dailyExpenseTrend = getDailyExpenseTrend();
   const filteredExpenseTotal = filteredExpenses.reduce((sum, transaction) => sum + transaction.amount, 0);
   const topCategory = categoryInsights[0];
-  const maxDailyExpense = Math.max(...dailyExpenseTrend.map(item => item.amount), 1);
 
   if (loading) {
     return (
@@ -282,7 +284,7 @@ const Dashboard = () => {
 
       <div className="dashboard-grid">
         <div className="charts-section">
-          <div className="chart-card dashboard-insights-card">
+          <MaterialCard className="chart-card dashboard-insights-card">
             <div className="chart-header enhanced-chart-header">
               <div>
                 <h3 className="chart-title"><PieChart size={20} /> Expense Intelligence</h3>
@@ -327,93 +329,50 @@ const Dashboard = () => {
               </div>
 
               <div className="category-donut-panel">
-                <div
-                  className="category-donut"
-                  style={{
-                    background: categoryInsights.length > 0
-                      ? `conic-gradient(${categoryInsights.map((item, index) => {
-                          const start = categoryInsights
-                            .slice(0, index)
-                            .reduce((sum, current) => sum + current.percentage, 0);
-                          return `${item.color} ${start}% ${start + item.percentage}%`;
-                        }).join(', ')})`
-                      : '#e2e8f0'
-                  }}
-                >
-                  <div className="category-donut-center">
-                    <span>Total</span>
-                    <strong>{formatCurrency(filteredExpenseTotal)}</strong>
-                  </div>
-                </div>
-              </div>
-
-              <div className="category-rank-list">
-                {categoryInsights.length === 0 ? (
-                  <div className="dashboard-empty-state">No category data for this filter.</div>
-                ) : (
-                  categoryInsights.map(item => (
-                    <div key={item.category} className="category-rank-item">
-                      <div className="category-rank-meta">
-                        <span className="category-dot" style={{ backgroundColor: item.color }} />
-                        <span>{item.category}</span>
-                        <strong>{formatCurrency(item.amount)}</strong>
-                      </div>
-                      <div className="category-rank-bar">
-                        <span style={{ width: `${item.percentage}%`, backgroundColor: item.color }} />
-                      </div>
-                    </div>
-                  ))
-                )}
+                <SharedPieChart
+                  data={categoryInsights}
+                  emptyMessage="No category data for this filter."
+                  centerLabel="Total"
+                  height={240}
+                />
               </div>
             </div>
-          </div>
+          </MaterialCard>
 
-          <div className="chart-card">
+          <MaterialCard className="chart-card">
             <div className="chart-header enhanced-chart-header">
               <div>
                 <h3 className="chart-title"><CalendarDays size={20} /> Date-wise Expenses</h3>
                 <p className="chart-subtitle">Daily spending for the selected filter</p>
               </div>
             </div>
-            <div className="date-expense-chart">
-              {dailyExpenseTrend.length === 0 ? (
-                <div className="dashboard-empty-state">No daily expense data for this filter.</div>
-              ) : (
-                dailyExpenseTrend.map(item => (
-                  <div key={item.date} className="date-expense-column">
-                    <div className="date-expense-bar-wrap">
-                      <span
-                        className="date-expense-bar"
-                        style={{ height: `${Math.max((item.amount / maxDailyExpense) * 100, 8)}%` }}
-                        title={`${item.label}: ${formatCurrency(item.amount)}`}
-                      />
-                    </div>
-                    <span className="date-expense-label">{item.label}</span>
-                    <strong>{formatCurrency(item.amount)}</strong>
-                  </div>
-                ))
-              )}
-            </div>
-          </div>
+            <SharedBarChart
+              data={dailyExpenseTrend}
+              series={[{ dataKey: 'amount', label: 'Expenses', color: '#ef4444' }]}
+              emptyMessage="No daily expense data for this filter."
+              height={280}
+              showLegend={false}
+            />
+          </MaterialCard>
 
-          <div className="chart-card">
+          <MaterialCard className="chart-card">
             <div className="chart-header">
               <h3 className="chart-title">Income vs Expenses</h3>
               <p className="chart-subtitle">Monthly comparison</p>
             </div>
             <IncomeExpenseChart transactions={transactions} />
-          </div>
+          </MaterialCard>
 
-          <div className="chart-card">
+          <MaterialCard className="chart-card">
             <div className="chart-header">
               <h3 className="chart-title">Expense Categories</h3>
               <p className="chart-subtitle">Where your money goes</p>
             </div>
             <ExpenseChart transactions={transactions.filter(t => t.type === 'EXPENSE')} />
-          </div>
+          </MaterialCard>
         </div>
 
-        <div className="recent-section">
+        <MaterialCard className="recent-section">
           <div className="section-header">
             <h3 className="section-title">Recent Transactions</h3>
             <button className="view-all-btn" onClick={() => navigate('/transactions')}>
@@ -424,37 +383,38 @@ const Dashboard = () => {
             transactions={getRecentTransactions()}
             onRefresh={fetchTransactions}
           />
-        </div>
+        </MaterialCard>
       </div>
 
-      <div className="quick-actions">
+      <MaterialCard className="quick-actions">
         <h3 className="section-title">Quick Actions</h3>
         <div className="actions-grid">
-          <button className="action-card" onClick={() => setShowTransactionForm(true)}>
+          <MaterialCard className="action-card" component="button" type="button" onClick={() => setShowTransactionForm(true)}>
             <span className="action-icon"><CreditCard size={24} /></span>
             <span className="action-label">Add Expense</span>
-          </button>
-          <button className="action-card" onClick={() => setShowTransactionForm(true)}>
+          </MaterialCard>
+          <MaterialCard className="action-card" component="button" type="button" onClick={() => setShowTransactionForm(true)}>
             <span className="action-icon"><Wallet size={24} /></span>
             <span className="action-label">Add Income</span>
-          </button>
-          <button className="action-card" onClick={() => navigate('/analytics')}>
+          </MaterialCard>
+          <MaterialCard className="action-card" component="button" type="button" onClick={() => navigate('/analytics')}>
             <span className="action-icon"><BarChart3 size={24} /></span>
             <span className="action-label">View Reports</span>
-          </button>
-          <button className="action-card" onClick={() => openGoalForm('Monthly Savings')}>
+          </MaterialCard>
+          <MaterialCard className="action-card" component="button" type="button" onClick={() => openGoalForm('Monthly Savings')}>
             <span className="action-icon"><Flag size={24} /></span>
             <span className="action-label">Set Goals</span>
-          </button>
+          </MaterialCard>
         </div>
-      </div>
+      </MaterialCard>
 
-      <div className="tips-section">
+      <MaterialCard className="tips-section">
         <h3 className="section-title"><Lightbulb size={20} /> Financial Tips</h3>
         <div className="tips-grid">
-          <button
+          <MaterialCard
             type="button"
             className="tip-card"
+            component="button"
             onClick={() => openGoalForm('Monthly Budget')}
           >
             <span className="tip-icon"><Target size={18} /></span>
@@ -462,10 +422,11 @@ const Dashboard = () => {
               <h4>Set Monthly Budgets</h4>
               <p>Create spending limits for different categories to stay on track.</p>
             </div>
-          </button>
-          <button
+          </MaterialCard>
+          <MaterialCard
             type="button"
             className="tip-card"
+            component="button"
             onClick={() => setShowTransactionForm(true)}
           >
             <span className="tip-icon"><CreditCard size={18} /></span>
@@ -473,10 +434,11 @@ const Dashboard = () => {
               <h4>Track Daily Expenses</h4>
               <p>Record transactions immediately to maintain accurate records.</p>
             </div>
-          </button>
-          <button
+          </MaterialCard>
+          <MaterialCard
             type="button"
             className="tip-card"
+            component="button"
             onClick={() => navigate('/analytics')}
           >
             <span className="tip-icon"><BarChart3 size={18} /></span>
@@ -484,9 +446,9 @@ const Dashboard = () => {
               <h4>Review Weekly</h4>
               <p>Check your spending patterns every week to identify trends.</p>
             </div>
-          </button>
+          </MaterialCard>
         </div>
-      </div>
+      </MaterialCard>
 
       {showTransactionForm && (
         <div className="modal-overlay" onClick={() => setShowTransactionForm(false)}>
