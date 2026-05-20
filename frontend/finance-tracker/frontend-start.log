@@ -2995,3 +2995,162 @@ webpack compiled with [1m[33m1 warning[39m[22m
 Compiling...
 Compiled successfully!
 webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Failed to compile.
+
+[eslint] 
+src\components\profile\Profile.js
+Syntax error: Expected corresponding JSX closing tag for <div>. (354:8) (354:8)
+[1m[31mERROR[39m[22m in [1m./src/components/profile/Profile.js[39m[22m
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\src\components\profile\Profile.js: Expected corresponding JSX closing tag for <div>. (354:8)
+
+[0m [90m 352 |[39m             [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 353 |[39m           )}
+[31m[1m>[22m[39m[90m 354 |[39m         [33m<[39m[33m/[39m[33mMaterialCard[39m[33m>[39m
+ [90m     |[39m         [31m[1m^[22m[39m
+ [90m 355 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 356 |[39m     [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 357 |[39m   )[33m;[39m[0m
+    at constructor (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:367:19)
+    at FlowParserMixin.raise (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:6627:19)
+    at FlowParserMixin.jsxParseElementAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4757:16)
+    at FlowParserMixin.jsxParseElementAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4728:32)
+    at FlowParserMixin.jsxParseElementAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4728:32)
+    at FlowParserMixin.jsxParseElement (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4779:17)
+    at FlowParserMixin.parseExprAtom (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4789:19)
+    at FlowParserMixin.parseExprSubscripts (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11076:23)
+    at FlowParserMixin.parseUpdate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11061:21)
+    at FlowParserMixin.parseMaybeUnary (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11041:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10894:61)
+    at FlowParserMixin.parseExprOps (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10899:23)
+    at FlowParserMixin.parseMaybeConditional (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10876:23)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10826:21)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3528:39
+    at FlowParserMixin.tryParse (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:6935:20)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3528:18)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10795:39
+    at FlowParserMixin.allowInAnd (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12427:12)
+    at FlowParserMixin.parseMaybeAssignAllowIn (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10795:17)
+    at FlowParserMixin.parseMaybeAssignAllowInOrVoidPattern (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12494:17)
+    at FlowParserMixin.parseParenAndDistinguishExpression (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11674:28)
+    at FlowParserMixin.parseParenAndDistinguishExpression (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3621:18)
+    at FlowParserMixin.parseExprAtom (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11326:23)
+    at FlowParserMixin.parseExprAtom (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4794:20)
+    at FlowParserMixin.parseExprSubscripts (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11076:23)
+    at FlowParserMixin.parseUpdate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11061:21)
+    at FlowParserMixin.parseMaybeUnary (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11041:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10894:61)
+    at FlowParserMixin.parseExprOps (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10899:23)
+    at FlowParserMixin.parseMaybeConditional (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10876:23)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10826:21)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3579:18)
+    at FlowParserMixin.parseExpressionBase (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10779:23)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10775:39
+    at FlowParserMixin.allowInAnd (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12422:16)
+    at FlowParserMixin.parseExpression (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10775:17)
+    at FlowParserMixin.parseReturnStatement (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13142:28)
+    at FlowParserMixin.parseStatementContent (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12798:21)
+    at FlowParserMixin.parseStatementLike (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12767:17)
+    at FlowParserMixin.parseStatementLike (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:2946:24)
+    at FlowParserMixin.parseStatementListItem (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12747:17)
+    at FlowParserMixin.parseBlockOrModuleBlockBody (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13316:61)
+    at FlowParserMixin.parseBlockBody (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13309:10)
+    at FlowParserMixin.parseBlock (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13297:10)
+    at FlowParserMixin.parseFunctionBody (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12101:24)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:2920:63
+    at FlowParserMixin.forwardNoArrowParamsConversionAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3096:16)
+    at FlowParserMixin.parseFunctionBody (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:2920:12)
+    at FlowParserMixin.parseArrowExpression (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12076:10)
+
+[1m[31mERROR[39m[22m in [1m[eslint] 
+src\components\profile\Profile.js
+  Line 354:8:  Parsing [1m[31merror[39m[22m[1m: Expected corresponding JSX closing tag for <div>. (354:8)
+
+[39m[22m
+
+webpack compiled with [1m[31m2 errors[39m[22m
+Compiling...
+Failed to compile.
+
+[eslint] 
+src\components\profile\Profile.js
+Syntax error: Expected corresponding JSX closing tag for <div>. (354:8) (354:8)
+[1m[31mERROR[39m[22m in [1m./src/components/profile/Profile.js[39m[22m
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\src\components\profile\Profile.js: Expected corresponding JSX closing tag for <div>. (354:8)
+
+[0m [90m 352 |[39m             [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 353 |[39m           )}
+[31m[1m>[22m[39m[90m 354 |[39m         [33m<[39m[33m/[39m[33mMaterialCard[39m[33m>[39m
+ [90m     |[39m         [31m[1m^[22m[39m
+ [90m 355 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 356 |[39m     [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 357 |[39m   )[33m;[39m[0m
+    at constructor (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:367:19)
+    at FlowParserMixin.raise (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:6627:19)
+    at FlowParserMixin.jsxParseElementAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4757:16)
+    at FlowParserMixin.jsxParseElementAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4728:32)
+    at FlowParserMixin.jsxParseElementAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4728:32)
+    at FlowParserMixin.jsxParseElement (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4779:17)
+    at FlowParserMixin.parseExprAtom (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4789:19)
+    at FlowParserMixin.parseExprSubscripts (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11076:23)
+    at FlowParserMixin.parseUpdate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11061:21)
+    at FlowParserMixin.parseMaybeUnary (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11041:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10894:61)
+    at FlowParserMixin.parseExprOps (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10899:23)
+    at FlowParserMixin.parseMaybeConditional (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10876:23)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10826:21)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3528:39
+    at FlowParserMixin.tryParse (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:6935:20)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3528:18)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10795:39
+    at FlowParserMixin.allowInAnd (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12427:12)
+    at FlowParserMixin.parseMaybeAssignAllowIn (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10795:17)
+    at FlowParserMixin.parseMaybeAssignAllowInOrVoidPattern (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12494:17)
+    at FlowParserMixin.parseParenAndDistinguishExpression (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11674:28)
+    at FlowParserMixin.parseParenAndDistinguishExpression (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3621:18)
+    at FlowParserMixin.parseExprAtom (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11326:23)
+    at FlowParserMixin.parseExprAtom (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:4794:20)
+    at FlowParserMixin.parseExprSubscripts (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11076:23)
+    at FlowParserMixin.parseUpdate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11061:21)
+    at FlowParserMixin.parseMaybeUnary (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:11041:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10894:61)
+    at FlowParserMixin.parseExprOps (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10899:23)
+    at FlowParserMixin.parseMaybeConditional (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10876:23)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10826:21)
+    at FlowParserMixin.parseMaybeAssign (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3579:18)
+    at FlowParserMixin.parseExpressionBase (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10779:23)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10775:39
+    at FlowParserMixin.allowInAnd (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12422:16)
+    at FlowParserMixin.parseExpression (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:10775:17)
+    at FlowParserMixin.parseReturnStatement (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13142:28)
+    at FlowParserMixin.parseStatementContent (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12798:21)
+    at FlowParserMixin.parseStatementLike (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12767:17)
+    at FlowParserMixin.parseStatementLike (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:2946:24)
+    at FlowParserMixin.parseStatementListItem (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12747:17)
+    at FlowParserMixin.parseBlockOrModuleBlockBody (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13316:61)
+    at FlowParserMixin.parseBlockBody (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13309:10)
+    at FlowParserMixin.parseBlock (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:13297:10)
+    at FlowParserMixin.parseFunctionBody (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12101:24)
+    at E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:2920:63
+    at FlowParserMixin.forwardNoArrowParamsConversionAt (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:3096:16)
+    at FlowParserMixin.parseFunctionBody (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:2920:12)
+    at FlowParserMixin.parseArrowExpression (E:\JavaProject\Personal-finance-tracker\frontend\finance-tracker\node_modules\@babel\parser\lib\index.js:12076:10)
+
+[1m[31mERROR[39m[22m in [1m[eslint] 
+src\components\profile\Profile.js
+  Line 354:8:  Parsing [1m[31merror[39m[22m[1m: Expected corresponding JSX closing tag for <div>. (354:8)
+
+[39m[22m
+
+webpack compiled with [1m[31m2 errors[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m

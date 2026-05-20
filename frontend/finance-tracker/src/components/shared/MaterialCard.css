@@ -5,6 +5,10 @@
 
 .material-card.MuiCard-root {
   border-radius: var(--radius-xl);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-smooth);
 }
 
 .material-card[role='button'],
@@ -14,3 +18,4 @@
   text-align: left;
   cursor: pointer;
 }
+
