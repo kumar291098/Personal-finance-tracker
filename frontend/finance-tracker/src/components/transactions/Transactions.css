@@ -1,19 +1,71 @@
-.transactions {
-  padding: 20px;
-  max-width: 1200px;
+.transactions-page {
+  max-width: 1400px;
   margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  animation: fadeIn 0.35s ease-out;
+  min-width: 0;
 }
 
-.transactions-header {
+.transactions-header-card {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 30px;
+  align-items: flex-start;
+  gap: var(--spacing-lg);
+  margin-bottom: 4px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05);
+  min-width: 0;
+  overflow: hidden;
 }
 
-.transactions-header h1 {
-  color: #333;
+.transactions-header-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.transactions-kicker {
+  margin: 0 0 8px;
+  color: #0f766e;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-bold);
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.transactions-title {
+  font-size: 2rem;
+  font-weight: var(--font-bold);
+  color: var(--gray-900);
+  margin-bottom: 6px;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
+}
+
+.transactions-subtitle {
+  color: var(--gray-600);
+  font-size: var(--font-size-base);
   margin: 0;
+  line-height: 1.5;
+}
+
+.transactions-card {
+  background: white;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05);
+  border: 1px solid #e2e8f0;
+  transition: all var(--transition-normal);
+  min-width: 0;
+  overflow: hidden;
+}
+
+.transactions-card:hover {
+  box-shadow: 0 18px 44px rgba(15, 23, 42, 0.08);
 }
 
 .add-button {
@@ -515,18 +567,20 @@
 }
 
 /* Dark Mode Overrides */
+:root[data-theme='dark'] .transactions-header-card,
+:root[data-theme='dark'] .transactions-card,
 :root[data-theme='dark'] .transaction-form,
 :root[data-theme='dark'] .transactions-list,
 :root[data-theme='dark'] .transactions-controls,
 :root[data-theme='dark'] .filters-section,
 :root[data-theme='dark'] .transactions-container {
-  background-color: #111827;
+  background-color: #0f172a;
   border-color: #334155;
   box-shadow: none;
 }
 
 :root[data-theme='dark'] .payment-simulator-card {
-  background: #111827;
+  background: #0f172a;
   border-color: #334155;
   box-shadow: none;
 }
@@ -537,12 +591,13 @@
 :root[data-theme='dark'] .transactions-list td {
   border-color: #334155;
 }
-:root[data-theme='dark'] .transactions-header h1,
+:root[data-theme='dark'] .transactions-title,
 :root[data-theme='dark'] .transaction-form h2,
 :root[data-theme='dark'] .payment-simulator-content h3 {
   color: var(--gray-900);
 }
 
+:root[data-theme='dark'] .transactions-subtitle,
 :root[data-theme='dark'] .payment-simulator-content p,
 :root[data-theme='dark'] .sort-label {
   color: var(--gray-600);

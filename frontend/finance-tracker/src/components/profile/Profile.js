@@ -5,6 +5,7 @@ import {
   fetchProfile,
   updateProfile
 } from '../../services/profileService';
+import MaterialCard from '../shared/MaterialCard';
 import './Profile.css';
 
 const defaultPreferences = {
@@ -139,16 +140,17 @@ const Profile = () => {
 
   return (
     <div className="profile-page">
-      <div className="profile-header">
-        <div className="header-content">
-          <h1 className="page-title">Account Settings</h1>
-          <p className="page-subtitle">Manage your account information and preferences</p>
+      <MaterialCard className="profile-header-card">
+        <div className="profile-header-content">
+          <p className="profile-kicker">Settings</p>
+          <h1 className="profile-title">Account Settings</h1>
+          <p className="profile-subtitle">Manage your account information and preferences.</p>
         </div>
 
         <div className="user-avatar-large">
           {user?.username?.charAt(0).toUpperCase() || 'U'}
         </div>
-      </div>
+      </MaterialCard>
 
       {message && (
         <div className="profile-message">
@@ -164,7 +166,7 @@ const Profile = () => {
       )}
 
       <div className="profile-content">
-        <div className="profile-sidebar">
+        <MaterialCard className="profile-sidebar">
           <nav className="profile-nav">
             {tabs.map(tab => {
               const Icon = tab.icon;
@@ -180,9 +182,9 @@ const Profile = () => {
               );
             })}
           </nav>
-        </div>
+        </MaterialCard>
 
-        <div className="profile-main">
+        <MaterialCard className="profile-main">
           {activeTab === 'profile' && (
             <div className="tab-content">
               <div className="section-header">
@@ -284,22 +286,6 @@ const Profile = () => {
 
               <form onSubmit={handlePreferencesSubmit} className="profile-form">
                 <div className="preference-section">
-                  <h3 className="preference-title">Appearance</h3>
-                  <div className="form-group">
-                    <label className="form-label">Theme</label>
-                    <select
-                      value={preferences.theme}
-                      onChange={(event) => setPreferences(prev => ({ ...prev, theme: event.target.value }))}
-                      className="form-select"
-                    >
-                      <option value="light">Light</option>
-                      <option value="dark">Dark</option>
-                      <option value="auto">Auto (System)</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div className="preference-section">
                   <h3 className="preference-title">Notifications</h3>
                   <div className="checkbox-group">
                     <PreferenceCheckbox label="Email notifications" checked={preferences.notifications.email} onChange={checked => updatePreference('notifications', 'email', checked)} />
@@ -332,25 +318,25 @@ const Profile = () => {
               </div>
 
               <div className="danger-section">
-                <div className="danger-item">
+                <MaterialCard className="danger-item">
                   <div className="danger-info">
                     <h3 className="danger-title">Logout from all devices</h3>
                     <p className="danger-description">This will log you out from this browser session.</p>
                   </div>
                   <button className="btn btn-secondary" onClick={logout}>Logout Everywhere</button>
-                </div>
+                </MaterialCard>
 
-                <div className="danger-item">
+                <MaterialCard className="danger-item">
                   <div className="danger-info">
                     <h3 className="danger-title">Delete Account</h3>
                     <p className="danger-description">Permanently delete your account and all associated data. This needs a backend endpoint before it can run.</p>
                   </div>
                   <button className="btn btn-error" onClick={handleDeleteAccount}>Delete Account</button>
-                </div>
+                </MaterialCard>
               </div>
             </div>
           )}
-        </div>
+        </MaterialCard>
       </div>
     </div>
   );

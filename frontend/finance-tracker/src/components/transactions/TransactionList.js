@@ -22,6 +22,7 @@ import {
   Zap
 } from 'lucide-react';
 import { formatCurrency, formatDate } from '../../utils/transactionUtils';
+import MaterialCard from '../shared/MaterialCard';
 import './TransactionList.css';
 
 const categoryIcons = {
@@ -155,7 +156,7 @@ const TransactionList = ({
 
       <div className="transaction-cards">
         {transactions.map(transaction => (
-          <div
+          <MaterialCard
             key={transaction.id}
             className={`transaction-card ${transaction.type.toLowerCase()}`}
           >
@@ -190,7 +191,7 @@ const TransactionList = ({
                 </button>
               </div>
             </div>
-          </div>
+          </MaterialCard>
         ))}
       </div>
     </div>

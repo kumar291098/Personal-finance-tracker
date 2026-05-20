@@ -10,6 +10,7 @@ import {
   Wallet
 } from 'lucide-react';
 import { formatCurrency } from '../../utils/transactionUtils';
+import MaterialCard from './MaterialCard';
 import './StatsCard.css';
 
 const StatsCard = ({
@@ -58,8 +59,10 @@ const StatsCard = ({
   };
 
   return (
-    <div
+    <MaterialCard
       className={`stats-card ${getTypeClass()} ${onClick ? 'stats-card-clickable' : ''}`}
+      component={onClick ? 'button' : 'div'}
+      type={onClick ? 'button' : undefined}
       onClick={onClick}
     >
       <div className="stats-card-header">
@@ -83,7 +86,7 @@ const StatsCard = ({
           <div className="stats-card-subtitle">{subtitle}</div>
         )}
       </div>
-    </div>
+    </MaterialCard>
   );
 };
 

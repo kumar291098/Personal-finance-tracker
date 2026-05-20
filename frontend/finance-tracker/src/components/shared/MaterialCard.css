@@ -1,0 +1,21 @@
+.material-card {
+  color: inherit;
+  font: inherit;
+}
+
+.material-card.MuiCard-root {
+  border-radius: var(--radius-xl);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-smooth);
+}
+
+.material-card[role='button'],
+.material-card[type='button'] {
+  width: 100%;
+  border: 0;
+  text-align: left;
+  cursor: pointer;
+}
+

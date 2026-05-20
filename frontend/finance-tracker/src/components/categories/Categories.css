@@ -4,37 +4,54 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-2xl);
-  animation: fadeIn 0.6s ease-out;
+  gap: 24px;
+  animation: fadeIn 0.35s ease-out;
+  min-width: 0;
 }
 
-.categories-header {
+.categories-header-card {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: var(--spacing-lg);
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: 4px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05);
+  min-width: 0;
+  overflow: hidden;
 }
 
-.header-content {
+.categories-header-content {
   flex: 1;
+  min-width: 0;
 }
 
-.page-title {
-  font-size: var(--font-size-3xl);
+.categories-kicker {
+  margin: 0 0 8px;
+  color: #0f766e;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-bold);
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.categories-title {
+  font-size: 2rem;
   font-weight: var(--font-bold);
   color: var(--gray-900);
-  margin-bottom: var(--spacing-xs);
-  background: linear-gradient(135deg, var(--gray-900), var(--primary-600));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  margin-bottom: 6px;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
 }
 
-.page-subtitle {
+.categories-subtitle {
   color: var(--gray-600);
   font-size: var(--font-size-base);
   margin: 0;
+  line-height: 1.5;
 }
 
 .categories-content {
@@ -496,10 +513,13 @@
   }
 }
 /* Dark Mode Overrides */
+:root[data-theme='dark'] .categories-header-card,
 :root[data-theme='dark'] .category-section,
-:root[data-theme='dark'] .category-card {
-  background-color: #111827;
+:root[data-theme='dark'] .category-card,
+:root[data-theme='dark'] .modal-content {
+  background-color: #0f172a;
   border-color: #334155;
+  box-shadow: none;
 }
 :root[data-theme='dark'] .category-card:hover {
   background-color: #1e293b;
@@ -510,4 +530,13 @@
 }
 :root[data-theme='dark'] .expense-card:hover {
   background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(239, 68, 68, 0.2));
+}
+:root[data-theme='dark'] .categories-title,
+:root[data-theme='dark'] .section-title,
+:root[data-theme='dark'] .modal-header h3,
+:root[data-theme='dark'] .category-name {
+  color: var(--gray-900);
+}
+:root[data-theme='dark'] .categories-subtitle {
+  color: var(--gray-600);
 }

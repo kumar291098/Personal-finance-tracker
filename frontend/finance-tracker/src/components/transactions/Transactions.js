@@ -6,6 +6,7 @@ import TransactionFormModal from './TransactionFormModal';
 import TransactionList from './TransactionList';
 import TransactionStats from './TransactionStats';
 import PaymentModal from './PaymentModal';
+import MaterialCard from '../shared/MaterialCard';
 import {
   DEFAULT_FILTERS,
   DEFAULT_PAYMENT_DATA,
@@ -158,18 +159,23 @@ const Transactions = () => {
 
   return (
     <div className="transactions-page">
-      <div className="transactions-header">
-        <div className="header-content">
-          <h1 className="page-title">Transactions</h1>
-          <p className="page-subtitle">Manage and track all your financial transactions</p>
+      <MaterialCard className="transactions-header-card">
+        <div className="transactions-header-content">
+          <p className="transactions-kicker">Transactions</p>
+          <h1 className="transactions-title">Transactions</h1>
+          <p className="transactions-subtitle">
+            Manage and track all your financial transactions in one place.
+          </p>
         </div>
-        <button className="btn btn-primary" onClick={() => setShowForm(true)}>
-          <Plus size={18} />
-          Add Transaction
-        </button>
-      </div>
+        <div className="header-actions">
+          <button className="btn btn-primary export-btn" onClick={() => setShowForm(true)}>
+            <Plus size={18} />
+            Add Transaction
+          </button>
+        </div>
+      </MaterialCard>
 
-      <div className="payment-simulator-card">
+      <MaterialCard className="payment-simulator-card transactions-card">
         <div className="payment-simulator-content">
           <span className="payment-simulator-icon"><Smartphone size={22} /></span>
           <div>
@@ -181,7 +187,7 @@ const Transactions = () => {
           <CreditCard size={18} />
           Make Payment
         </button>
-      </div>
+      </MaterialCard>
 
       <TransactionStats stats={stats} />
 
@@ -196,7 +202,7 @@ const Transactions = () => {
         onSortOrderToggle={() => setSortOrder(prev => prev === 'asc' ? 'desc' : 'asc')}
       />
 
-      <div className="transactions-content">
+      <MaterialCard className="transactions-content">
         {filteredTransactions.length === 0 ? (
           <div className="empty-state">
             <h3>No transactions found</h3>
@@ -220,7 +226,7 @@ const Transactions = () => {
             onSort={handleSort}
           />
         )}
-      </div>
+      </MaterialCard>
 
       {showForm && (
         <TransactionFormModal

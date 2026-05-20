@@ -120,10 +120,11 @@ const Categories = () => {
   if (loading) {
     return (
       <div className="categories-page">
-        <div className="categories-header">
-          <div className="header-content">
-            <h1 className="page-title">Categories</h1>
-            <p className="page-subtitle">Loading your category preferences...</p>
+        <div className="categories-header-card">
+          <div className="categories-header-content">
+            <p className="categories-kicker">Categories</p>
+            <h1 className="categories-title">Categories</h1>
+            <p className="categories-subtitle">Loading your category preferences...</p>
           </div>
         </div>
       </div>
@@ -132,20 +133,23 @@ const Categories = () => {
 
   return (
     <div className="categories-page">
-      <div className="categories-header">
-        <div className="header-content">
-          <h1 className="page-title">Categories</h1>
-          <p className="page-subtitle">
-            Organize your transactions with custom categories
+      <div className="categories-header-card">
+        <div className="categories-header-content">
+          <p className="categories-kicker">Categories</p>
+          <h1 className="categories-title">Categories</h1>
+          <p className="categories-subtitle">
+            Organize your transactions with custom categories.
           </p>
         </div>
-        <button
-          className="btn btn-primary"
-          onClick={() => setShowForm(true)}
-        >
-          <span>＋</span>
-          Add Category
-        </button>
+        <div className="header-actions">
+          <button
+            className="btn btn-primary export-btn"
+            onClick={() => setShowForm(true)}
+          >
+            <span>＋</span>
+            Add Category
+          </button>
+        </div>
       </div>
 
       {error && <div className="form-error">{error}</div>}
