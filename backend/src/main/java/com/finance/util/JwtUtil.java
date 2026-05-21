@@ -6,15 +6,23 @@ import org.springframework.stereotype.Component;
 
 import java.security.Key;
 import java.util.Date;
+import jakarta.annotation.PostConstruct;
+import org.springframework.beans.factory.annotation.Value;
 
 @Component
 public class JwtUtil {
 
-    private final String SECRET = "uL5drT9t2yU7LgfWe9KrFbWpEqpUvMNs"; // must be at least 256 bits for HS256
+    @Value("${jwt.secret}")
+    private String secret;
 
     private final long EXPIRATION_TIME = 86400000; // 24 hours (86400000 milliseconds)
 
-    private final Key key = Keys.hmacShaKeyFor(SECRET.getBytes());
+    private Key key;
+
+    @PostConstruct
+    public void init() {
+        this.key = Keys.hmacShaKeyFor(secret.getBytes());
+    }
 
     public String generateToken(String username, Long userId) {
         return generateToken(username, userId, "FREE");

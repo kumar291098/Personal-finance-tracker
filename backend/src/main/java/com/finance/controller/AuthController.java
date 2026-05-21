@@ -13,7 +13,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestClientResponseException;
-
+import org.springframework.web.client.RestClientResponseException;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.data.redis.core.StringRedisTemplate;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import java.time.Duration;
 import java.security.SecureRandom;
 import java.time.LocalDateTime;
 import java.util.*;
@@ -35,6 +39,12 @@ public class AuthController {
     private EmailService emailService;
     @Autowired
     private AccessPolicyService accessPolicyService;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+    @Autowired
+    private Optional<StringRedisTemplate> redisTemplate;
+    @Autowired
+    private ObjectMapper objectMapper;
 
     @Value("${app.password-reset.expose-otp:false}")
     private boolean exposeOtp;
@@ -44,8 +54,8 @@ public class AuthController {
          User user = userRepository.findByUsername(request.getUsername())
             .orElseThrow(() -> new RuntimeException("Invalid username"));
 
-    // If you're not using password hashing (e.g., BCrypt), do a direct comparison
-    if (!user.getPassword().equals(request.getPassword())) {
+    // Compare hashed password
+    if (!passwordEncoder.matches(request.getPassword(), user.getPassword())) {
         throw new RuntimeException("Invalid password");
     }
 
@@ -103,7 +113,7 @@ public class AuthController {
         user.setUsername(username);
         user.setEmail(email);
         user.setPhone(phone);
-        user.setPassword(password); // no encoding
+        user.setPassword(passwordEncoder.encode(password)); // encode password
         user.setAccessLevel("demo".equalsIgnoreCase(username) ? AccessLevel.ADMIN : AccessLevel.FREE);
         userRepository.save(user);
 
@@ -136,7 +146,17 @@ public class AuthController {
 
         String otp = String.format("%06d", OTP_RANDOM.nextInt(1_000_000));
         LocalDateTime expiresAt = LocalDateTime.now().plusMinutes(OTP_EXPIRY_MINUTES);
-        PASSWORD_RESET_OTPS.put(identifier.toLowerCase(), new PasswordResetOtp(userResult.get().getId(), otp, expiresAt));
+        PasswordResetOtp resetOtp = new PasswordResetOtp(userResult.get().getId(), otp, expiresAt);
+        
+        if (redisTemplate.isPresent()) {
+            try {
+                redisTemplate.get().opsForValue().set("otp:" + identifier.toLowerCase(), objectMapper.writeValueAsString(resetOtp), Duration.ofMinutes(OTP_EXPIRY_MINUTES));
+            } catch (Exception e) {
+                PASSWORD_RESET_OTPS.put(identifier.toLowerCase(), resetOtp);
+            }
+        } else {
+            PASSWORD_RESET_OTPS.put(identifier.toLowerCase(), resetOtp);
+        }
 
         User user = userResult.get();
         boolean sentByEmail = false;
@@ -145,7 +165,7 @@ public class AuthController {
                 emailService.sendPasswordResetOtp(user.getEmail(), user.getUsername(), otp, OTP_EXPIRY_MINUTES);
                 sentByEmail = true;
             } catch (RestClientResponseException brevoError) {
-                PASSWORD_RESET_OTPS.remove(identifier.toLowerCase());
+                removeOtp(identifier.toLowerCase());
                 String brevoBody = brevoError.getResponseBodyAsString();
                 String brevoMessage = brevoBody == null || brevoBody.isBlank()
                     ? "No response body from Brevo"
@@ -156,7 +176,7 @@ public class AuthController {
                     .body("Brevo rejected OTP email. Status: " + brevoError.getStatusCode()
                         + ". Response: " + brevoMessage);
             } catch (RestClientException | IllegalStateException emailError) {
-                PASSWORD_RESET_OTPS.remove(identifier.toLowerCase());
+                removeOtp(identifier.toLowerCase());
                 System.out.println("OTP email failed: " + emailError.getMessage());
                 return ResponseEntity.status(HttpStatus.BAD_GATEWAY)
                     .body("Unable to send OTP email. Check Brevo API key, sender verification, and Brevo account status.");
@@ -187,13 +207,26 @@ public class AuthController {
             return ResponseEntity.badRequest().body("Enter identifier, OTP, and a password with at least 6 characters.");
         }
 
-        PasswordResetOtp resetOtp = PASSWORD_RESET_OTPS.get(identifier.toLowerCase());
+        PasswordResetOtp resetOtp = null;
+        if (redisTemplate.isPresent()) {
+            try {
+                String json = redisTemplate.get().opsForValue().get("otp:" + identifier.toLowerCase());
+                if (json != null) {
+                    resetOtp = objectMapper.readValue(json, PasswordResetOtp.class);
+                }
+            } catch (Exception e) {
+                resetOtp = PASSWORD_RESET_OTPS.get(identifier.toLowerCase());
+            }
+        } else {
+            resetOtp = PASSWORD_RESET_OTPS.get(identifier.toLowerCase());
+        }
+
         if (resetOtp == null) {
             return ResponseEntity.badRequest().body("Request a new OTP before resetting your password.");
         }
 
         if (LocalDateTime.now().isAfter(resetOtp.expiresAt())) {
-            PASSWORD_RESET_OTPS.remove(identifier.toLowerCase());
+            removeOtp(identifier.toLowerCase());
             return ResponseEntity.badRequest().body("OTP expired. Please request a new OTP.");
         }
 
@@ -203,19 +236,28 @@ public class AuthController {
 
         Optional<User> userResult = userRepository.findById(resetOtp.userId());
         if (userResult.isEmpty()) {
-            PASSWORD_RESET_OTPS.remove(identifier.toLowerCase());
+            removeOtp(identifier.toLowerCase());
             return ResponseEntity.badRequest().body("Account not found.");
         }
 
         User user = userResult.get();
-        user.setPassword(newPassword.trim());
+        user.setPassword(passwordEncoder.encode(newPassword.trim()));
         userRepository.save(user);
-        PASSWORD_RESET_OTPS.remove(identifier.toLowerCase());
+        removeOtp(identifier.toLowerCase());
 
         Map<String, Object> response = new HashMap<>();
         response.put("success", true);
         response.put("message", "Password reset successfully. You can login now.");
         return ResponseEntity.ok(response);
+    }
+
+    private void removeOtp(String identifier) {
+        if (redisTemplate.isPresent()) {
+            try {
+                redisTemplate.get().delete("otp:" + identifier);
+            } catch (Exception ignored) {}
+        }
+        PASSWORD_RESET_OTPS.remove(identifier);
     }
 
     @PostMapping("/forgot-password")
