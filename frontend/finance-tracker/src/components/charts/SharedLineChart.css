@@ -1,0 +1,212 @@
+.shared-line-chart {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  padding: 18px;
+  overflow: hidden;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-xl);
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.08), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(15, 118, 110, 0.08), transparent 32%),
+    linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  box-shadow:
+    0 18px 45px rgba(15, 23, 42, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.75);
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.shared-line-chart::before {
+  content: '';
+  position: absolute;
+  inset: 14px;
+  border: 1px dashed rgba(148, 163, 184, 0.22);
+  border-radius: calc(var(--radius-xl) - 6px);
+  pointer-events: none;
+}
+
+.shared-line-chart:hover {
+  transform: translateY(-2px);
+  border-color: rgba(37, 99, 235, 0.28);
+  box-shadow:
+    0 22px 55px rgba(15, 23, 42, 0.12),
+    0 10px 24px rgba(37, 99, 235, 0.08);
+}
+
+.shared-line-chart .MuiChartsSurface-root,
+.shared-line-chart svg {
+  position: relative;
+  z-index: 1;
+}
+
+.shared-line-chart .MuiLineElement-root {
+  filter: drop-shadow(0 8px 14px rgba(15, 23, 42, 0.1));
+}
+
+.shared-line-chart .MuiMarkElement-root {
+  filter: drop-shadow(0 5px 9px rgba(15, 23, 42, 0.12));
+}
+
+.shared-line-chart .MuiChartsTooltip-root,
+.shared-line-chart .MuiChartsTooltip-paper {
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  background: #ffffff;
+  color: var(--gray-900);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.14);
+}
+
+.shared-line-chart-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shared-line-empty {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 24px;
+  border-radius: var(--radius-xl);
+  background: rgba(255, 255, 255, 0.68);
+  color: var(--gray-500);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-semibold);
+  text-align: center;
+}
+
+.shared-line-empty::before {
+  content: '';
+  width: 72px;
+  height: 72px;
+  display: inline-flex;
+  border-radius: 50%;
+  background:
+    linear-gradient(135deg, transparent 45%, #2563eb 46%, #2563eb 54%, transparent 55%),
+    #eff6ff;
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.14);
+}
+
+html[data-theme='dark'] .shared-line-chart,
+:root[data-theme='dark'] .shared-line-chart {
+  border-color: #334155;
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.16), transparent 36%),
+    radial-gradient(circle at bottom right, rgba(20, 184, 166, 0.12), transparent 34%),
+    linear-gradient(180deg, #0f172a 0%, #020617 100%);
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.32),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+html[data-theme='light'] .shared-line-chart,
+:root[data-theme='light'] .shared-line-chart,
+body[data-theme='light'] .shared-line-chart {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border-color: #e5e7eb !important;
+}
+
+html[data-theme='light'] .shared-line-chart text,
+html[data-theme='light'] .shared-line-chart .MuiChartsLegend-series text,
+:root[data-theme='light'] .shared-line-chart text,
+:root[data-theme='light'] .shared-line-chart .MuiChartsLegend-series text,
+body[data-theme='light'] .shared-line-chart text,
+body[data-theme='light'] .shared-line-chart .MuiChartsLegend-series text {
+  fill: #000000 !important;
+  color: #000000 !important;
+}
+
+html[data-theme='light'] .shared-line-chart .MuiChartsTooltip-root,
+html[data-theme='light'] .shared-line-chart .MuiChartsTooltip-paper,
+:root[data-theme='light'] .shared-line-chart .MuiChartsTooltip-root,
+:root[data-theme='light'] .shared-line-chart .MuiChartsTooltip-paper,
+body[data-theme='light'] .shared-line-chart .MuiChartsTooltip-root,
+body[data-theme='light'] .shared-line-chart .MuiChartsTooltip-paper {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border-color: #e5e7eb !important;
+}
+
+html[data-theme='dark'] .shared-line-chart::before,
+:root[data-theme='dark'] .shared-line-chart::before {
+  border-color: rgba(148, 163, 184, 0.16);
+}
+
+html[data-theme='dark'] .shared-line-chart:hover,
+:root[data-theme='dark'] .shared-line-chart:hover {
+  border-color: rgba(96, 165, 250, 0.38);
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.42),
+    0 10px 28px rgba(37, 99, 235, 0.08);
+}
+
+html[data-theme='dark'] .shared-line-chart text,
+:root[data-theme='dark'] .shared-line-chart text {
+  fill: #e2e8f0 !important;
+}
+
+html[data-theme='dark'] .shared-line-chart .MuiChartsTooltip-root,
+html[data-theme='dark'] .shared-line-chart .MuiChartsTooltip-paper,
+:root[data-theme='dark'] .shared-line-chart .MuiChartsTooltip-root,
+:root[data-theme='dark'] .shared-line-chart .MuiChartsTooltip-paper {
+  border-color: #334155;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+html[data-theme='dark'] .shared-line-chart .MuiChartsTooltip-paper *,
+:root[data-theme='dark'] .shared-line-chart .MuiChartsTooltip-paper * {
+  color: #e2e8f0 !important;
+}
+
+html[data-theme='dark'] .shared-line-empty,
+:root[data-theme='dark'] .shared-line-empty {
+  background: rgba(15, 23, 42, 0.72);
+  color: #cbd5e1;
+}
+
+html[data-theme='dark'] .shared-line-empty::before,
+:root[data-theme='dark'] .shared-line-empty::before {
+  background:
+    linear-gradient(135deg, transparent 45%, #60a5fa 46%, #60a5fa 54%, transparent 55%),
+    rgba(37, 99, 235, 0.12);
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.1);
+}
+
+@media (max-width: 768px) {
+  .shared-line-chart {
+    padding: 14px;
+    border-radius: var(--radius-lg);
+  }
+
+  .shared-line-chart::before {
+    inset: 10px;
+    border-radius: var(--radius-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .shared-line-chart {
+    padding: 10px;
+  }
+
+  .shared-line-empty {
+    min-height: 180px;
+    padding: 18px;
+  }
+
+  .shared-line-empty::before {
+    width: 60px;
+    height: 60px;
+  }
+}

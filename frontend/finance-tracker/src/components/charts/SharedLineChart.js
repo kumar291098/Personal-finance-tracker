@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { BarChart } from '@mui/x-charts/BarChart';
+import { LineChart } from '@mui/x-charts/LineChart';
 import { formatCurrency } from '../../utils/transactionUtils';
 
-const SharedBarChart = ({
+const SharedLineChart = ({
   data = [],
   series = [],
   xKey = 'label',
-  height = 300,
-  emptyMessage = 'No chart data available',
+  height = 320,
+  emptyMessage = 'No line chart data available',
   showLegend = true,
   className = ''
 }) => {
@@ -30,7 +30,7 @@ const SharedBarChart = ({
   }, []);
 
   const hasData = data.some(item =>
-    series.some(current => Number(item[current.dataKey] || 0) > 0)
+    series.some(current => Number(item[current.dataKey] || 0) !== 0)
   );
 
   const tickColor = isDarkMode ? '#cbd5e1' : '#64748b';
@@ -39,19 +39,19 @@ const SharedBarChart = ({
 
   if (!hasData) {
     return (
-      <div className={`shared-bar-chart shared-bar-chart-empty ${className}`.trim()} style={{ minHeight: height }}>
-        <div className="shared-bar-empty">{emptyMessage}</div>
+      <div className={`shared-line-chart shared-line-chart-empty ${className}`.trim()} style={{ minHeight: height }}>
+        <div className="shared-line-empty">{emptyMessage}</div>
       </div>
     );
   }
 
   return (
-    <div className={`shared-bar-chart ${className}`.trim()}>
-      <BarChart
+    <div className={`shared-line-chart ${className}`.trim()}>
+      <LineChart
         dataset={data}
         xAxis={[
           {
-            scaleType: 'band',
+            scaleType: 'point',
             dataKey: xKey,
             tickLabelStyle: {
               fill: tickColor,
@@ -74,12 +74,13 @@ const SharedBarChart = ({
           dataKey: item.dataKey,
           label: item.label,
           color: item.color,
+          curve: 'monotoneX',
+          showMark: true,
           valueFormatter: value => formatCurrency(value || 0)
         }))}
         height={height}
-        borderRadius={6}
         grid={{ horizontal: true }}
-        margin={{ top: showLegend ? 42 : 18, right: 16, bottom: 34, left: 68 }}
+        margin={{ top: showLegend ? 42 : 18, right: 18, bottom: 34, left: 72 }}
         slotProps={{
           legend: {
             hidden: !showLegend
@@ -96,6 +97,13 @@ const SharedBarChart = ({
             stroke: `${gridColor} !important`,
             strokeDasharray: '4 6'
           },
+          '& .MuiLineElement-root': {
+            strokeWidth: 3
+          },
+          '& .MuiMarkElement-root': {
+            stroke: isDarkMode ? '#0f172a' : '#ffffff',
+            strokeWidth: 2
+          },
           '& .MuiChartsLegend-series text': {
             fill: isDarkMode ? '#e2e8f0 !important' : '#475569 !important',
             fontSize: '12px !important',
@@ -107,4 +115,4 @@ const SharedBarChart = ({
   );
 };
 
-export default SharedBarChart;
+export default SharedLineChart;

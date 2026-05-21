@@ -540,3 +540,82 @@
 :root[data-theme='dark'] .categories-subtitle {
   color: var(--gray-600);
 }
+/* =========================================================
+   CATEGORY HEADER BUTTON ALIGNMENT
+   Desktop: right aligned
+   Mobile: below title, full row
+   ========================================================= */
+
+.categories-header,
+.category-header,
+.categories-header-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.categories-header-content,
+.category-header-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.categories-header .header-actions,
+.category-header .header-actions,
+.categories-header-card .header-actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+.categories-header .btn,
+.category-header .btn,
+.categories-header-card .btn {
+  width: auto;
+  white-space: nowrap;
+}
+
+/* Tablet / Mobile */
+@media (max-width: 768px) {
+  .categories-header,
+  .category-header,
+  .categories-header-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .categories-header .header-actions,
+  .category-header .header-actions,
+  .categories-header-card .header-actions {
+    width: 100%;
+    margin-left: 0;
+    justify-content: flex-end;
+  }
+
+  .categories-header .btn,
+  .category-header .btn,
+  .categories-header-card .btn {
+    width: fit-content;
+    align-self: flex-end;
+  }
+}
+
+/* Small mobile: button fits full row */
+@media (max-width: 480px) {
+  .categories-header .header-actions,
+  .category-header .header-actions,
+  .categories-header-card .header-actions {
+    justify-content: stretch;
+  }
+
+  .categories-header .btn,
+  .category-header .btn,
+  .categories-header-card .btn {
+    width: 100%;
+    min-height: 46px;
+  }
+}

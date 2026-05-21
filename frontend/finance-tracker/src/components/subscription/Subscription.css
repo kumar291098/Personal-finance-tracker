@@ -1,272 +1,820 @@
+/* =========================================================
+   SUBSCRIPTION PAGE - MODERN RESPONSIVE DESIGN
+   Works with Subscription.jsx
+   ========================================================= */
+
 .subscription-page {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-xl);
+  width: 100%;
   min-width: 0;
+  display: grid;
+  gap: 24px;
+  color: #0f172a;
 }
 
+/* =========================================================
+   HEADER
+   ========================================================= */
+
 .subscription-header {
-  display: grid;
-  gap: var(--spacing-xs);
+  position: relative;
+  overflow: hidden;
+  padding: 32px;
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at top left, rgba(245, 158, 11, 0.16), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(15, 118, 110, 0.12), transparent 34%),
+    linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  box-shadow:
+    0 24px 60px rgba(15, 23, 42, 0.09),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+.subscription-header::before {
+  content: '';
+  position: absolute;
+  inset: 16px;
+  border: 1px dashed rgba(148, 163, 184, 0.22);
+  border-radius: 24px;
+  pointer-events: none;
 }
 
 .subscription-eyebrow {
+  position: relative;
+  z-index: 1;
+  width: fit-content;
   display: inline-flex;
   align-items: center;
-  gap: var(--spacing-xs);
-  color: #0f766e;
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-semibold);
+  gap: 8px;
+  padding: 7px 12px;
+  border: 1px solid rgba(245, 158, 11, 0.22);
+  border-radius: 999px;
+  background: #fffbeb;
+  color: #b45309;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
-.subscription-card {
-  display: grid;
-  gap: var(--spacing-lg);
-  max-width: 720px;
-  padding: var(--spacing-xl);
-  border: 1px solid var(--gray-200);
-  border-radius: var(--radius-lg);
-  background: white;
-  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+.page-title {
+  position: relative;
+  z-index: 1;
+  margin: 14px 0 0;
+  color: #0f172a;
+  font-size: clamp(1.8rem, 3vw, 2.55rem);
+  font-weight: 950;
+  line-height: 1.08;
+  letter-spacing: -0.05em;
 }
+
+.page-subtitle {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+  margin: 10px 0 0;
+  color: #64748b;
+  font-size: 0.98rem;
+  font-weight: 550;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   ALERTS
+   ========================================================= */
+
+.subscription-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  font-size: 0.92rem;
+  font-weight: 800;
+  line-height: 1.45;
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.06);
+}
+
+.subscription-alert.error {
+  border: 1px solid rgba(239, 68, 68, 0.24);
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.subscription-alert.success {
+  border: 1px solid rgba(34, 197, 94, 0.24);
+  background: #f0fdf4;
+  color: #15803d;
+}
+
+/* =========================================================
+   THANK YOU CARD
+   ========================================================= */
+
+.subscription-thankyou {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  justify-items: center;
+  gap: 14px;
+  padding: 34px 24px;
+  border: 1px solid rgba(34, 197, 94, 0.24);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at top, rgba(34, 197, 94, 0.16), transparent 34%),
+    linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);
+  text-align: center;
+  box-shadow:
+    0 24px 60px rgba(21, 128, 61, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+.subscription-thankyou::before {
+  content: '';
+  position: absolute;
+  right: -55px;
+  top: -55px;
+  width: 180px;
+  height: 180px;
+  border-radius: 999px;
+  background: rgba(34, 197, 94, 0.12);
+}
+
+.subscription-thankyou-mark {
+  position: relative;
+  z-index: 1;
+  width: 86px;
+  height: 86px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  color: #ffffff;
+  box-shadow: 0 20px 42px rgba(22, 163, 74, 0.28);
+}
+
+.subscription-thankyou-badge {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: #dcfce7;
+  color: #15803d;
+  font-size: 0.78rem;
+  font-weight: 950;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.subscription-thankyou h2 {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: #0f172a;
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  font-weight: 950;
+  letter-spacing: -0.04em;
+}
+
+.subscription-thankyou p {
+  position: relative;
+  z-index: 1;
+  max-width: 580px;
+  margin: 0;
+  color: #64748b;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.subscription-thankyou-row {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.subscription-thankyou-row span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 12px;
+  border: 1px solid rgba(34, 197, 94, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  color: #15803d;
+  font-size: 0.84rem;
+  font-weight: 850;
+}
+
+/* =========================================================
+   MAIN SUBSCRIPTION CARD
+   ========================================================= */
+
+.subscription-card {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  gap: 24px;
+  padding: 28px;
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at top left, rgba(15, 118, 110, 0.1), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(245, 158, 11, 0.1), transparent 34%),
+    linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  box-shadow:
+    0 24px 60px rgba(15, 23, 42, 0.09),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+.subscription-card::before {
+  content: '';
+  position: absolute;
+  inset: 16px;
+  border: 1px dashed rgba(148, 163, 184, 0.2);
+  border-radius: 24px;
+  pointer-events: none;
+}
+
+.subscription-plan,
+.subscription-benefits,
+.subscription-status,
+.upi-payment-box,
+.subscription-pay-btn,
+.subscription-note {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================================================
+   PLAN AREA
+   ========================================================= */
 
 .subscription-plan {
   display: flex;
-  justify-content: space-between;
-  gap: var(--spacing-lg);
   align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 22px;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at top left, rgba(245, 158, 11, 0.12), transparent 36%),
+    rgba(255, 255, 255, 0.78);
 }
 
 .subscription-plan h2 {
-  margin: 0 0 4px;
-  color: var(--gray-900);
+  margin: 0;
+  color: #0f172a;
+  font-size: 1.45rem;
+  font-weight: 950;
+  letter-spacing: -0.04em;
 }
 
-.subscription-plan p,
-.subscription-note {
-  margin: 0;
-  color: var(--gray-600);
+.subscription-plan p {
+  max-width: 560px;
+  margin: 7px 0 0;
+  color: #64748b;
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.55;
 }
 
 .subscription-plan strong {
+  flex-shrink: 0;
   color: #0f766e;
-  font-size: var(--font-size-3xl);
-  white-space: nowrap;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 950;
+  letter-spacing: -0.05em;
 }
+
+/* =========================================================
+   BENEFITS
+   ========================================================= */
 
 .subscription-benefits {
   display: grid;
-  gap: var(--spacing-sm);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
 }
 
-.subscription-benefits span,
+.subscription-benefits span {
+  min-height: 74px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 15px;
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.82);
+  color: #334155;
+  font-size: 0.88rem;
+  font-weight: 750;
+  line-height: 1.45;
+}
+
+.subscription-benefits svg {
+  flex-shrink: 0;
+  color: #16a34a;
+}
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
 .subscription-status {
   display: flex;
   align-items: center;
-  gap: var(--spacing-sm);
-  color: var(--gray-700);
+  gap: 10px;
+  padding: 16px;
+  border: 1px solid rgba(34, 197, 94, 0.24);
+  border-radius: 20px;
+  background: #f0fdf4;
+  color: #15803d;
+  font-size: 0.95rem;
+  font-weight: 850;
 }
 
-.subscription-benefits svg,
-.subscription-status svg {
+/* =========================================================
+   UPI PAYMENT BOX
+   ========================================================= */
+
+.upi-payment-box {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 22px;
+  align-items: stretch;
+  padding: 22px;
+  border: 1px solid rgba(15, 118, 110, 0.2);
+  border-radius: 26px;
+  background:
+    radial-gradient(circle at top left, rgba(15, 118, 110, 0.1), transparent 38%),
+    rgba(255, 255, 255, 0.78);
+}
+
+.upi-qr-wrap {
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 16px 34px rgba(15, 23, 42, 0.07);
+}
+
+.upi-qr-wrap img {
+  width: 100%;
+  max-width: 220px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  border-radius: 18px;
+}
+
+.upi-qr-placeholder {
+  width: 190px;
+  height: 190px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #cbd5e1;
+  border-radius: 22px;
+  color: #94a3b8;
+  font-size: 2rem;
+  font-weight: 950;
+  background: #f8fafc;
+}
+
+.upi-payment-form {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+}
+
+.upi-payment-form h3 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 1.25rem;
+  font-weight: 950;
+  letter-spacing: -0.03em;
+}
+
+.upi-payment-form p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+.upi-payment-form p strong {
   color: #0f766e;
+  font-weight: 950;
+}
+
+.input {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 16px;
+  outline: none;
+  background: #ffffff;
+  color: #0f172a;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.input::placeholder {
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.input:focus {
+  border-color: #0f766e;
+  box-shadow: 0 0 0 4px rgba(15, 118, 110, 0.12);
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.btn {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  font-size: 0.92rem;
+  font-weight: 900;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #0f766e, #14b8a6);
+  color: #ffffff;
+  box-shadow: 0 18px 34px rgba(15, 118, 110, 0.25);
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 24px 44px rgba(15, 118, 110, 0.32);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #334155, #0f172a);
+  color: #ffffff;
+  box-shadow: 0 18px 34px rgba(15, 23, 42, 0.22);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 24px 44px rgba(15, 23, 42, 0.28);
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
 }
 
 .subscription-pay-btn {
   width: fit-content;
-  min-width: 220px;
+  justify-self: end;
 }
 
-.subscription-alert {
-  max-width: 720px;
-  padding: var(--spacing-md);
-  border-radius: var(--radius-lg);
+/* =========================================================
+   NOTE
+   ========================================================= */
+
+.subscription-note {
+  margin: 0;
+  padding: 14px 16px;
+  border: 1px dashed rgba(245, 158, 11, 0.35);
+  border-radius: 18px;
+  background: #fffbeb;
+  color: #92400e;
+  font-size: 0.9rem;
+  font-weight: 750;
+  line-height: 1.5;
 }
 
-.subscription-alert.error {
-  border: 1px solid var(--error-300);
-  background: var(--error-100);
-  color: var(--error-700);
+/* =========================================================
+   ANIMATION
+   ========================================================= */
+
+.spin-icon {
+  animation: subscription-spin 0.8s linear infinite;
 }
 
-.subscription-alert.success {
-  border: 1px solid #99f6e4;
-  background: #f0fdfa;
-  color: #0f766e;
+@keyframes subscription-spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.subscription-thankyou {
-  max-width: 720px;
-  display: grid;
-  justify-items: center;
-  gap: var(--spacing-md);
-  padding: var(--spacing-xl);
-  border: 1px solid #86efac;
-  border-radius: var(--radius-lg);
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+html[data-theme='dark'] .subscription-page,
+:root[data-theme='dark'] .subscription-page {
+  color: #f8fafc;
+}
+
+html[data-theme='dark'] .subscription-header,
+html[data-theme='dark'] .subscription-card,
+html[data-theme='dark'] .subscription-thankyou,
+:root[data-theme='dark'] .subscription-header,
+:root[data-theme='dark'] .subscription-card,
+:root[data-theme='dark'] .subscription-thankyou {
+  border-color: #334155;
   background:
-    radial-gradient(circle at top left, rgba(34, 197, 94, 0.18), transparent 34%),
-    linear-gradient(180deg, #f0fdf4 0%, #ecfeff 100%);
-  color: #14532d;
-  text-align: center;
-  box-shadow: 0 18px 44px rgba(22, 101, 52, 0.14);
+    radial-gradient(circle at top left, rgba(245, 158, 11, 0.1), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(20, 184, 166, 0.1), transparent 34%),
+    linear-gradient(180deg, rgba(15, 23, 42, 0.92), rgba(2, 6, 23, 0.92));
+  box-shadow:
+    0 20px 55px rgba(0, 0, 0, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
-.subscription-thankyou-mark {
-  width: 92px;
-  height: 92px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 999px;
-  background: #22c55e;
-  color: white;
-  box-shadow: 0 16px 34px rgba(34, 197, 94, 0.28);
+html[data-theme='dark'] .subscription-header::before,
+html[data-theme='dark'] .subscription-card::before,
+:root[data-theme='dark'] .subscription-header::before,
+:root[data-theme='dark'] .subscription-card::before {
+  border-color: rgba(148, 163, 184, 0.14);
 }
 
-.subscription-thankyou-badge,
-.subscription-thankyou-row span {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--spacing-xs);
-  font-weight: var(--font-semibold);
+html[data-theme='dark'] .page-title,
+html[data-theme='dark'] .subscription-plan h2,
+html[data-theme='dark'] .upi-payment-form h3,
+html[data-theme='dark'] .subscription-thankyou h2,
+:root[data-theme='dark'] .page-title,
+:root[data-theme='dark'] .subscription-plan h2,
+:root[data-theme='dark'] .upi-payment-form h3,
+:root[data-theme='dark'] .subscription-thankyou h2 {
+  color: #f8fafc;
 }
 
-.subscription-thankyou-badge {
-  padding: 8px 12px;
-  border: 1px solid #86efac;
-  border-radius: 999px;
-  background: white;
-  color: #15803d;
+html[data-theme='dark'] .page-subtitle,
+html[data-theme='dark'] .subscription-plan p,
+html[data-theme='dark'] .upi-payment-form p,
+html[data-theme='dark'] .subscription-thankyou p,
+:root[data-theme='dark'] .page-subtitle,
+:root[data-theme='dark'] .subscription-plan p,
+:root[data-theme='dark'] .upi-payment-form p,
+:root[data-theme='dark'] .subscription-thankyou p {
+  color: #94a3b8;
 }
 
-.subscription-thankyou h2,
-.subscription-thankyou p {
-  margin: 0;
+html[data-theme='dark'] .subscription-plan,
+html[data-theme='dark'] .upi-payment-box,
+html[data-theme='dark'] .subscription-benefits span,
+html[data-theme='dark'] .upi-qr-wrap,
+:root[data-theme='dark'] .subscription-plan,
+:root[data-theme='dark'] .upi-payment-box,
+:root[data-theme='dark'] .subscription-benefits span,
+:root[data-theme='dark'] .upi-qr-wrap {
+  border-color: #334155;
+  background: rgba(15, 23, 42, 0.72);
 }
 
-.subscription-thankyou h2 {
-  color: #14532d;
-  font-size: var(--font-size-3xl);
+html[data-theme='dark'] .subscription-benefits span,
+:root[data-theme='dark'] .subscription-benefits span {
+  color: #cbd5e1;
 }
 
-.subscription-thankyou p {
-  max-width: 480px;
-  color: #166534;
+html[data-theme='dark'] .input,
+:root[data-theme='dark'] .input {
+  border-color: #334155;
+  background: #020617;
+  color: #f8fafc;
 }
 
-.subscription-thankyou-row {
-  display: flex;
-  justify-content: center;
-  gap: var(--spacing-md);
-  flex-wrap: wrap;
-  color: #0f766e;
+html[data-theme='dark'] .input::placeholder,
+:root[data-theme='dark'] .input::placeholder {
+  color: #64748b;
 }
 
-.subscription-status {
-  padding: var(--spacing-md);
-  border: 1px solid #99f6e4;
-  border-radius: var(--radius-lg);
-  background: #f0fdfa;
-  color: #0f766e;
-  font-weight: var(--font-semibold);
+html[data-theme='dark'] .upi-qr-placeholder,
+:root[data-theme='dark'] .upi-qr-placeholder {
+  border-color: #334155;
+  background: #020617;
+  color: #64748b;
 }
 
-.upi-payment-box {
-  display: grid;
-  grid-template-columns: 180px minmax(0, 1fr);
-  gap: var(--spacing-lg);
-  padding: var(--spacing-lg);
-  border: 1px solid #99f6e4;
-  border-radius: var(--radius-lg);
-  background: #f0fdfa;
+html[data-theme='dark'] .subscription-status,
+:root[data-theme='dark'] .subscription-status {
+  border-color: rgba(34, 197, 94, 0.28);
+  background: rgba(34, 197, 94, 0.12);
+  color: #86efac;
 }
 
-.upi-qr-wrap {
-  width: 180px;
-  height: 180px;
-  border: 1px solid #5eead4;
-  border-radius: var(--radius-lg);
-  background: white;
-  overflow: hidden;
+html[data-theme='dark'] .subscription-alert.error,
+:root[data-theme='dark'] .subscription-alert.error {
+  border-color: rgba(248, 113, 113, 0.28);
+  background: rgba(127, 29, 29, 0.28);
+  color: #fecaca;
 }
 
-.upi-qr-wrap img,
-.upi-qr-placeholder {
-  width: 100%;
-  height: 100%;
+html[data-theme='dark'] .subscription-alert.success,
+:root[data-theme='dark'] .subscription-alert.success {
+  border-color: rgba(34, 197, 94, 0.28);
+  background: rgba(20, 83, 45, 0.28);
+  color: #bbf7d0;
 }
 
-.upi-qr-wrap img {
-  object-fit: contain;
+html[data-theme='dark'] .subscription-note,
+:root[data-theme='dark'] .subscription-note {
+  border-color: rgba(245, 158, 11, 0.28);
+  background: rgba(120, 53, 15, 0.24);
+  color: #fcd34d;
 }
 
-.upi-qr-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #0f766e;
-  font-weight: var(--font-bold);
-  font-size: var(--font-size-3xl);
-}
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
 
-.upi-payment-form {
-  display: grid;
-  gap: var(--spacing-md);
-}
-
-.upi-payment-form h3,
-.upi-payment-form p {
-  margin: 0;
-}
-
-.upi-payment-form h3 {
-  color: var(--gray-900);
-}
-
-.upi-payment-form p {
-  color: var(--gray-600);
-}
-
-@media (max-width: 640px) {
-  .subscription-plan {
-    flex-direction: column;
+@media (max-width: 1024px) {
+  .subscription-benefits {
+    grid-template-columns: 1fr;
   }
 
-  .subscription-pay-btn,
-  .upi-payment-form .btn {
-    width: 100%;
+  .upi-payment-box {
+    grid-template-columns: 230px minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .subscription-page {
+    gap: 18px;
+  }
+
+  .subscription-header,
+  .subscription-card,
+  .subscription-thankyou {
+    border-radius: 26px;
+  }
+
+  .subscription-header,
+  .subscription-card {
+    padding: 22px;
+  }
+
+  .subscription-header::before,
+  .subscription-card::before {
+    inset: 10px;
+    border-radius: 20px;
+  }
+
+  .subscription-plan {
+    flex-direction: column;
+    padding: 18px;
+  }
+
+  .subscription-plan strong {
+    font-size: 1.7rem;
   }
 
   .upi-payment-box {
     grid-template-columns: 1fr;
+    padding: 18px;
   }
 
   .upi-qr-wrap {
-    width: min(100%, 240px);
-    height: auto;
-    aspect-ratio: 1;
+    min-height: 220px;
+  }
+
+  .upi-qr-wrap img {
+    max-width: 190px;
+  }
+
+  .subscription-pay-btn {
+    width: 100%;
+    justify-self: stretch;
   }
 }
 
-:root[data-theme='dark'] .subscription-card {
-  background: #111827;
-  border-color: #334155;
+@media (max-width: 480px) {
+  .subscription-header,
+  .subscription-card,
+  .subscription-thankyou {
+    border-radius: 22px;
+  }
+
+  .subscription-header,
+  .subscription-card,
+  .subscription-thankyou {
+    padding: 18px;
+  }
+
+  .page-title {
+    font-size: 1.45rem;
+  }
+
+  .page-subtitle {
+    font-size: 0.88rem;
+  }
+
+  .subscription-eyebrow {
+    font-size: 0.7rem;
+  }
+
+  .subscription-plan {
+    border-radius: 20px;
+  }
+
+  .subscription-benefits span {
+    min-height: auto;
+  }
+
+  .upi-payment-box {
+    border-radius: 22px;
+  }
+
+  .upi-qr-wrap {
+    min-height: 200px;
+    border-radius: 20px;
+  }
+
+  .upi-qr-wrap img {
+    max-width: 170px;
+  }
+
+  .upi-payment-form h3 {
+    font-size: 1.08rem;
+  }
+
+  .btn {
+    width: 100%;
+    min-height: 46px;
+    font-size: 0.88rem;
+  }
+
+  .subscription-thankyou-mark {
+    width: 72px;
+    height: 72px;
+    border-radius: 24px;
+  }
+
+  .subscription-thankyou-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .subscription-thankyou-row span {
+    justify-content: center;
+  }
 }
 
-:root[data-theme='dark'] .upi-payment-box {
-  background: #0f172a;
-  border-color: #0f766e;
+@media (max-width: 360px) {
+  .subscription-header,
+  .subscription-card,
+  .subscription-thankyou {
+    padding: 16px;
+  }
+
+  .page-title {
+    font-size: 1.32rem;
+  }
+
+  .subscription-plan h2 {
+    font-size: 1.22rem;
+  }
+
+  .subscription-plan strong {
+    font-size: 1.45rem;
+  }
+
+  .upi-qr-wrap img {
+    max-width: 150px;
+  }
 }
 
-:root[data-theme='dark'] .subscription-thankyou {
-  background:
-    radial-gradient(circle at top left, rgba(34, 197, 94, 0.2), transparent 34%),
-    linear-gradient(180deg, #052e16 0%, #0f172a 100%);
-  border-color: #15803d;
-  color: #dcfce7;
-}
-
-:root[data-theme='dark'] .subscription-thankyou h2,
-:root[data-theme='dark'] .subscription-thankyou p {
-  color: #dcfce7;
+@media (hover: none) {
+  .btn-primary:hover:not(:disabled),
+  .btn-secondary:hover:not(:disabled) {
+    transform: none;
+  }
 }

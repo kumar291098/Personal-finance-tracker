@@ -1,29 +1,20 @@
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
-import { BarChart3, CalendarDays, FileSpreadsheet, Flag, PieChart, Printer, TrendingDown, TrendingUp, Target } from 'lucide-react';
-=======
-import { BarChart3, CalendarDays, PieChart, TrendingDown, TrendingUp, Target, Download, FileText } from 'lucide-react';
->>>>>>> main
 import {
-  CartesianGrid,
-  Legend,
-  Line,
-  LineChart,
-<<<<<<< HEAD
-=======
-  BarChart,
-  Bar,
-  PieChart as RechartsPieChart,
-  Pie,
-  Cell,
->>>>>>> main
-  ResponsiveContainer,
-  Tooltip,
-  XAxis,
-  YAxis
-} from 'recharts';
+  BarChart3,
+  CalendarDays,
+  PieChart,
+  TrendingDown,
+  TrendingUp,
+  Target,
+  Download,
+  FileText
+} from 'lucide-react';
+
 import { transactionService } from '../../services/transactionService';
 import StatsCard from '../shared/StatsCard';
+import SharedBarChart from '../charts/SharedBarChart';
+import SharedLineChart from '../charts/SharedLineChart';
+import SharedPieChart from '../charts/SharedPieChart';
 import { formatCurrency } from '../../utils/transactionUtils';
 import './Analytics.css';
 
@@ -41,6 +32,8 @@ const periodOptions = [
   { value: 'custom', label: 'Custom Range' },
   { value: 'all', label: 'All Time' }
 ];
+
+const getNumericAmount = (value) => Number(value || 0);
 
 const Analytics = () => {
   const [transactions, setTransactions] = useState([]);
@@ -130,7 +123,7 @@ const Analytics = () => {
     }
   };
 
-  const getTotal = (items) => items.reduce((sum, transaction) => sum + transaction.amount, 0);
+  const getTotal = (items) => items.reduce((sum, transaction) => sum + getNumericAmount(transaction.amount), 0);
 
   const filterTransactionsByRange = (type) => {
     const { startDate, endDate } = getDateRange(analysisFilter);
@@ -170,9 +163,9 @@ const Analytics = () => {
       }
 
       if (transaction.type === 'INCOME') {
-        acc[transaction.category].income += transaction.amount;
+        acc[transaction.category].income += getNumericAmount(transaction.amount);
       } else {
-        acc[transaction.category].expense += transaction.amount;
+        acc[transaction.category].expense += getNumericAmount(transaction.amount);
       }
 
       acc[transaction.category].count += 1;
@@ -208,7 +201,7 @@ const Analytics = () => {
     const source = type === 'income' ? analytics.incomeTransactions : analytics.expenseTransactions;
     const totals = source.reduce((acc, transaction) => {
       const category = transaction.category || 'Other';
-      acc[category] = (acc[category] || 0) + transaction.amount;
+      acc[category] = (acc[category] || 0) + getNumericAmount(transaction.amount);
       return acc;
     }, {});
     const total = Object.values(totals).reduce((sum, amount) => sum + amount, 0);
@@ -237,9 +230,9 @@ const Analytics = () => {
       }
 
       if (transaction.type === 'INCOME') {
-        acc[key].income += transaction.amount;
+        acc[key].income += getNumericAmount(transaction.amount);
       } else {
-        acc[key].expense += transaction.amount;
+        acc[key].expense += getNumericAmount(transaction.amount);
       }
 
       return acc;
@@ -267,9 +260,9 @@ const Analytics = () => {
       }
 
       if (transaction.type === 'INCOME') {
-        acc[key].income += transaction.amount;
+        acc[key].income += getNumericAmount(transaction.amount);
       } else {
-        acc[key].expense += transaction.amount;
+        acc[key].expense += getNumericAmount(transaction.amount);
       }
 
       acc[key].balance = acc[key].income - acc[key].expense;
@@ -292,14 +285,6 @@ const Analytics = () => {
   const incomeCategoryData = getCategoryChartData('income');
   const monthlyTrend = getMonthlyTrend();
   const dailyTrend = getDailyTrend();
-<<<<<<< HEAD
-  const categoryTotal = expenseCategoryData.reduce((sum, item) => sum + item.amount, 0);
-  const maxTrendAmount = Math.max(
-    ...monthlyTrend.flatMap(item => [item.income, item.expense]),
-    1
-  );
-=======
->>>>>>> main
   const incomeExpenseTotal = Math.max(analytics.income + analytics.expenses, 1);
   const incomeShare = (analytics.income / incomeExpenseTotal) * 100;
   const expenseShare = (analytics.expenses / incomeExpenseTotal) * 100;
@@ -310,7 +295,7 @@ const Analytics = () => {
       Type: transaction.type,
       Category: transaction.category || 'Other',
       Description: transaction.description || '',
-      Amount: transaction.amount
+      Amount: getNumericAmount(transaction.amount)
     }));
   };
 
@@ -421,22 +406,13 @@ const Analytics = () => {
             Track income, expenses, date ranges, trends, and progress toward your goal.
           </p>
         </div>
-        <div className="header-actions">
-<<<<<<< HEAD
-          <button className="btn btn-secondary export-btn" onClick={exportCsv}>
-            <FileSpreadsheet size={18} />
-            Export CSV
-          </button>
-          <button className="btn btn-primary export-btn" onClick={exportPdf}>
-            <Printer size={18} />
-=======
+        <div className="analytics-header-actions">
           <button className="export-btn" onClick={exportCsv}>
             <Download size={18} />
             Export CSV
           </button>
           <button className="export-btn pdf-btn" onClick={exportPdf}>
             <FileText size={18} />
->>>>>>> main
             Export PDF
           </button>
         </div>
@@ -572,61 +548,16 @@ const Analytics = () => {
             <div className="empty-analytics">No line chart data available for this range.</div>
           ) : (
             <div className="line-chart-wrap">
-              <ResponsiveContainer width="100%" height={320}>
-                <LineChart data={dailyTrend} margin={{ top: 12, right: 16, left: 4, bottom: 8 }}>
-                  <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
-                  <XAxis
-                    dataKey="label"
-                    tickLine={false}
-                    axisLine={false}
-                    tick={{ fill: '#64748b', fontSize: 12 }}
-                  />
-                  <YAxis
-                    tickLine={false}
-                    axisLine={false}
-                    tick={{ fill: '#64748b', fontSize: 12 }}
-                    tickFormatter={(value) => `INR ${Math.round(value)}`}
-                    width={70}
-                  />
-                  <Tooltip
-                    formatter={(value, name) => [formatCurrency(value), name]}
-                    labelFormatter={(label) => `Date: ${label}`}
-                    contentStyle={{
-                      borderRadius: 12,
-                      border: '1px solid #e2e8f0',
-                      boxShadow: '0 12px 30px rgba(15, 23, 42, 0.12)'
-                    }}
-                  />
-                  <Legend verticalAlign="top" height={36} iconType="circle" />
-                  <Line
-                    type="monotone"
-                    dataKey="income"
-                    name="Income"
-                    stroke="#0f766e"
-                    strokeWidth={3}
-                    dot={{ r: 4, strokeWidth: 2 }}
-                    activeDot={{ r: 6 }}
-                  />
-                  <Line
-                    type="monotone"
-                    dataKey="expense"
-                    name="Expenses"
-                    stroke="#ef4444"
-                    strokeWidth={3}
-                    dot={{ r: 4, strokeWidth: 2 }}
-                    activeDot={{ r: 6 }}
-                  />
-                  <Line
-                    type="monotone"
-                    dataKey="balance"
-                    name="Balance"
-                    stroke="#2563eb"
-                    strokeWidth={3}
-                    dot={{ r: 4, strokeWidth: 2 }}
-                    activeDot={{ r: 6 }}
-                  />
-                </LineChart>
-              </ResponsiveContainer>
+              <SharedLineChart
+                data={dailyTrend}
+                series={[
+                  { dataKey: 'balance', label: 'Balance', color: '#2563eb' },
+                  { dataKey: 'expense', label: 'Expenses', color: '#ef4444' },
+                  { dataKey: 'income', label: 'Income', color: '#0f766e' }
+                ]}
+                emptyMessage="No line chart data available for this range."
+                height={320}
+              />
             </div>
           )}
         </div>
@@ -642,31 +573,15 @@ const Analytics = () => {
             {monthlyTrend.length === 0 ? (
               <div className="empty-analytics">No cash flow data available for this range.</div>
             ) : (
-              <ResponsiveContainer width="100%" height={260}>
-                <BarChart data={monthlyTrend} margin={{ top: 20, right: 0, left: -20, bottom: 0 }}>
-                  <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
-                  <XAxis 
-                    dataKey="label" 
-                    tickLine={false} 
-                    axisLine={false} 
-                    tick={{ fill: '#64748b', fontSize: 12 }} 
-                  />
-                  <YAxis 
-                    tickLine={false} 
-                    axisLine={false} 
-                    tick={{ fill: '#64748b', fontSize: 12 }} 
-                    tickFormatter={(value) => `₹${Math.round(value)}`} 
-                  />
-                  <Tooltip 
-                    formatter={(value, name) => [formatCurrency(value), name]} 
-                    cursor={{ fill: 'rgba(15, 23, 42, 0.04)' }} 
-                    contentStyle={{ borderRadius: 12, border: '1px solid #e2e8f0', boxShadow: '0 12px 30px rgba(15, 23, 42, 0.12)' }} 
-                  />
-                  <Legend verticalAlign="top" height={36} iconType="circle" />
-                  <Bar dataKey="income" name="Income" fill="#0f766e" radius={[4, 4, 0, 0]} maxBarSize={40} />
-                  <Bar dataKey="expense" name="Expenses" fill="#ef4444" radius={[4, 4, 0, 0]} maxBarSize={40} />
-                </BarChart>
-              </ResponsiveContainer>
+              <SharedBarChart
+                data={monthlyTrend}
+                series={[
+                  { dataKey: 'expense', label: 'Expenses', color: '#ef4444' },
+                  { dataKey: 'income', label: 'Income', color: '#0f766e' }
+                ]}
+                emptyMessage="No cash flow data available for this range."
+                height={260}
+              />
             )}
           </div>
         </div>
@@ -685,30 +600,14 @@ const Analytics = () => {
                   No data available
                 </div>
               ) : (
-                <ResponsiveContainer width="100%" height="100%">
-                  <RechartsPieChart>
-                    <Pie
-                      data={expenseCategoryData}
-                      cx="50%"
-                      cy="50%"
-                      innerRadius={60}
-                      outerRadius={80}
-                      paddingAngle={5}
-                      dataKey="amount"
-                      nameKey="category"
-                      stroke="none"
-                    >
-                      {expenseCategoryData.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={entry.color} />
-                      ))}
-                    </Pie>
-                    <Tooltip 
-                      formatter={(value) => formatCurrency(value)} 
-                      contentStyle={{ borderRadius: 12, border: '1px solid #e2e8f0', boxShadow: '0 12px 30px rgba(15, 23, 42, 0.12)' }} 
-                      itemStyle={{ color: '#0f172a', fontWeight: 600 }}
-                    />
-                  </RechartsPieChart>
-                </ResponsiveContainer>
+                <SharedPieChart
+                  data={expenseCategoryData}
+                  emptyMessage="No data available"
+                  height={220}
+                  showLegend={false}
+                  centerLabel="Expenses"
+                  className="analytics-expense-pie"
+                />
               )}
             </div>
             <div className="donut-list">

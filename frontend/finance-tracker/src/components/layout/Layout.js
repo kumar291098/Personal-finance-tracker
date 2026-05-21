@@ -29,7 +29,12 @@ import './Layout.css';
 const Layout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [notificationsOpen, setNotificationsOpen] = useState(false);
-  const [theme, setTheme] = useState(() => localStorage.getItem('financeTheme') || 'light');
+  const [theme, setTheme] = useState(() =>
+    localStorage.getItem('financeTheme') ||
+    document.documentElement.getAttribute('data-theme') ||
+    document.body.getAttribute('data-theme') ||
+    'light'
+  );
   const [readNotificationIds, setReadNotificationIds] = useState([]);
   const { user, logout, canAccessPage, isAdmin } = useAuth();
   const navigate = useNavigate();
@@ -111,6 +116,7 @@ const Layout = () => {
   const unreadCount = notifications.filter(notification => notification.unread).length;
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
+    document.body.setAttribute('data-theme', theme);
     localStorage.setItem('financeTheme', theme);
   }, [theme]);
 

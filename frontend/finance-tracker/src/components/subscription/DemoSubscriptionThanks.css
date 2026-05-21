@@ -1,87 +1,448 @@
+/* =========================================================
+   DEMO SUBSCRIPTION THANKS PAGE
+   Works with DemoSubscriptionThanks.jsx
+   ========================================================= */
+
 .demo-thanks-page {
+  position: relative;
   min-height: 100vh;
-  display: grid;
-  place-items: center;
-  padding: var(--spacing-xl);
-  background: linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top left, rgba(245, 158, 11, 0.18), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(15, 118, 110, 0.16), transparent 34%),
+    linear-gradient(135deg, #f8fafc 0%, #ecfeff 50%, #fff7ed 100%);
+}
+
+.demo-thanks-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.35;
+  background-image:
+    linear-gradient(rgba(15, 118, 110, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 118, 110, 0.08) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(circle at center, black, transparent 78%);
+  pointer-events: none;
 }
 
 .demo-thanks-card {
-  width: min(100%, 520px);
+  position: relative;
+  z-index: 1;
+  width: min(560px, 100%);
   display: grid;
-  gap: var(--spacing-lg);
-  padding: var(--spacing-xl);
-  border: 1px solid var(--gray-200);
-  border-radius: var(--radius-lg);
-  background: white;
+  justify-items: center;
+  gap: 18px;
+  padding: 38px;
+  overflow: hidden;
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  border-radius: 34px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(18px);
   text-align: center;
-  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.12);
+  box-shadow:
+    0 30px 80px rgba(15, 23, 42, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.demo-thanks-card::before {
+  content: '';
+  position: absolute;
+  inset: 16px;
+  border: 1px dashed rgba(148, 163, 184, 0.24);
+  border-radius: 26px;
+  pointer-events: none;
+}
+
+.demo-thanks-card::after {
+  content: '';
+  position: absolute;
+  right: -70px;
+  top: -70px;
+  width: 220px;
+  height: 220px;
+  border-radius: 999px;
+  background: rgba(245, 158, 11, 0.14);
+  pointer-events: none;
 }
 
 .demo-thanks-icon {
-  width: 64px;
-  height: 64px;
-  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  width: 78px;
+  height: 78px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: var(--radius-lg);
-  background: #fef3c7;
-  color: #92400e;
+  border-radius: 26px;
+  background: linear-gradient(135deg, #d97706, #f59e0b);
+  color: #ffffff;
+  box-shadow: 0 20px 42px rgba(217, 119, 6, 0.28);
 }
 
 .demo-thanks-card h1 {
+  position: relative;
+  z-index: 1;
   margin: 0;
-  color: var(--gray-900);
+  color: #0f172a;
+  font-size: clamp(1.65rem, 4vw, 2.35rem);
+  font-weight: 950;
+  line-height: 1.1;
+  letter-spacing: -0.05em;
 }
 
-.demo-thanks-card p {
+.demo-thanks-card > p {
+  position: relative;
+  z-index: 1;
+  max-width: 440px;
   margin: 0;
-  color: var(--gray-600);
+  color: #64748b;
+  font-size: 0.96rem;
+  font-weight: 600;
+  line-height: 1.6;
 }
+
+/* Alert */
+
+.demo-thanks-alert {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid rgba(239, 68, 68, 0.24);
+  border-radius: 18px;
+  background: #fef2f2;
+  color: #b91c1c;
+  font-size: 0.9rem;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+/* Reference Box */
 
 .demo-reference-box {
+  position: relative;
+  z-index: 1;
+  width: 100%;
   display: grid;
-  gap: 6px;
-  padding: var(--spacing-lg);
-  border: 1px solid #99f6e4;
-  border-radius: var(--radius-lg);
-  background: #f0fdfa;
+  gap: 10px;
+  padding: 22px;
+  border: 1px solid rgba(15, 118, 110, 0.2);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at top left, rgba(20, 184, 166, 0.14), transparent 36%),
+    #f8fafc;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.06);
 }
 
-.demo-reference-box span,
-.demo-reference-box small {
+.demo-reference-box span {
   color: #0f766e;
-  font-size: var(--font-size-sm);
+  font-size: 0.76rem;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .demo-reference-box strong {
-  color: #134e4a;
-  font-size: clamp(1.5rem, 6vw, 2.4rem);
+  display: block;
+  width: 100%;
+  padding: 14px 16px;
   overflow-wrap: anywhere;
+  border: 1px dashed rgba(15, 118, 110, 0.35);
+  border-radius: 18px;
+  background: #ffffff;
+  color: #0f172a;
+  font-size: clamp(1.05rem, 3vw, 1.35rem);
+  font-weight: 950;
+  letter-spacing: 0.04em;
+  line-height: 1.35;
 }
+
+.demo-reference-box small {
+  color: #64748b;
+  font-size: 0.82rem;
+  font-weight: 650;
+  line-height: 1.45;
+}
+
+/* Buttons */
 
 .demo-thanks-actions {
-  display: flex;
-  justify-content: center;
-  gap: var(--spacing-md);
-  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
 }
 
-.demo-subscription-link {
+.btn {
+  min-height: 48px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--spacing-sm);
-  color: #0f766e;
+  gap: 9px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 900;
+  white-space: nowrap;
   text-decoration: none;
-  font-weight: var(--font-semibold);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease,
+    background 0.2s ease;
 }
 
-.demo-thanks-alert {
-  padding: var(--spacing-md);
-  border: 1px solid var(--error-300);
-  border-radius: var(--radius-lg);
-  background: var(--error-100);
-  color: var(--error-700);
+.btn-primary {
+  background: linear-gradient(135deg, #0f766e, #14b8a6);
+  color: #ffffff;
+  box-shadow: 0 18px 34px rgba(15, 118, 110, 0.24);
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 24px 44px rgba(15, 118, 110, 0.32);
+}
+
+.btn-secondary {
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #334155;
+  box-shadow: 0 12px 26px rgba(15, 23, 42, 0.06);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  background: #f8fafc;
+  box-shadow: 0 18px 34px rgba(15, 23, 42, 0.1);
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.62;
+}
+
+/* Subscription Link */
+
+.demo-subscription-link {
+  position: relative;
+  z-index: 1;
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 0 18px;
+  border: 1px solid rgba(15, 118, 110, 0.22);
+  border-radius: 999px;
+  background: #ecfdf5;
+  color: #0f766e;
+  font-size: 0.9rem;
+  font-weight: 950;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.demo-subscription-link:hover {
+  transform: translateY(-2px);
+  background: #ccfbf1;
+  box-shadow: 0 16px 30px rgba(15, 118, 110, 0.14);
+}
+
+/* Loading Spin */
+
+.spin-icon {
+  animation: demo-reference-spin 0.8s linear infinite;
+}
+
+@keyframes demo-reference-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+html[data-theme='dark'] .demo-thanks-page,
+:root[data-theme='dark'] .demo-thanks-page {
+  background:
+    radial-gradient(circle at top left, rgba(245, 158, 11, 0.14), transparent 36%),
+    radial-gradient(circle at bottom right, rgba(20, 184, 166, 0.14), transparent 34%),
+    linear-gradient(135deg, #020617 0%, #0f172a 100%);
+}
+
+html[data-theme='dark'] .demo-thanks-card,
+:root[data-theme='dark'] .demo-thanks-card {
+  border-color: #334155;
+  background: rgba(15, 23, 42, 0.9);
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+html[data-theme='dark'] .demo-thanks-card::before,
+:root[data-theme='dark'] .demo-thanks-card::before {
+  border-color: rgba(148, 163, 184, 0.16);
+}
+
+html[data-theme='dark'] .demo-thanks-card h1,
+:root[data-theme='dark'] .demo-thanks-card h1 {
+  color: #f8fafc;
+}
+
+html[data-theme='dark'] .demo-thanks-card > p,
+:root[data-theme='dark'] .demo-thanks-card > p,
+html[data-theme='dark'] .demo-reference-box small,
+:root[data-theme='dark'] .demo-reference-box small {
+  color: #94a3b8;
+}
+
+html[data-theme='dark'] .demo-reference-box,
+:root[data-theme='dark'] .demo-reference-box {
+  border-color: #334155;
+  background:
+    radial-gradient(circle at top left, rgba(20, 184, 166, 0.1), transparent 36%),
+    #0f172a;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.24);
+}
+
+html[data-theme='dark'] .demo-reference-box strong,
+:root[data-theme='dark'] .demo-reference-box strong {
+  border-color: rgba(20, 184, 166, 0.3);
+  background: #020617;
+  color: #f8fafc;
+}
+
+html[data-theme='dark'] .btn-secondary,
+:root[data-theme='dark'] .btn-secondary {
+  border-color: #334155;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+html[data-theme='dark'] .btn-secondary:hover:not(:disabled),
+:root[data-theme='dark'] .btn-secondary:hover:not(:disabled) {
+  background: #1e293b;
+}
+
+html[data-theme='dark'] .demo-subscription-link,
+:root[data-theme='dark'] .demo-subscription-link {
+  border-color: rgba(20, 184, 166, 0.28);
+  background: rgba(20, 184, 166, 0.1);
+  color: #5eead4;
+}
+
+html[data-theme='dark'] .demo-subscription-link:hover,
+:root[data-theme='dark'] .demo-subscription-link:hover {
+  background: rgba(20, 184, 166, 0.16);
+}
+
+html[data-theme='dark'] .demo-thanks-alert,
+:root[data-theme='dark'] .demo-thanks-alert {
+  border-color: rgba(248, 113, 113, 0.28);
+  background: rgba(127, 29, 29, 0.28);
+  color: #fecaca;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 640px) {
+  .demo-thanks-page {
+    align-items: flex-start;
+    padding: 18px;
+  }
+
+  .demo-thanks-card {
+    padding: 28px 22px;
+    border-radius: 28px;
+  }
+
+  .demo-thanks-card::before {
+    inset: 10px;
+    border-radius: 22px;
+  }
+
+  .demo-thanks-icon {
+    width: 68px;
+    height: 68px;
+    border-radius: 22px;
+  }
+
+  .demo-thanks-card h1 {
+    font-size: 1.55rem;
+  }
+
+  .demo-thanks-card > p {
+    font-size: 0.9rem;
+  }
+
+  .demo-reference-box {
+    padding: 18px;
+    border-radius: 22px;
+  }
+
+  .demo-thanks-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .btn,
+  .demo-subscription-link {
+    width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .demo-thanks-page {
+    padding: 12px;
+  }
+
+  .demo-thanks-card {
+    padding: 24px 18px;
+    border-radius: 24px;
+  }
+
+  .demo-thanks-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+  }
+
+  .demo-thanks-card h1 {
+    font-size: 1.35rem;
+  }
+
+  .demo-reference-box strong {
+    font-size: 0.98rem;
+    padding: 12px;
+  }
+
+  .btn,
+  .demo-subscription-link {
+    min-height: 44px;
+    font-size: 0.84rem;
+  }
+}
+
+@media (hover: none) {
+  .btn-primary:hover:not(:disabled),
+  .btn-secondary:hover:not(:disabled),
+  .demo-subscription-link:hover {
+    transform: none;
+  }
 }

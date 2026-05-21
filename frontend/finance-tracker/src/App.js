@@ -6,6 +6,9 @@ import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import ForgotPassword from './components/auth/ForgotPassword';
 import './styles/global.css';
+import './components/charts/SharedBarChart.css';
+import './components/charts/SharedLineChart.css';
+import './components/charts/SharedPieChart.css';
 
 // Lazy loading feature components for faster initial/login load
 const Dashboard = lazy(() => import('./components/dashboard/Dashboard'));
@@ -20,8 +23,19 @@ const UserAccess = lazy(() => import('./components/admin/UserAccess'));
 
 // Loading fallback
 const PageLoader = () => (
-  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-    <div>Loading...</div>
+  <div className="page-loader">
+    <div className="page-loader-card">
+      <div className="page-loader-logo">
+        <span>₹</span>
+      </div>
+
+      <div className="page-loader-content">
+        <h2>Finance Tracker</h2>
+        <p>Preparing your dashboard...</p>
+      </div>
+
+      <div className="page-loader-spinner" aria-label="Loading" />
+    </div>
   </div>
 );
 
