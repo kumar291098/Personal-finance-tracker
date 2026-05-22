@@ -1,0 +1,17 @@
+Starting project at E:\JavaProject\Personal-finance-tracker\mobile
+Using src/app as the root directory for Expo Router.
+React Compiler enabled
+Starting Metro Bundler
+
+warning: Bundler cache is empty, rebuilding (this may take a minute)
+Waiting on http://localhost:8082
+Logs for your project will appear below.
+λ Bundled 5816ms node_modules\expo\node_modules\@expo\cli\node_modules\@expo\router-server\node\render.js (888 modules)
+Web Bundled 6216ms node_modules\expo-router\entry.js (851 modules)
+λ Bundled 11980ms node_modules\expo\node_modules\@expo\cli\node_modules\@expo\router-server\node\render.js (1 module)
+Web Bundled 12108ms node_modules\expo-router\entry.js (1 module)
+Web Bundled 2333ms node_modules\expo-router\entry.js (854 modules)
+Web  LOG  Running application "main" with appParams:
+ {"hydrate": undefined, "rootTag": "#root"} 
+Development-level warnings: ON.
+Performance optimizations: OFF.

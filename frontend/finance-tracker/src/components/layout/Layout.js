@@ -376,6 +376,27 @@ const Layout = () => {
         <div className="page-content">
           <Outlet />
         </div>
+
+        {/* Bottom Navigation for Mobile */}
+        <nav className="bottom-nav">
+          {menuItems.filter(item => (item.adminOnly ? isAdmin : canAccessPage(item.page)))
+            .slice(0, 5) // Take top 5 items for bottom nav
+            .map((item) => {
+              const Icon = item.icon;
+              return (
+                <NavLink
+                  key={item.path}
+                  to={item.path}
+                  className={({ isActive }) =>
+                    `bottom-nav-item ${isActive ? 'active' : ''}`
+                  }
+                >
+                  <Icon size={20} />
+                  <span>{item.label}</span>
+                </NavLink>
+              );
+          })}
+        </nav>
       </main>
 
       {sidebarOpen && (

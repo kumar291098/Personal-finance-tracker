@@ -123,13 +123,16 @@ const Dashboard = () => {
   }
 
   return (
-    <div className="dashboard-container">
+    <div className="dashboard">
       <div className="dashboard-header">
-        <h1>Financial Dashboard</h1>
-        <p>Welcome back, <strong>{user?.username}</strong>!</p>
+        <div className="welcome-section">
+          <p className="dashboard-kicker">Overview</p>
+          <h1 className="dashboard-title">Financial Dashboard</h1>
+          <p className="dashboard-subtitle">Welcome back, <strong>{user?.username}</strong>! Here is what's happening with your finances today.</p>
+        </div>
       </div>
 
-      <div className="dashboard-stats">
+      <div className="stats-grid">
         <div className="stat-card">
           <h3>Total Income</h3>
           <p className="amount income">{formatCurrency(income)}</p>
@@ -146,46 +149,58 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <div className="dashboard-filters">
-        <select value={filter} onChange={(e) => setFilter(e.target.value)}>
-          <option value="all">All Transactions</option>
-          <option value="INCOME">Income Only</option>
-          <option value="EXPENSE">Expenses Only</option>
-        </select>
+      <div className="dashboard-grid">
+        <div className="charts-section">
+          <div className="chart-card dashboard-insights-card">
+            <div className="chart-header">
+              <h3 className="chart-title">Filters</h3>
+              <p className="chart-subtitle">Refine your transaction view</p>
+            </div>
+            <div className="dashboard-filter-row">
+              <select className="dashboard-filter-select" value={filter} onChange={(e) => setFilter(e.target.value)}>
+                <option value="all">All Transactions</option>
+                <option value="INCOME">Income Only</option>
+                <option value="EXPENSE">Expenses Only</option>
+              </select>
 
-        <select value={dateRange} onChange={(e) => setDateRange(e.target.value)}>
-          <option value="all">All Time</option>
-          <option value="week">This Week</option>
-          <option value="month">This Month</option>
-          <option value="year">This Year</option>
-        </select>
-      </div>
+              <select className="dashboard-filter-select" value={dateRange} onChange={(e) => setDateRange(e.target.value)}>
+                <option value="all">All Time</option>
+                <option value="week">This Week</option>
+                <option value="month">This Month</option>
+                <option value="year">This Year</option>
+              </select>
+            </div>
+          </div>
+        </div>
 
-      <div className="transactions-section">
-        <h2>Your Transactions</h2>
-        {filteredTransactions.length === 0 ? (
-          <div className="empty-state">
-            <p>No transactions found. Start by adding your first transaction!</p>
+        <div className="recent-section">
+          <div className="section-header">
+            <h3 className="section-title">Your Transactions</h3>
           </div>
-        ) : (
-          <div className="transactions-list">
-            {filteredTransactions.map(transaction => (
-              <div key={transaction.id} className="transaction-card">
-                <div className="transaction-header">
-                  <h4>{transaction.description}</h4>
-                  <span className={`type ${transaction.type.toLowerCase()}`}>
-                    {transaction.type}
-                  </span>
+          {filteredTransactions.length === 0 ? (
+            <div className="empty-state">
+              <p>No transactions found. Start by adding your first transaction!</p>
+            </div>
+          ) : (
+            <div className="transactions-list">
+              {filteredTransactions.map(transaction => (
+                <div key={transaction.id} className="transaction-card">
+                  <div className="transaction-header">
+                    <h4>{transaction.description}</h4>
+                    <span className={`type ${transaction.type.toLowerCase()}`}>
+                      {transaction.type}
+                    </span>
+                  </div>
+                  <div className="transaction-details">
+                    <p><strong>Amount:</strong> {formatCurrency(transaction.amount)}</p>
+                    <p><strong>Category:</strong> {transaction.category || 'Other'}</p>
+                    <p><strong>Date:</strong> {formatDate(transaction.transactionDate)}</p>
+                  </div>
                 </div>
-                <div className="transaction-details">
-                  <p><strong>Amount:</strong> {formatCurrency(transaction.amount)}</p>
-                  <p><strong>Category:</strong> {transaction.category || 'Other'}</p>
-                  <p><strong>Date:</strong> {formatDate(transaction.transactionDate)}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

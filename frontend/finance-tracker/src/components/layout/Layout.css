@@ -680,100 +680,6 @@
    DARK MODE
    ========================================================= */
 
-html[data-theme='light'] .layout,
-:root[data-theme='light'] .layout,
-body[data-theme='light'] .layout {
-  background: #ffffff !important;
-  color: #000000 !important;
-}
-
-html[data-theme='light'] .sidebar,
-html[data-theme='light'] .top-header,
-html[data-theme='light'] .notification-panel,
-html[data-theme='light'] .user-info,
-html[data-theme='light'] .search-input,
-html[data-theme='light'] .theme-toggle-btn,
-html[data-theme='light'] .notification-btn,
-html[data-theme='light'] .user-menu-btn,
-html[data-theme='light'] .mobile-menu-btn,
-html[data-theme='light'] .sidebar-toggle,
-:root[data-theme='light'] .sidebar,
-:root[data-theme='light'] .top-header,
-:root[data-theme='light'] .notification-panel,
-:root[data-theme='light'] .user-info,
-:root[data-theme='light'] .search-input,
-:root[data-theme='light'] .theme-toggle-btn,
-:root[data-theme='light'] .notification-btn,
-:root[data-theme='light'] .user-menu-btn,
-:root[data-theme='light'] .mobile-menu-btn,
-:root[data-theme='light'] .sidebar-toggle,
-body[data-theme='light'] .sidebar,
-body[data-theme='light'] .top-header,
-body[data-theme='light'] .notification-panel,
-body[data-theme='light'] .user-info,
-body[data-theme='light'] .search-input,
-body[data-theme='light'] .theme-toggle-btn,
-body[data-theme='light'] .notification-btn,
-body[data-theme='light'] .user-menu-btn,
-body[data-theme='light'] .mobile-menu-btn,
-body[data-theme='light'] .sidebar-toggle {
-  background: #ffffff !important;
-  color: #000000 !important;
-  border-color: #e5e7eb !important;
-}
-
-html[data-theme='light'] .logo-text,
-html[data-theme='light'] .nav-link,
-html[data-theme='light'] .nav-label,
-html[data-theme='light'] .nav-description,
-html[data-theme='light'] .user-name,
-html[data-theme='light'] .user-role,
-html[data-theme='light'] .user-name-header,
-html[data-theme='light'] .notification-panel-header h3,
-html[data-theme='light'] .notification-item strong,
-html[data-theme='light'] .notification-item small,
-:root[data-theme='light'] .logo-text,
-:root[data-theme='light'] .nav-link,
-:root[data-theme='light'] .nav-label,
-:root[data-theme='light'] .nav-description,
-:root[data-theme='light'] .user-name,
-:root[data-theme='light'] .user-role,
-:root[data-theme='light'] .user-name-header,
-:root[data-theme='light'] .notification-panel-header h3,
-:root[data-theme='light'] .notification-item strong,
-:root[data-theme='light'] .notification-item small,
-body[data-theme='light'] .logo-text,
-body[data-theme='light'] .nav-link,
-body[data-theme='light'] .nav-label,
-body[data-theme='light'] .nav-description,
-body[data-theme='light'] .user-name,
-body[data-theme='light'] .user-role,
-body[data-theme='light'] .user-name-header,
-body[data-theme='light'] .notification-panel-header h3,
-body[data-theme='light'] .notification-item strong,
-body[data-theme='light'] .notification-item small {
-  color: #000000 !important;
-}
-
-html[data-theme='light'] .nav-icon,
-:root[data-theme='light'] .nav-icon,
-body[data-theme='light'] .nav-icon {
-  background: #ffffff !important;
-  color: #000000 !important;
-  border: 1px solid #e5e7eb;
-}
-
-html[data-theme='light'] .nav-link-active,
-html[data-theme='light'] .notification-item.unread,
-:root[data-theme='light'] .nav-link-active,
-:root[data-theme='light'] .notification-item.unread,
-body[data-theme='light'] .nav-link-active,
-body[data-theme='light'] .notification-item.unread {
-  background: #ffffff !important;
-  color: #000000 !important;
-  border-color: #d1d5db !important;
-}
-
 html[data-theme='dark'] .layout,
 :root[data-theme='dark'] .layout {
   background:
@@ -1143,6 +1049,201 @@ html[data-theme='dark'] .notification-badge,
   .user-menu-btn {
     flex: 0 0 42px;
     width: 42px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 286px;
+  }
+
+  .top-header {
+    min-height: 70px;
+  }
+
+  .header-actions {
+    gap: 12px;
+  }
+
+  .search-box {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .user-name-header,
+  .member-chip,
+  .dropdown-arrow {
+    display: none;
+  }
+
+  .user-menu-btn {
+    width: 44px;
+    min-width: 44px;
+    padding: 5px;
+    justify-content: center;
+  }
+
+  .notification-panel {
+    right: -54px;
+    width: min(360px, calc(100vw - 24px));
+  }
+
+  .page-content {
+    padding: 18px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+  .sidebar {
+    width: min(286px, 86vw);
+  }
+
+  .top-header {
+    padding: 10px 12px;
+    gap: 10px;
+  }
+
+  .mobile-menu-btn,
+  .theme-toggle-btn,
+  .notification-btn,
+  .user-menu-btn {
+    width: 42px;
+    min-width: 42px;
+    height: 42px;
+    border-radius: 14px;
+  }
+
+  .header-actions {
+    justify-content: flex-end;
+  }
+
+  .search-box {
+    display: none;
+  }
+
+  .header-buttons {
+    gap: 8px;
+  }
+
+  .notification-panel {
+    position: fixed;
+    top: 64px;
+    right: 12px;
+    left: 12px;
+    width: auto;
+    max-height: calc(100vh - 86px);
+  }
+
+  .notification-list {
+    max-height: calc(100vh - 160px);
+  }
+
+  .page-content {
+    padding: 14px;
+  }
+}
+
+/* Very small mobile */
+@media (max-width: 380px) {
+  .sidebar {
+    width: 90vw;
+  }
+
+  .logo-text {
+    font-size: 0.95rem;
+  }
+
+  .sidebar-header {
+    padding: 14px;
+  }
+
+  .sidebar-nav {
+    padding: 12px;
+  }
+
+  .nav-link {
+    padding: 12px;
+    border-radius: 16px;
+  }
+
+  .nav-icon {
+    width: 38px;
+    min-width: 38px;
+    height: 38px;
+  }
+
+  .sidebar-footer {
+    padding: 12px;
+  }
+
+  .page-content {
+    padding: 12px;
+  }
+}
+
+/* Remove hover movement on touch devices */
+@media (hover: none) {
+  .nav-link:hover,
+  .logout-btn:hover,
+  .theme-toggle-btn:hover,
+  .notification-btn:hover,
+  .user-menu-btn:hover,
+  .mobile-menu-btn:hover {
+    transform: none;
+  }
+}
+/* =========================================================
+   MOBILE HEADER FIX
+   Menu left, icons/profile right
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .top-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    min-height: 64px;
+    padding: 10px 14px;
+  }
+
+  .mobile-menu-btn {
+    display: inline-flex;
+    flex: 0 0 42px;
+    width: 42px;
+    min-width: 42px;
+    height: 42px;
+  }
+
+  .header-actions {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  .search-box {
+    display: none;
+  }
+
+  .header-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-left: auto;
+    min-width: 0;
+  }
+
+  .theme-toggle-btn,
+  .notification-btn,
+  .user-menu-btn {
+    flex: 0 0 42px;
+    width: 42px;
     min-width: 42px;
     height: 42px;
     border-radius: 14px;
@@ -1169,4 +1270,284 @@ html[data-theme='dark'] .notification-badge,
   .dropdown-arrow {
     display: none;
   }
+
+  /* Padding for bottom nav */
+  .page-content {
+    padding-bottom: 80px; 
+  }
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+  .sidebar {
+    width: min(286px, 86vw);
+  }
+
+  .top-header {
+    padding: 10px 12px;
+    gap: 10px;
+  }
+
+  .mobile-menu-btn,
+  .theme-toggle-btn,
+  .notification-btn,
+  .user-menu-btn {
+    width: 42px;
+    min-width: 42px;
+    height: 42px;
+    border-radius: 14px;
+  }
+
+  .header-actions {
+    justify-content: flex-end;
+  }
+
+  .search-box {
+    display: none;
+  }
+
+  .header-buttons {
+    gap: 8px;
+  }
+
+  .notification-panel {
+    position: fixed;
+    top: 64px;
+    right: 12px;
+    left: 12px;
+    width: auto;
+    max-height: calc(100vh - 86px);
+  }
+
+  .notification-list {
+    max-height: calc(100vh - 160px);
+  }
+
+  .page-content {
+    padding: 14px;
+  }
+}
+
+/* Very small mobile */
+@media (max-width: 380px) {
+  .sidebar {
+    width: 90vw;
+  }
+
+  .logo-text {
+    font-size: 0.95rem;
+  }
+
+  .sidebar-header {
+    padding: 14px;
+  }
+
+  .sidebar-nav {
+    padding: 12px;
+  }
+
+  .nav-link {
+    padding: 12px;
+    border-radius: 16px;
+  }
+
+  .nav-icon {
+    width: 38px;
+    min-width: 38px;
+    height: 38px;
+  }
+
+  .sidebar-footer {
+    padding: 12px;
+  }
+
+  .page-content {
+    padding: 12px;
+  }
+}
+
+/* Remove hover movement on touch devices */
+@media (hover: none) {
+  .nav-link:hover,
+  .logout-btn:hover,
+  .theme-toggle-btn:hover,
+  .notification-btn:hover,
+  .user-menu-btn:hover,
+  .mobile-menu-btn:hover {
+    transform: none;
+  }
+}
+/* =========================================================
+   MOBILE HEADER FIX
+   Menu left, icons/profile right
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .top-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    min-height: 64px;
+    padding: 10px 14px;
+  }
+
+  .mobile-menu-btn {
+    display: inline-flex;
+    flex: 0 0 42px;
+    width: 42px;
+    min-width: 42px;
+    height: 42px;
+  }
+
+  .header-actions {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  .search-box {
+    display: none;
+  }
+
+  .header-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-left: auto;
+    min-width: 0;
+  }
+
+  .theme-toggle-btn,
+  .notification-btn,
+  .user-menu-btn {
+    flex: 0 0 42px;
+    width: 42px;
+    min-width: 42px;
+    height: 42px;
+    border-radius: 14px;
+  }
+
+  .user-menu {
+    flex: 0 0 auto;
+  }
+
+  .user-menu-btn {
+    padding: 4px;
+    justify-content: center;
+  }
+
+  .user-avatar-small {
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+    border-radius: 12px;
+  }
+
+  .user-name-header,
+  .member-chip,
+  .dropdown-arrow {
+    display: none;
+  }
+
+  /* Padding for bottom nav */
+  .page-content {
+    padding-bottom: 80px; 
+  }
+}
+
+/* =========================================================
+   BOTTOM NAVIGATION (MOBILE ONLY)
+   ========================================================= */
+
+.bottom-nav {
+  display: none; /* Hidden by default on desktop */
+}
+
+@media (max-width: 768px) {
+  .bottom-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 65px;
+    background: rgba(248, 250, 252, 0.96);
+    backdrop-filter: blur(18px);
+    border-top: 1px solid rgba(226, 232, 240, 0.9);
+    z-index: 1000;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 10px;
+    box-shadow: 0 -4px 20px rgba(15, 23, 42, 0.05);
+  }
+
+  .bottom-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    color: #64748b;
+    text-decoration: none;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+  }
+
+  .bottom-nav-item span {
+    white-space: nowrap;
+  }
+
+  .bottom-nav-item:hover,
+  .bottom-nav-item:active {
+    color: #0f766e;
+    background: rgba(240, 253, 250, 0.9);
+  }
+
+  .bottom-nav-item.active {
+    color: #0f766e;
+    font-weight: 800;
+  }
+
+  .bottom-nav-item.active svg {
+    stroke-width: 2.5;
+  }
+}
+
+/* Dark Theme Support for Bottom Nav */
+html[data-theme='dark'] .bottom-nav,
+:root[data-theme='dark'] .bottom-nav {
+  background: rgba(15, 23, 42, 0.96);
+  border-top-color: #1e293b;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+}
+
+html[data-theme='dark'] .bottom-nav-item,
+:root[data-theme='dark'] .bottom-nav-item {
+  color: #94a3b8;
+}
+
+html[data-theme='dark'] .bottom-nav-item:hover,
+html[data-theme='dark'] .bottom-nav-item:active,
+:root[data-theme='dark'] .bottom-nav-item:hover,
+:root[data-theme='dark'] .bottom-nav-item:active {
+  color: #5eead4;
+  background: rgba(20, 184, 166, 0.1);
+}
+
+html[data-theme='dark'] .bottom-nav-item.active,
+:root[data-theme='dark'] .bottom-nav-item.active {
+  color: #5eead4;
+}
+
+/* Hide mobile menu button if bottom nav handles everything, or keep it for extra links */
+@media (max-width: 768px) {
+  /* We keep the mobile-menu-btn for accessing links not in the top 5 */
 }

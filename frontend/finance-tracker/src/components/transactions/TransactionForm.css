@@ -347,6 +347,17 @@
   border-color: #334155;
   color: var(--gray-900);
 }
+
+:root[data-theme='dark'] .category-option {
+  background-color: #111827;
+  border-color: #334155;
+}
+
+:root[data-theme='dark'] .category-option:hover {
+  background-color: #111827;
+  border-color: #475569;
+}
+
 :root[data-theme='dark'] .type-option:hover {
   background-color: #1e293b;
   border-color: #475569;

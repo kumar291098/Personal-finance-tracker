@@ -14,6 +14,7 @@ public interface CategoryRepository extends JpaRepository<Category, Long> {
     boolean existsByNameAndType(String name, String type);
     boolean existsByNameAndTypeAndUserIsNull(String name, String type);
     Optional<Category> findByUserIdAndSourceCategoryId(Long userId, Long sourceCategoryId);
+    void deleteByUserId(Long userId);
 
     @Query("""
         select c from Category c

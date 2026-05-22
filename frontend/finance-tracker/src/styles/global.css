@@ -210,65 +210,7 @@ body[data-theme='light'] {
   color-scheme: light;
 }
 
-:root[data-theme='light'] body,
-body[data-theme='light'] {
-  background: #ffffff;
-  color: #000000;
-}
 
-:root[data-theme='light'] input,
-:root[data-theme='light'] select,
-:root[data-theme='light'] textarea,
-body[data-theme='light'] input,
-body[data-theme='light'] select,
-body[data-theme='light'] textarea {
-  background-color: #ffffff;
-  color: #000000;
-  border-color: #d1d5db;
-}
-
-:root[data-theme='light'] input::placeholder,
-:root[data-theme='light'] textarea::placeholder,
-body[data-theme='light'] input::placeholder,
-body[data-theme='light'] textarea::placeholder {
-  color: #111827;
-}
-
-:root[data-theme='light'] .card,
-:root[data-theme='light'] .modal-content,
-:root[data-theme='light'] .material-card,
-body[data-theme='light'] .card,
-body[data-theme='light'] .modal-content,
-body[data-theme='light'] .material-card {
-  background: #ffffff;
-  color: #000000;
-  border-color: #e5e7eb;
-}
-
-:root[data-theme='light'] h1,
-:root[data-theme='light'] h2,
-:root[data-theme='light'] h3,
-:root[data-theme='light'] h4,
-:root[data-theme='light'] h5,
-:root[data-theme='light'] h6,
-:root[data-theme='light'] p,
-:root[data-theme='light'] span,
-:root[data-theme='light'] label,
-:root[data-theme='light'] strong,
-:root[data-theme='light'] small,
-body[data-theme='light'] h1,
-body[data-theme='light'] h2,
-body[data-theme='light'] h3,
-body[data-theme='light'] h4,
-body[data-theme='light'] h5,
-body[data-theme='light'] h6,
-body[data-theme='light'] p,
-body[data-theme='light'] span,
-body[data-theme='light'] label,
-body[data-theme='light'] strong,
-body[data-theme='light'] small {
-  color: #000000;
-}
 
 button,
 input,

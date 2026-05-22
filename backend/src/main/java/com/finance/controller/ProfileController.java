@@ -1,23 +1,27 @@
 package com.finance.controller;
 
 import com.finance.model.User;
+import com.finance.repository.CategoryRepository;
+import com.finance.repository.TransactionRepository;
 import com.finance.repository.UserRepository;
 import com.finance.service.AccessPolicyService;
 import com.finance.util.JwtUtil;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeParseException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
@@ -30,10 +34,19 @@ public class ProfileController {
     private UserRepository userRepository;
 
     @Autowired
+    private TransactionRepository transactionRepository;
+
+    @Autowired
+    private CategoryRepository categoryRepository;
+
+    @Autowired
     private JwtUtil jwtUtil;
 
     @Autowired
     private AccessPolicyService accessPolicyService;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     @GetMapping
     public ResponseEntity<?> getProfile(HttpServletRequest request) {
@@ -66,6 +79,11 @@ public class ProfileController {
             return conflict;
         }
 
+        String dateOfBirth = normalize(data.get("dateOfBirth"));
+        if (dateOfBirth != null && !isValidDate(dateOfBirth)) {
+            return ResponseEntity.badRequest().body("Date of birth must use YYYY-MM-DD format.");
+        }
+
         user.setUsername(username);
         user.setEmail(email);
         applyNonSensitiveFields(user, data);
@@ -73,6 +91,68 @@ public class ProfileController {
 
         String token = jwtUtil.generateToken(user.getUsername(), user.getId(), user.getAccessLevel().name());
         return ResponseEntity.ok(toProfileResponse(user, "Profile updated successfully.", token));
+    }
+
+    @PatchMapping("/password")
+    public ResponseEntity<?> changePassword(HttpServletRequest request, @RequestBody Map<String, String> data) {
+        Optional<User> userResult = currentUser(request);
+        if (userResult.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Login required.");
+        }
+
+        String currentPassword = data.get("currentPassword");
+        String newPassword = data.get("newPassword");
+        String confirmPassword = data.get("confirmPassword");
+
+        if (currentPassword == null || currentPassword.isBlank()
+                || newPassword == null || newPassword.isBlank()
+                || confirmPassword == null || confirmPassword.isBlank()) {
+            return ResponseEntity.badRequest().body("All password fields are required.");
+        }
+
+        if (!newPassword.equals(confirmPassword)) {
+            return ResponseEntity.badRequest().body("New password and confirmation do not match.");
+        }
+
+        if (newPassword.length() < 6) {
+            return ResponseEntity.badRequest().body("New password must be at least 6 characters.");
+        }
+
+        User user = userResult.get();
+        if (!passwordEncoder.matches(currentPassword, user.getPassword())) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Current password is incorrect.");
+        }
+
+        user.setPassword(passwordEncoder.encode(newPassword));
+        userRepository.save(user);
+
+        return ResponseEntity.ok(Map.of("success", true, "message", "Password changed successfully."));
+    }
+
+    @DeleteMapping
+    @Transactional
+    public ResponseEntity<?> deleteAccount(HttpServletRequest request, @RequestBody(required = false) Map<String, String> data) {
+        Optional<User> userResult = currentUser(request);
+        if (userResult.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Login required.");
+        }
+
+        User user = userResult.get();
+        String password = data == null ? null : data.get("password");
+        if (password == null || password.isBlank()) {
+            return ResponseEntity.badRequest().body("Password is required to delete your account.");
+        }
+
+        if (!passwordEncoder.matches(password, user.getPassword())) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Password is incorrect.");
+        }
+
+        Long userId = user.getId();
+        categoryRepository.deleteByUserId(userId);
+        transactionRepository.deleteByUserId(userId);
+        userRepository.delete(user);
+
+        return ResponseEntity.ok(Map.of("success", true, "message", "Account deleted successfully."));
     }
 
     private Optional<User> currentUser(HttpServletRequest request) {
@@ -119,6 +199,15 @@ public class ProfileController {
         user.setCurrency(normalize(data.get("currency")) == null ? "INR" : normalize(data.get("currency")));
         String dateOfBirth = normalize(data.get("dateOfBirth"));
         user.setDateOfBirth(dateOfBirth == null ? null : LocalDate.parse(dateOfBirth));
+    }
+
+    private boolean isValidDate(String value) {
+        try {
+            LocalDate.parse(value);
+            return true;
+        } catch (DateTimeParseException error) {
+            return false;
+        }
     }
 
     private String normalize(String value) {
