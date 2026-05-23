@@ -98,8 +98,6 @@ export function InteractiveBarChart({ data, colors, width, barColor, title }: {
         onPress={(item: any, index: number) => {
           setTooltip(prev => prev?.index === index ? null : { index, value: item.value, label: item.label });
         }}
-        showGradient
-        gradientColor={colors.bgCard}
       />
     </View>
   );
