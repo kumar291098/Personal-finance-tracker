@@ -1,1 +1,22 @@
 "shadow*" style props are deprecated. Use "boxShadow".
+E:\JavaProject\Personal-finance-tracker\mobile\node_modules\expo\node_modules\@expo\cli\build\src\utils\errors.js:130
+    throw error;
+    ^
+
+Error: ENOENT: no such file or directory, watch 'E:\JavaProject\Personal-finance-tracker\mobile\node_modules\@react-navigation\.routers-x5VansHa'
+    at FSWatcher.<computed> (node:internal/fs/watchers:316:19)
+    at Object.watch (node:fs:2521:36)
+    at #watchdir (E:\JavaProject\Personal-finance-tracker\mobile\node_modules\@expo\metro-file-map\build\watchers\FallbackWatcher.js:164:38)
+    at E:\JavaProject\Personal-finance-tracker\mobile\node_modules\@expo\metro-file-map\build\watchers\FallbackWatcher.js:268:39
+    at Walker.<anonymous> (E:\JavaProject\Personal-finance-tracker\mobile\node_modules\@expo\metro-file-map\build\watchers\FallbackWatcher.js:410:33)
+    at Walker.emit (node:events:508:20)
+    at E:\JavaProject\Personal-finance-tracker\mobile\node_modules\walker\lib\walker.js:69:16
+    at FSReqCallback.oncomplete (node:fs:180:23) {
+  errno: -4058,
+  syscall: 'watch',
+  code: 'ENOENT',
+  path: 'E:\\JavaProject\\Personal-finance-tracker\\mobile\\node_modules\\@react-navigation\\.routers-x5VansHa',
+  filename: 'E:\\JavaProject\\Personal-finance-tracker\\mobile\\node_modules\\@react-navigation\\.routers-x5VansHa'
+}
+
+Node.js v25.5.0

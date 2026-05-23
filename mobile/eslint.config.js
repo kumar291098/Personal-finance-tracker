@@ -9,6 +9,7 @@ module.exports = defineConfig([
     rules: {
       "react-hooks/refs": "off",
       "react-hooks/set-state-in-effect": "off",
+      "react-hooks/purity": "off",
       "react/no-unescaped-entities": "off",
     },
   }

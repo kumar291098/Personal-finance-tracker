@@ -1,9 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import {
   View, Text, StyleSheet, ScrollView, TouchableOpacity,
-  StatusBar, ActivityIndicator, TextInput, Alert, Platform, Animated, Linking,
+  StatusBar, ActivityIndicator, TextInput, Alert, Platform, Animated, Linking, Image,
 } from 'react-native';
 import { getSubscriptionPlan, submitManualUpiRequest, getAccessPolicy, SubscriptionPlan } from '../../api/subscription';
+import {
+  AccessLevel,
+  AccessPolicy,
+  AdminUser,
+  SubscriptionRequest,
+  SubscriptionSettings,
+  getAccessPolicies,
+  getAdminUsers,
+  getSubscriptionRequests,
+  getSubscriptionSettings,
+  reviewSubscriptionRequest,
+  updateAccessPolicy,
+  updateSubscriptionSettings,
+  updateUserAccess,
+} from '../../api/admin';
 import { Fonts, Radii, useTheme } from '../../theme';
 
 const ACCESS_FEATURES: Record<string, { label: string; icon: string; free: boolean; subscriber: boolean }[]> = {
@@ -42,6 +57,16 @@ export default function SubscriptionScreen() {
   const [utrInput, setUtrInput] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [successMsg, setSuccessMsg] = useState('');
+  const [adminLoading, setAdminLoading] = useState(false);
+  const [adminSaving, setAdminSaving] = useState(false);
+  const [adminUsers, setAdminUsers] = useState<AdminUser[]>([]);
+  const [subscriptionSettings, setSubscriptionSettings] = useState<SubscriptionSettings | null>(null);
+  const [subscriptionRequests, setSubscriptionRequests] = useState<SubscriptionRequest[]>([]);
+  const [accessPages, setAccessPages] = useState<string[]>([]);
+  const [accessPolicies, setAccessPolicies] = useState<AccessPolicy[]>([]);
+  const [feeRupees, setFeeRupees] = useState('99');
+  const [upiId, setUpiId] = useState('');
+  const [qrImageUrl, setQrImageUrl] = useState('');
   const pulseAnim = React.useRef(new Animated.Value(1)).current;
 
   useEffect(() => {
@@ -71,6 +96,96 @@ export default function SubscriptionScreen() {
     ).start();
   }, []);
 
+  const loadAdminData = async () => {
+    setAdminLoading(true);
+    try {
+      const [usersData, settingsData, requestsData, policiesData] = await Promise.all([
+        getAdminUsers(),
+        getSubscriptionSettings(),
+        getSubscriptionRequests(),
+        getAccessPolicies(),
+      ]);
+      setAdminUsers(usersData);
+      setSubscriptionSettings(settingsData);
+      setSubscriptionRequests(requestsData);
+      setAccessPages(policiesData.pages);
+      setAccessPolicies(policiesData.policies);
+      setFeeRupees(String(Math.round(settingsData.amountPaise / 100)));
+      setUpiId(settingsData.upiId || '');
+      setQrImageUrl(settingsData.upiQrImageUrl || '');
+    } catch (e: any) {
+      Platform.OS === 'web' ? window.alert(e.message) : Alert.alert('Admin Error', e.message);
+    } finally {
+      setAdminLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    if (accessLevel === 'ADMIN') {
+      loadAdminData();
+    }
+  }, [accessLevel]);
+
+  const handleSaveSubscriptionSettings = async () => {
+    const amount = Number(feeRupees);
+    if (!Number.isFinite(amount) || amount <= 0) {
+      const msg = 'Enter a valid subscription fee in rupees.';
+      Platform.OS === 'web' ? window.alert(msg) : Alert.alert('Error', msg);
+      return;
+    }
+
+    setAdminSaving(true);
+    try {
+      const updated = await updateSubscriptionSettings({
+        amountPaise: Math.round(amount * 100),
+        upiId: upiId.trim(),
+        upiQrImageUrl: qrImageUrl.trim(),
+      });
+      setSubscriptionSettings(updated);
+      const planData = await getSubscriptionPlan();
+      setPlan(planData);
+      const msg = 'Subscription settings saved.';
+      Platform.OS === 'web' ? window.alert(msg) : Alert.alert('Saved', msg);
+    } catch (e: any) {
+      Platform.OS === 'web' ? window.alert(e.message) : Alert.alert('Error', e.message);
+    } finally {
+      setAdminSaving(false);
+    }
+  };
+
+  const handleUpdateUserAccess = async (userId: number, nextLevel: AccessLevel) => {
+    try {
+      const updated = await updateUserAccess(userId, nextLevel);
+      setAdminUsers(current => current.map(user => user.id === updated.id ? updated : user));
+    } catch (e: any) {
+      Platform.OS === 'web' ? window.alert(e.message) : Alert.alert('Error', e.message);
+    }
+  };
+
+  const handleTogglePolicyPage = async (policy: AccessPolicy, page: string) => {
+    if (policy.accessLevel === 'ADMIN') return;
+
+    const allowedPages = policy.allowedPages.includes(page)
+      ? policy.allowedPages.filter(value => value !== page)
+      : [...policy.allowedPages, page];
+
+    try {
+      const updated = await updateAccessPolicy(policy.accessLevel, allowedPages);
+      setAccessPolicies(current => current.map(item => item.accessLevel === updated.accessLevel ? updated : item));
+    } catch (e: any) {
+      Platform.OS === 'web' ? window.alert(e.message) : Alert.alert('Error', e.message);
+    }
+  };
+
+  const handleReviewRequest = async (requestId: number, action: 'approve' | 'reject') => {
+    try {
+      await reviewSubscriptionRequest(requestId, action);
+      await loadAdminData();
+    } catch (e: any) {
+      Platform.OS === 'web' ? window.alert(e.message) : Alert.alert('Error', e.message);
+    }
+  };
+
   const handleSubmitUtr = async () => {
     if (!utrInput || utrInput.trim().length < 6) {
       const msg = 'Enter a valid UTR / transaction ID (min 6 characters)';
@@ -97,6 +212,11 @@ export default function SubscriptionScreen() {
 
   const alreadySubscribed = accessLevel === 'SUBSCRIBER' || accessLevel === 'ADMIN';
   const amountRupees = plan ? (plan.amountPaise / 100).toFixed(0) : '99';
+  const userCounts = {
+    ADMIN: adminUsers.filter(user => user.accessLevel === 'ADMIN').length,
+    SUBSCRIBER: adminUsers.filter(user => user.accessLevel === 'SUBSCRIBER').length,
+    FREE: adminUsers.filter(user => user.accessLevel === 'FREE').length,
+  };
 
   if (loading) {
     return (
@@ -134,6 +254,211 @@ export default function SubscriptionScreen() {
             </View>
           )}
         </View>
+
+        {accessLevel === 'ADMIN' && (
+          <View style={sb.section}>
+            <View style={sb.adminHeader}>
+              <View>
+                <Text style={[sb.sectionTitle, { color: colors.textPrimary, marginBottom: 4 }]}>Admin Control</Text>
+                <Text style={[sb.adminSubtitle, { color: colors.textSecondary }]}>
+                  Manage subscriber settings, page access, and user roles.
+                </Text>
+              </View>
+              <TouchableOpacity
+                style={[sb.refreshBtn, { backgroundColor: colors.bgCard, borderColor: colors.border }]}
+                onPress={loadAdminData}
+                disabled={adminLoading}
+              >
+                <Text style={[sb.refreshBtnText, { color: colors.primary }]}>
+                  {adminLoading ? '...' : 'Refresh'}
+                </Text>
+              </TouchableOpacity>
+            </View>
+
+            <View style={sb.adminStatsRow}>
+              {(['ADMIN', 'SUBSCRIBER', 'FREE'] as const).map(level => (
+                <View key={level} style={[sb.adminStat, { backgroundColor: colors.bgCard, borderColor: colors.border }]}>
+                  <Text style={[sb.adminStatNumber, { color: colors.primary }]}>{userCounts[level]}</Text>
+                  <Text style={[sb.adminStatLabel, { color: colors.textSecondary }]}>
+                    {level === 'ADMIN' ? 'Admins' : level === 'SUBSCRIBER' ? 'Subscribers' : 'Free users'}
+                  </Text>
+                </View>
+              ))}
+            </View>
+
+            <View style={[sb.adminCard, { backgroundColor: colors.bgCard, borderColor: colors.border }]}>
+              <Text style={[sb.adminCardTitle, { color: colors.textPrimary }]}>Subscription Settings</Text>
+              <Text style={[sb.adminCardHint, { color: colors.textSecondary }]}>
+                Set the fee and QR/UPI details shown to users.
+              </Text>
+
+              <Text style={[sb.adminInputLabel, { color: colors.textSecondary }]}>Fee in rupees</Text>
+              <TextInput
+                style={[sb.adminInput, { backgroundColor: colors.bgInput, borderColor: colors.border, color: colors.textPrimary }]}
+                value={feeRupees}
+                onChangeText={setFeeRupees}
+                keyboardType="numeric"
+                placeholder="99"
+                placeholderTextColor={colors.textMuted}
+              />
+
+              <Text style={[sb.adminInputLabel, { color: colors.textSecondary }]}>UPI ID</Text>
+              <TextInput
+                style={[sb.adminInput, { backgroundColor: colors.bgInput, borderColor: colors.border, color: colors.textPrimary }]}
+                value={upiId}
+                onChangeText={setUpiId}
+                autoCapitalize="none"
+                placeholder="name@upi"
+                placeholderTextColor={colors.textMuted}
+              />
+
+              <Text style={[sb.adminInputLabel, { color: colors.textSecondary }]}>QR image URL or data URL</Text>
+              <TextInput
+                style={[sb.adminInput, sb.adminQrInput, { backgroundColor: colors.bgInput, borderColor: colors.border, color: colors.textPrimary }]}
+                value={qrImageUrl}
+                onChangeText={setQrImageUrl}
+                autoCapitalize="none"
+                multiline
+                placeholder="https://... or data:image/png;base64,..."
+                placeholderTextColor={colors.textMuted}
+              />
+
+              {qrImageUrl.trim() !== '' && (
+                <View style={[sb.qrPreviewBox, { backgroundColor: colors.bgInput, borderColor: colors.border }]}>
+                  <Image source={{ uri: qrImageUrl.trim() }} style={sb.qrPreview} resizeMode="contain" />
+                  <Text style={[sb.qrPreviewLabel, { color: colors.textMuted }]}>Subscription QR preview</Text>
+                </View>
+              )}
+
+              {subscriptionSettings?.updatedAt ? (
+                <Text style={[sb.adminUpdatedAt, { color: colors.textMuted }]}>
+                  Last updated {new Date(subscriptionSettings.updatedAt).toLocaleString()}
+                </Text>
+              ) : null}
+
+              <TouchableOpacity
+                style={[sb.saveAdminBtn, { backgroundColor: colors.primary }, adminSaving && { opacity: 0.6 }]}
+                onPress={handleSaveSubscriptionSettings}
+                disabled={adminSaving}
+              >
+                <Text style={sb.saveAdminBtnText}>
+                  {adminSaving ? 'Saving...' : 'Save Subscription Settings'}
+                </Text>
+              </TouchableOpacity>
+            </View>
+
+            <View style={[sb.adminCard, { backgroundColor: colors.bgCard, borderColor: colors.border }]}>
+              <Text style={[sb.adminCardTitle, { color: colors.textPrimary }]}>Page Access</Text>
+              <Text style={[sb.adminCardHint, { color: colors.textSecondary }]}>
+                Choose pages visible to each account level.
+              </Text>
+
+              {accessPolicies
+                .filter(policy => policy.accessLevel !== 'ADMIN')
+                .map(policy => (
+                  <View key={policy.accessLevel} style={[sb.policyBlock, { borderColor: colors.border }]}>
+                    <View style={sb.policyTopRow}>
+                      <Text style={[sb.policyTitle, { color: colors.textPrimary }]}>{policy.accessLevel}</Text>
+                      <Text style={[sb.policyCount, { color: colors.textMuted }]}>
+                        {policy.allowedPages.length} pages enabled
+                      </Text>
+                    </View>
+                    <View style={sb.policyPageGrid}>
+                      {accessPages.map(page => {
+                        const enabled = policy.allowedPages.includes(page);
+                        return (
+                          <TouchableOpacity
+                            key={`${policy.accessLevel}-${page}`}
+                            style={[
+                              sb.policyPageChip,
+                              {
+                                backgroundColor: enabled ? `${colors.primary}22` : colors.bgInput,
+                                borderColor: enabled ? colors.primary : colors.border,
+                              },
+                            ]}
+                            onPress={() => handleTogglePolicyPage(policy, page)}
+                          >
+                            <Text style={[sb.policyPageText, { color: enabled ? colors.primary : colors.textSecondary }]}>
+                              {enabled ? '✓ ' : ''}{page}
+                            </Text>
+                          </TouchableOpacity>
+                        );
+                      })}
+                    </View>
+                  </View>
+                ))}
+            </View>
+
+            <View style={[sb.adminCard, { backgroundColor: colors.bgCard, borderColor: colors.border }]}>
+              <View style={sb.policyTopRow}>
+                <Text style={[sb.adminCardTitle, { color: colors.textPrimary }]}>UPI Subscription Requests</Text>
+                <Text style={[sb.policyCount, { color: colors.textMuted }]}>{subscriptionRequests.length} pending</Text>
+              </View>
+              {subscriptionRequests.length === 0 ? (
+                <Text style={[sb.adminEmptyText, { color: colors.textMuted }]}>No pending UPI subscription requests.</Text>
+              ) : (
+                subscriptionRequests.map(request => (
+                  <View key={request.id} style={[sb.requestCard, { borderColor: colors.border, backgroundColor: colors.bgInput }]}>
+                    <Text style={[sb.requestUser, { color: colors.textPrimary }]}>{request.username}</Text>
+                    <Text style={[sb.requestMeta, { color: colors.textSecondary }]}>Ref: {request.reference}</Text>
+                    <Text style={[sb.requestMeta, { color: colors.textSecondary }]}>
+                      Amount: ₹{Math.round(request.amountPaise / 100)}
+                    </Text>
+                    <View style={sb.requestActions}>
+                      <TouchableOpacity
+                        style={[sb.reviewBtn, { backgroundColor: `${colors.expense}18`, borderColor: `${colors.expense}55` }]}
+                        onPress={() => handleReviewRequest(request.id, 'reject')}
+                      >
+                        <Text style={[sb.reviewBtnText, { color: colors.expense }]}>Reject</Text>
+                      </TouchableOpacity>
+                      <TouchableOpacity
+                        style={[sb.reviewBtn, { backgroundColor: `${colors.income}18`, borderColor: `${colors.income}55` }]}
+                        onPress={() => handleReviewRequest(request.id, 'approve')}
+                      >
+                        <Text style={[sb.reviewBtnText, { color: colors.income }]}>Approve</Text>
+                      </TouchableOpacity>
+                    </View>
+                  </View>
+                ))
+              )}
+            </View>
+
+            <View style={[sb.adminCard, { backgroundColor: colors.bgCard, borderColor: colors.border }]}>
+              <Text style={[sb.adminCardTitle, { color: colors.textPrimary }]}>Accounts</Text>
+              <Text style={[sb.adminCardHint, { color: colors.textSecondary }]}>{adminUsers.length} total</Text>
+              {adminUsers.map(user => (
+                <View key={user.id} style={[sb.userAccessRow, { borderColor: colors.border }]}>
+                  <View style={sb.userInfo}>
+                    <Text style={[sb.userName, { color: colors.textPrimary }]}>{user.username}</Text>
+                    <Text style={[sb.userEmail, { color: colors.textMuted }]}>{user.email || user.phone || 'No contact'}</Text>
+                  </View>
+                  <View style={sb.accessButtons}>
+                    {(['ADMIN', 'SUBSCRIBER', 'FREE'] as const).map(level => {
+                      const selected = user.accessLevel === level;
+                      return (
+                        <TouchableOpacity
+                          key={`${user.id}-${level}`}
+                          style={[
+                            sb.accessLevelBtn,
+                            {
+                              backgroundColor: selected ? colors.primary : colors.bgInput,
+                              borderColor: selected ? colors.primary : colors.border,
+                            },
+                          ]}
+                          onPress={() => handleUpdateUserAccess(user.id, level)}
+                        >
+                          <Text style={[sb.accessLevelText, { color: selected ? '#FFFFFF' : colors.textSecondary }]}>
+                            {level === 'SUBSCRIBER' ? 'SUB' : level}
+                          </Text>
+                        </TouchableOpacity>
+                      );
+                    })}
+                  </View>
+                </View>
+              ))}
+            </View>
+          </View>
+        )}
 
         {/* Access Level Pages */}
         <View style={sb.section}>
@@ -322,6 +647,129 @@ const sb = StyleSheet.create({
 
   section: { marginBottom: 24 },
   sectionTitle: { fontSize: 16, fontWeight: Fonts.bold, marginBottom: 12 },
+  adminHeader: {
+    alignItems: 'flex-start',
+    flexDirection: 'row',
+    gap: 12,
+    justifyContent: 'space-between',
+    marginBottom: 14,
+  },
+  adminSubtitle: { fontSize: 13, lineHeight: 18, maxWidth: 230 },
+  refreshBtn: {
+    borderRadius: Radii.full,
+    borderWidth: 1,
+    paddingHorizontal: 14,
+    paddingVertical: 9,
+  },
+  refreshBtnText: { fontSize: 12, fontWeight: Fonts.bold },
+  adminStatsRow: { flexDirection: 'row', gap: 8, marginBottom: 14 },
+  adminStat: {
+    alignItems: 'center',
+    borderRadius: Radii.md,
+    borderWidth: 1,
+    flex: 1,
+    paddingVertical: 13,
+  },
+  adminStatNumber: { fontSize: 22, fontWeight: Fonts.bold },
+  adminStatLabel: { fontSize: 11, marginTop: 3, textAlign: 'center' },
+  adminCard: {
+    borderRadius: Radii.lg,
+    borderWidth: 1,
+    marginBottom: 14,
+    padding: 16,
+  },
+  adminCardTitle: { fontSize: 17, fontWeight: Fonts.bold, marginBottom: 4 },
+  adminCardHint: { fontSize: 12, lineHeight: 17, marginBottom: 14 },
+  adminInputLabel: { fontSize: 12, fontWeight: Fonts.semiBold, marginBottom: 7 },
+  adminInput: {
+    borderRadius: Radii.md,
+    borderWidth: 1,
+    fontSize: 14,
+    marginBottom: 14,
+    minHeight: 46,
+    paddingHorizontal: 12,
+  },
+  adminQrInput: {
+    minHeight: 86,
+    paddingTop: 12,
+    textAlignVertical: 'top',
+  },
+  qrPreviewBox: {
+    alignItems: 'center',
+    borderRadius: Radii.md,
+    borderWidth: 1,
+    marginBottom: 14,
+    padding: 12,
+  },
+  qrPreview: { height: 150, width: 150 },
+  qrPreviewLabel: { fontSize: 12, marginTop: 8 },
+  adminUpdatedAt: { fontSize: 11, marginBottom: 12 },
+  saveAdminBtn: {
+    alignItems: 'center',
+    borderRadius: Radii.md,
+    justifyContent: 'center',
+    minHeight: 48,
+  },
+  saveAdminBtnText: { color: '#FFFFFF', fontSize: 14, fontWeight: Fonts.bold },
+  policyBlock: {
+    borderRadius: Radii.md,
+    borderWidth: 1,
+    marginTop: 12,
+    padding: 12,
+  },
+  policyTopRow: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    gap: 10,
+    justifyContent: 'space-between',
+  },
+  policyTitle: { fontSize: 14, fontWeight: Fonts.bold },
+  policyCount: { fontSize: 12 },
+  policyPageGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginTop: 10 },
+  policyPageChip: {
+    borderRadius: Radii.full,
+    borderWidth: 1,
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+  },
+  policyPageText: { fontSize: 12, fontWeight: Fonts.semiBold },
+  adminEmptyText: { fontSize: 13, marginTop: 10 },
+  requestCard: {
+    borderRadius: Radii.md,
+    borderWidth: 1,
+    marginTop: 12,
+    padding: 12,
+  },
+  requestUser: { fontSize: 14, fontWeight: Fonts.bold, marginBottom: 4 },
+  requestMeta: { fontSize: 12, marginTop: 2 },
+  requestActions: { flexDirection: 'row', gap: 10, marginTop: 12 },
+  reviewBtn: {
+    alignItems: 'center',
+    borderRadius: Radii.md,
+    borderWidth: 1,
+    flex: 1,
+    paddingVertical: 10,
+  },
+  reviewBtnText: { fontSize: 13, fontWeight: Fonts.bold },
+  userAccessRow: {
+    borderRadius: Radii.md,
+    borderWidth: 1,
+    gap: 12,
+    marginTop: 10,
+    padding: 12,
+  },
+  userInfo: { gap: 3 },
+  userName: { fontSize: 14, fontWeight: Fonts.bold },
+  userEmail: { fontSize: 12 },
+  accessButtons: { flexDirection: 'row', gap: 7 },
+  accessLevelBtn: {
+    alignItems: 'center',
+    borderRadius: Radii.full,
+    borderWidth: 1,
+    flex: 1,
+    paddingVertical: 8,
+  },
+  accessLevelText: { fontSize: 10, fontWeight: Fonts.bold },
 
   pagesGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
   pageChip: {
