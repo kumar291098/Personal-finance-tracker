@@ -3,6 +3,7 @@ import { Modal, Pressable, StyleSheet, Text, View } from 'react-native';
 import { useEffect, useState } from 'react';
 import { getAccessPolicy } from '../../api/subscription';
 import { Fonts, Radii, useTheme } from '../../theme';
+import ChatScreen from './chat';
 
 type IconName = 'dashboard' | 'transactions' | 'analytics' | 'chat' | 'categories' | 'subscription' | 'profile';
 
@@ -100,8 +101,8 @@ export default function TabsLayout() {
   const pathname = usePathname();
   const { colors, shadows } = useTheme();
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [chatOpen, setChatOpen] = useState(false);
   const [allowedPages, setAllowedPages] = useState<string[]>(defaultAllowedPages);
-  const isChatRoute = pathname.includes('/chat');
   const canUseChat = allowedPages.includes('chat');
 
   useEffect(() => {
@@ -120,13 +121,10 @@ export default function TabsLayout() {
     };
   }, []);
 
-  useEffect(() => {
-    if (isChatRoute && !canUseChat) {
-      router.replace('/(tabs)/subscription');
-    }
-  }, [canUseChat, isChatRoute, router]);
-
-  const visibleDrawerItems = drawerItems.filter(item => allowedPages.includes(item.route));
+  // Drawer items excluding chat (chat is now a floating modal)
+  const visibleDrawerItems = drawerItems
+    .filter(item => item.route !== 'chat')
+    .filter(item => allowedPages.includes(item.route));
 
   const openRoute = (href: Href) => {
     setDrawerOpen(false);
@@ -151,6 +149,7 @@ export default function TabsLayout() {
         <Tabs.Screen name="profile" />
       </Tabs>
 
+      {/* ── Hamburger menu button (top-left) ── */}
       <Pressable
         onPress={() => setDrawerOpen(true)}
         style={({ pressed }) => [
@@ -166,11 +165,12 @@ export default function TabsLayout() {
         <HamburgerIcon color={colors.primary} />
       </Pressable>
 
-      {canUseChat && !isChatRoute && (
+      {/* ── Floating AI chat button (bottom-right) ── */}
+      {canUseChat && !chatOpen && (
         <Pressable
-          onPress={() => router.push('/(tabs)/chat')}
+          onPress={() => setChatOpen(true)}
           style={({ pressed }) => [
-            styles.chatButton,
+            styles.chatFab,
             {
               backgroundColor: colors.primary,
               opacity: pressed ? 0.86 : 1,
@@ -178,11 +178,50 @@ export default function TabsLayout() {
             shadows.violet,
           ]}
         >
-          <MenuIcon name="chat" active color="#FFFFFF" />
-          <Text style={styles.chatButtonSub}>Chatbot</Text>
+          <Text style={styles.chatFabEmoji}>🤖</Text>
+          <Text style={styles.chatFabLabel}>AI</Text>
         </Pressable>
       )}
 
+      {/* ── AI Chat Modal Overlay ── */}
+      <Modal
+        visible={chatOpen}
+        transparent
+        animationType="slide"
+        onRequestClose={() => setChatOpen(false)}
+      >
+        <View style={styles.chatModalRoot}>
+          {/* Tap outside to close */}
+          <Pressable style={styles.chatModalBackdrop} onPress={() => setChatOpen(false)} />
+
+            {/* Chat panel slides up from bottom */}
+            <View style={[styles.chatPanel, { backgroundColor: colors.bg }]}>
+              {/* Header with close button */}
+              <View style={[styles.chatPanelHeader, { backgroundColor: colors.bgCard, borderBottomColor: colors.border }]}>
+                <View style={styles.chatPanelTitleRow}>
+                  <Text style={styles.chatPanelEmoji}>🤖</Text>
+                  <View>
+                    <Text style={[styles.chatPanelTitle, { color: colors.textPrimary }]}>AI Finance Assistant</Text>
+                    <Text style={[styles.chatPanelSub, { color: colors.textMuted }]}>Ask me anything about your finances</Text>
+                  </View>
+                </View>
+                <Pressable
+                  onPress={() => setChatOpen(false)}
+                  style={[styles.chatCloseBtn, { backgroundColor: `${colors.expense}18`, borderColor: `${colors.expense}44` }]}
+                >
+                  <Text style={[styles.chatCloseTxt, { color: colors.expense }]}>✕</Text>
+                </Pressable>
+              </View>
+
+              {/* Render full chat screen content */}
+              <View style={{ flex: 1 }}>
+                {chatOpen && <ChatScreen />}
+              </View>
+            </View>
+        </View>
+      </Modal>
+
+      {/* ── Side Drawer ── */}
       <Modal visible={drawerOpen} transparent animationType="fade" onRequestClose={() => setDrawerOpen(false)}>
         <View style={styles.drawerRoot}>
           <Pressable style={styles.drawerBackdrop} onPress={() => setDrawerOpen(false)} />
@@ -196,7 +235,7 @@ export default function TabsLayout() {
                 onPress={() => setDrawerOpen(false)}
                 style={[styles.closeButton, { backgroundColor: colors.bgInput, borderColor: colors.border }]}
               >
-                <Text style={[styles.closeText, { color: colors.textPrimary }]}>X</Text>
+                <Text style={[styles.closeText, { color: colors.textPrimary }]}>✕</Text>
               </Pressable>
             </View>
 
@@ -229,6 +268,25 @@ export default function TabsLayout() {
                   </Pressable>
                 );
               })}
+
+              {/* AI Chat item in drawer too */}
+              {canUseChat && (
+                <Pressable
+                  onPress={() => { setDrawerOpen(false); setChatOpen(true); }}
+                  style={({ pressed }) => [
+                    styles.drawerItem,
+                    {
+                      backgroundColor: pressed ? `${colors.primary}18` : colors.bgInput,
+                      borderColor: colors.border,
+                    },
+                  ]}
+                >
+                  <View style={[styles.drawerItemIcon, { backgroundColor: `${colors.primary}18` }]}>
+                    <MenuIcon name="chat" active={false} color={colors.primary} />
+                  </View>
+                  <Text style={[styles.drawerItemText, { color: colors.textPrimary }]}>AI Chatbot</Text>
+                </Pressable>
+              )}
             </View>
           </View>
         </View>
@@ -253,18 +311,47 @@ const styles = StyleSheet.create({
   },
   hamburgerLines: { gap: 5 },
   hamburgerLine: { width: 20, height: 2.5, borderRadius: 2 },
-  chatButton: {
+  chatFab: {
     position: 'absolute',
     right: 18,
     bottom: 24,
-    width: 76,
-    height: 76,
-    borderRadius: 26,
+    width: 64,
+    height: 64,
+    borderRadius: 22,
     alignItems: 'center',
     justifyContent: 'center',
     zIndex: 20,
   },
-  chatButtonSub: { color: '#FFFFFFCC', fontSize: 11, fontWeight: Fonts.bold, marginTop: 3 },
+  chatFabEmoji: { fontSize: 26 },
+  chatFabLabel: { color: '#FFFFFFCC', fontSize: 10, fontWeight: Fonts.bold, marginTop: 2 },
+  chatModalRoot: { flex: 1, justifyContent: 'flex-end' },
+  chatModalBackdrop: {
+    position: 'absolute', top: 0, left: 0, right: 0, bottom: 0,
+    backgroundColor: 'rgba(0,0,0,0.5)',
+  },
+  chatPanel: {
+    height: '88%',
+    borderTopLeftRadius: 28,
+    borderTopRightRadius: 28,
+    overflow: 'hidden',
+  },
+  chatPanelHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 18,
+    paddingVertical: 14,
+    borderBottomWidth: 1,
+  },
+  chatPanelTitleRow: { flexDirection: 'row', alignItems: 'center', gap: 12 },
+  chatPanelEmoji: { fontSize: 28 },
+  chatPanelTitle: { fontSize: 16, fontWeight: Fonts.bold },
+  chatPanelSub: { fontSize: 11, marginTop: 2 },
+  chatCloseBtn: {
+    width: 36, height: 36, borderRadius: 12, borderWidth: 1,
+    alignItems: 'center', justifyContent: 'center',
+  },
+  chatCloseTxt: { fontSize: 16, fontWeight: Fonts.bold },
   drawerRoot: { flex: 1, flexDirection: 'row' },
   drawerBackdrop: {
     position: 'absolute',

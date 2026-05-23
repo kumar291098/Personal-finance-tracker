@@ -146,27 +146,6 @@ export default function ChatScreen() {
       behavior={Platform.OS === 'ios' ? 'padding' : undefined}
       keyboardVerticalOffset={Platform.OS === 'ios' ? 78 : 0}
     >
-      <StatusBar barStyle={isDark ? 'light-content' : 'dark-content'} />
-
-      <View style={styles.header}>
-        <View>
-          <Text style={[styles.kicker, { color: colors.teal }]}>AI Finance Coach</Text>
-          <Text style={[styles.title, { color: colors.textPrimary }]}>Chatbot</Text>
-        </View>
-        <Pressable
-          onPress={minimizeChat}
-          style={({ pressed }) => [
-            styles.minimizeButton,
-            {
-              backgroundColor: pressed ? `${colors.primary}22` : colors.bgCard,
-              borderColor: colors.border,
-            },
-          ]}
-        >
-          <Text style={[styles.minimizeIcon, { color: colors.primary }]}>_</Text>
-          <Text style={[styles.minimizeText, { color: colors.textSecondary }]}>Minimize</Text>
-        </Pressable>
-      </View>
 
       <View style={[styles.promptCard, { backgroundColor: colors.bgCard, borderColor: colors.border }, shadows.card]}>
         <Text style={[styles.promptTitle, { color: colors.textPrimary }]}>Ask about your money</Text>

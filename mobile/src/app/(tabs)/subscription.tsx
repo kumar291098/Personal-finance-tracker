@@ -3,6 +3,7 @@ import {
   View, Text, StyleSheet, ScrollView, TouchableOpacity,
   StatusBar, ActivityIndicator, TextInput, Alert, Platform, Animated, Linking, Image,
 } from 'react-native';
+import * as ImagePicker from 'expo-image-picker';
 import { getSubscriptionPlan, submitManualUpiRequest, getAccessPolicy, SubscriptionPlan } from '../../api/subscription';
 import {
   AccessLevel,
@@ -292,7 +293,8 @@ export default function SubscriptionScreen() {
                 Set the fee and QR/UPI details shown to users.
               </Text>
 
-              <Text style={[sb.adminInputLabel, { color: colors.textSecondary }]}>Fee in rupees</Text>
+              {/* Subscription Amount */}
+              <Text style={[sb.adminInputLabel, { color: colors.textSecondary }]}>Subscription Amount (₹)</Text>
               <TextInput
                 style={[sb.adminInput, { backgroundColor: colors.bgInput, borderColor: colors.border, color: colors.textPrimary }]}
                 value={feeRupees}
@@ -302,6 +304,7 @@ export default function SubscriptionScreen() {
                 placeholderTextColor={colors.textMuted}
               />
 
+              {/* UPI ID */}
               <Text style={[sb.adminInputLabel, { color: colors.textSecondary }]}>UPI ID</Text>
               <TextInput
                 style={[sb.adminInput, { backgroundColor: colors.bgInput, borderColor: colors.border, color: colors.textPrimary }]}
@@ -312,10 +315,46 @@ export default function SubscriptionScreen() {
                 placeholderTextColor={colors.textMuted}
               />
 
+              {/* QR Image */}
+              <Text style={[sb.adminInputLabel, { color: colors.textSecondary }]}>Payment QR Code</Text>
+              <TouchableOpacity
+                style={[sb.qrPickerBtn, { backgroundColor: colors.bgInput, borderColor: colors.border }]}
+                onPress={async () => {
+                  const permission = await ImagePicker.requestMediaLibraryPermissionsAsync();
+                  if (!permission.granted) {
+                    const msg = 'Permission to access gallery is required.';
+                    Platform.OS === 'web' ? window.alert(msg) : Alert.alert('Permission Required', msg);
+                    return;
+                  }
+                  const result = await ImagePicker.launchImageLibraryAsync({
+                    mediaTypes: ImagePicker.MediaTypeOptions.Images,
+                    allowsEditing: true,
+                    aspect: [1, 1],
+                    quality: 0.7,
+                    base64: true,
+                  });
+                  if (!result.canceled && result.assets[0]) {
+                    const asset = result.assets[0];
+                    const base64Uri = `data:image/jpeg;base64,${asset.base64}`;
+                    setQrImageUrl(base64Uri);
+                  }
+                }}
+              >
+                <Text style={{ fontSize: 20, marginBottom: 6 }}>🖼️</Text>
+                <Text style={[sb.qrPickerTxt, { color: colors.textSecondary }]}>
+                  {qrImageUrl ? 'Tap to change QR image' : 'Tap to pick QR image from gallery'}
+                </Text>
+              </TouchableOpacity>
+
               {qrImageUrl.trim() !== '' && (
                 <View style={[sb.qrPreviewBox, { backgroundColor: colors.bgInput, borderColor: colors.border }]}>
                   <Image source={{ uri: qrImageUrl.trim() }} style={sb.qrPreview} resizeMode="contain" />
-                  <Text style={[sb.qrPreviewLabel, { color: colors.textMuted }]}>Payment QR Code</Text>
+                  <View style={sb.qrPreviewFooter}>
+                    <Text style={[sb.qrPreviewLabel, { color: colors.textMuted }]}>Payment QR Code Preview</Text>
+                    <TouchableOpacity onPress={() => setQrImageUrl('')}>
+                      <Text style={[sb.qrRemoveTxt, { color: colors.expense }]}>✕ Remove</Text>
+                    </TouchableOpacity>
+                  </View>
                 </View>
               )}
 
@@ -692,6 +731,18 @@ const sb = StyleSheet.create({
   },
   qrPreview: { height: 150, width: 150 },
   qrPreviewLabel: { fontSize: 12, marginTop: 8 },
+  qrPreviewFooter: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', width: '100%', marginTop: 8 },
+  qrRemoveTxt: { fontSize: 12, fontWeight: Fonts.semiBold },
+  qrPickerBtn: {
+    borderRadius: Radii.md,
+    borderWidth: 1,
+    borderStyle: 'dashed',
+    paddingVertical: 18,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 12,
+  },
+  qrPickerTxt: { fontSize: 13, textAlign: 'center' },
   adminUpdatedAt: { fontSize: 11, marginBottom: 12 },
   saveAdminBtn: {
     alignItems: 'center',
