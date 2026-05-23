@@ -429,10 +429,17 @@ export default function DashboardScreen() {
           {catEntries.length > 0 && (
             <View style={[ss.card, { backgroundColor: colors.bgCard, borderColor: colors.border }]}>
               <SectionTitle title="🏷️ Expense Categories" colors={colors} />
-              <Text style={[ss.cardSub, { color: colors.textMuted }]}>Where your money goes</Text>
-              {catEntries.map(([name, amt], i) => (
-                <DonutRow key={name} name={name} amount={amt} total={filteredExpense} color={CAT_COLORS[i % CAT_COLORS.length]} colors={colors} />
-              ))}
+              <Text style={[ss.cardSub, { color: colors.textMuted }]}>Where your money goes — tap a slice</Text>
+              <InteractivePieChart
+                data={catEntries.map(([name, amount], i) => ({
+                  value: amount,
+                  color: CAT_COLORS[i % CAT_COLORS.length],
+                  label: name,
+                }))}
+                colors={colors}
+                size={90}
+                centerLabel="Tap slice"
+              />
             </View>
           )}
 
