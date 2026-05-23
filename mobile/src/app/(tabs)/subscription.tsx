@@ -66,6 +66,7 @@ export default function SubscriptionScreen() {
   const [accessPolicies, setAccessPolicies] = useState<AccessPolicy[]>([]);
   const [feeRupees, setFeeRupees] = useState('99');
   const [upiId, setUpiId] = useState('');
+  const [qrImageUrl, setQrImageUrl] = useState('');
   const pulseAnim = React.useRef(new Animated.Value(1)).current;
 
   useEffect(() => {
@@ -111,6 +112,7 @@ export default function SubscriptionScreen() {
       setAccessPolicies(policiesData.policies);
       setFeeRupees(String(Math.round(settingsData.amountPaise / 100)));
       setUpiId(settingsData.upiId || '');
+      setQrImageUrl(settingsData.upiQrImageUrl || '');
     } catch (e: any) {
       Platform.OS === 'web' ? window.alert(e.message) : Alert.alert('Admin Error', e.message);
     } finally {
@@ -137,7 +139,7 @@ export default function SubscriptionScreen() {
       const updated = await updateSubscriptionSettings({
         amountPaise: Math.round(amount * 100),
         upiId: upiId.trim(),
-        upiQrImageUrl: '',
+        upiQrImageUrl: qrImageUrl.trim(),
       });
       setSubscriptionSettings(updated);
       const planData = await getSubscriptionPlan();
@@ -310,7 +312,12 @@ export default function SubscriptionScreen() {
                 placeholderTextColor={colors.textMuted}
               />
 
-
+              {qrImageUrl.trim() !== '' && (
+                <View style={[sb.qrPreviewBox, { backgroundColor: colors.bgInput, borderColor: colors.border }]}>
+                  <Image source={{ uri: qrImageUrl.trim() }} style={sb.qrPreview} resizeMode="contain" />
+                  <Text style={[sb.qrPreviewLabel, { color: colors.textMuted }]}>Payment QR Code</Text>
+                </View>
+              )}
 
               {subscriptionSettings?.updatedAt ? (
                 <Text style={[sb.adminUpdatedAt, { color: colors.textMuted }]}>
