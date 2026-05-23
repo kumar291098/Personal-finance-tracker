@@ -8,8 +8,9 @@ import * as SecureStore from 'expo-secure-store';
 import { router } from 'expo-router';
 import { getTransactions, addTransaction, Transaction } from '../../api/transactions';
 import { getCategories, Category } from '../../api/categories';
+import { getProfile } from '../../api/profile';
 import { Fonts, Radii, useTheme } from '../../theme';
-import { PieChart, LineChart } from 'react-native-chart-kit';
+import { InteractivePieChart, InteractiveLineChart, DualBarChart } from '../../components/charts';
 
 const SCREEN_W = Dimensions.get('window').width;
 // Scroll has px:20 each side = 40. Card has padding:18 each side = 36. Total = 76.
@@ -70,50 +71,6 @@ function EmptyBox({ label, colors }: { label: string; colors: any }) {
   );
 }
 
-// Custom Donut Pie Chart using SVG-free approach — individual arc bars
-function DonutRow({ name, amount, total, color, colors }: {
-  name: string; amount: number; total: number; color: string; colors: any;
-}) {
-  const pct = total > 0 ? (amount / total) * 100 : 0;
-  return (
-    <View style={ss.donutRow}>
-      <View style={[ss.donutDot, { backgroundColor: color }]} />
-      <Text style={[ss.donutName, { color: colors.textPrimary }]} numberOfLines={1}>{name}</Text>
-      <View style={ss.donutBarWrap}>
-        <View style={[ss.donutBarTrack, { backgroundColor: colors.bgCardAlt }]}>
-          <View style={[ss.donutBarFill, { width: `${Math.max(pct, 2)}%`, backgroundColor: color }]} />
-        </View>
-      </View>
-      <Text style={[ss.donutPct, { color: color }]}>{pct.toFixed(0)}%</Text>
-      <Text style={[ss.donutAmt, { color: colors.textSecondary }]}>{fmt(amount)}</Text>
-    </View>
-  );
-}
-
-// Custom monthly bar chart
-function MonthBar({ month, income, expense, maxVal, colors }: {
-  month: string; income: number; expense: number; maxVal: number; colors: any;
-}) {
-  const incW = maxVal > 0 ? (income / maxVal) * 100 : 0;
-  const expW = maxVal > 0 ? (expense / maxVal) * 100 : 0;
-  return (
-    <View style={ss.mBarRow}>
-      <Text style={[ss.mBarLabel, { color: colors.textMuted }]}>{month}</Text>
-      <View style={ss.mBarBars}>
-        <View style={[ss.mBarTrack, { backgroundColor: colors.bgCardAlt }]}>
-          <View style={[ss.mBarFill, { width: `${Math.max(incW, 0)}%`, backgroundColor: colors.income }]} />
-        </View>
-        <View style={[ss.mBarTrack, { backgroundColor: colors.bgCardAlt, marginTop: 5 }]}>
-          <View style={[ss.mBarFill, { width: `${Math.max(expW, 0)}%`, backgroundColor: colors.expense }]} />
-        </View>
-      </View>
-      <View style={ss.mBarAmts}>
-        <Text style={[ss.mBarAmt, { color: colors.income }]}>{income > 0 ? fmt(income) : '-'}</Text>
-        <Text style={[ss.mBarAmt, { color: colors.expense }]}>{expense > 0 ? fmt(expense) : '-'}</Text>
-      </View>
-    </View>
-  );
-}
 
 // ── Main Screen ──────────────────────────────────────────────────────────────
 
@@ -121,7 +78,7 @@ export default function DashboardScreen() {
   const { colors, shadows, isDark } = useTheme();
   const fadeAnim = useRef(new Animated.Value(0)).current;
 
-  const [username, setUsername] = useState('User');
+  const [displayName, setDisplayName] = useState('');
   const [transactions, setTransactions] = useState<Transaction[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
   const [loading, setLoading] = useState(true);
@@ -140,11 +97,20 @@ export default function DashboardScreen() {
   const loadData = useCallback(async (isRefresh = false) => {
     if (!isRefresh) setLoading(true);
     try {
-      const stored = Platform.OS === 'web'
-        ? localStorage.getItem('username')
-        : await SecureStore.getItemAsync('username');
-      if (stored) setUsername(stored);
-      const [txs, cats] = await Promise.all([getTransactions(), getCategories()]);
+      // Try to get firstName from profile, fall back to stored username
+      const [profileData, txs, cats] = await Promise.all([
+        getProfile().catch(() => null),
+        getTransactions(),
+        getCategories(),
+      ]);
+      if (profileData) {
+        setDisplayName(profileData.firstName?.trim() || profileData.username?.trim() || '');
+      } else {
+        const stored = Platform.OS === 'web'
+          ? localStorage.getItem('username')
+          : await SecureStore.getItemAsync('username');
+        if (stored) setDisplayName(stored);
+      }
       setTransactions(txs.sort((a, b) =>
         new Date(b.transactionDate).getTime() - new Date(a.transactionDate).getTime()
       ));
@@ -285,8 +251,10 @@ export default function DashboardScreen() {
           {/* ── HEADER ─────────────────────────────────────────────── */}
           <View style={ss.header}>
             <View style={{ flex: 1, marginRight: 12 }}>
-              <Text style={[ss.greeting, { color: colors.textPrimary }]}>{getGreeting()}, {username} 👋</Text>
-              <Text style={[ss.headerSub, { color: colors.textMuted }]}>A clear view of your balance & cash flow.</Text>
+              <Text style={[ss.greeting, { color: colors.textPrimary }]}>
+                {getGreeting()}{displayName ? `, ${displayName}` : ''} 👋
+              </Text>
+              <Text style={[ss.headerSub, { color: colors.textMuted }]}>A clear view of your balance, cash flow, and recent activity.</Text>
             </View>
             <TouchableOpacity style={[ss.addBtn, { backgroundColor: colors.primary, ...shadows.violet }]} onPress={() => setAddModal('EXPENSE')}>
               <Text style={ss.addBtnTxt}>+ Add</Text>
@@ -378,61 +346,37 @@ export default function DashboardScreen() {
               {topCat && <Text style={[ss.filtNote, { color: colors.textMuted }]}>{topCat[0]} leads with {topCatPct}% of this view.</Text>}
             </View>
 
-            {/* ── PIE CHART (no legend — we draw our own) ── */}
-            {pieData.length > 0 ? (
+            {/* ── INTERACTIVE PIE CHART ── */}
+            {catEntries.length > 0 ? (
               <>
-                <Text style={[ss.miniLabel, { color: colors.textSecondary }]}>Category Breakdown</Text>
-                <View style={ss.pieWrap}>
-                  <PieChart
-                    data={pieData}
-                    width={CARD_INNER_W}
-                    height={160}
-                    chartConfig={chartConfig}
-                    accessor="population"
-                    backgroundColor="transparent"
-                    paddingLeft={String(Math.round(CARD_INNER_W * 0.18))}
-                    hasLegend={false}
-                    center={[CARD_INNER_W / 4 - 20, 0]}
-                  />
-                </View>
-                {/* Custom legend */}
-                {catEntries.map(([name, amt], i) => (
-                  <DonutRow key={name} name={name} amount={amt} total={filteredExpense} color={CAT_COLORS[i % CAT_COLORS.length]} colors={colors} />
-                ))}
-                <View style={[ss.donutTotalRow, { borderTopColor: colors.border }]}>
-                  <Text style={[ss.donutTotalLbl, { color: colors.textPrimary }]}>Total</Text>
-                  <Text style={[ss.donutTotalAmt, { color: colors.expense }]}>{fmt(filteredExpense)}</Text>
-                </View>
+                <Text style={[ss.miniLabel, { color: colors.textSecondary }]}>Category Breakdown — Tap a slice</Text>
+                <InteractivePieChart
+                  data={catEntries.map(([name, amount], i) => ({
+                    value: amount,
+                    color: CAT_COLORS[i % CAT_COLORS.length],
+                    label: name,
+                  }))}
+                  colors={colors}
+                  size={90}
+                  centerLabel="Tap slice"
+                />
               </>
             ) : (
               <EmptyBox label="No expenses in this filter" colors={colors} />
             )}
           </View>
 
-          {/* ── DATE-WISE LINE CHART ─────────────────────────────────── */}
           <View style={[ss.card, { backgroundColor: colors.bgCard, borderColor: colors.border }]}>
             <SectionTitle title="📈 Date-wise Expenses" colors={colors} />
-            <Text style={[ss.cardSub, { color: colors.textMuted }]}>Daily spending for the selected filter</Text>
+            <Text style={[ss.cardSub, { color: colors.textMuted }]}>Daily spending — tap a point to see value</Text>
             {hasLineData ? (
               <View style={ss.chartWrap}>
-                <LineChart
-                  data={{
-                    labels: lineLabels,
-                    datasets: [{ data: lineValues, color: (o = 1) => `rgba(108,99,255,${o})`, strokeWidth: 2 }],
-                  }}
+                <InteractiveLineChart
+                  data={lineLabels.map((label, i) => ({ label, value: lineValues[i] }))}
+                  colors={colors}
                   width={CARD_INNER_W}
-                  height={180}
-                  chartConfig={chartConfig}
-                  bezier
-                  style={ss.chartStyle}
-                  withInnerLines
-                  withOuterLines={false}
-                  withShadow={false}
-                  yAxisLabel="₹"
-                  yAxisSuffix=""
-                  yLabelsOffset={4}
-                  fromZero
-                  withDots
+                  lineColor={colors.primary}
+                  areaColor={colors.primary}
                 />
               </View>
             ) : (
@@ -472,16 +416,13 @@ export default function DashboardScreen() {
               </View>
             </View>
 
-            {/* Legend */}
-            <View style={ss.legendRow}>
-              <View style={ss.legendItem}><View style={[ss.legendDot, { backgroundColor: colors.income }]} /><Text style={[ss.legendTxt, { color: colors.textSecondary }]}>Income</Text></View>
-              <View style={ss.legendItem}><View style={[ss.legendDot, { backgroundColor: colors.expense }]} /><Text style={[ss.legendTxt, { color: colors.textSecondary }]}>Expenses</Text></View>
-            </View>
-
-            {/* Custom bar chart */}
-            {months.map(m => (
-              <MonthBar key={m.month} month={m.month} income={m.income} expense={m.expense} maxVal={maxMonthVal} colors={colors} />
-            ))}
+            {/* Interactive dual bar chart */}
+            <DualBarChart
+              data={months}
+              colors={colors}
+              width={CARD_INNER_W}
+              title=""
+            />
           </View>
 
           {/* ── EXPENSE CATEGORIES ──────────────────────────────────── */}

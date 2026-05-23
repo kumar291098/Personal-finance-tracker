@@ -25,12 +25,10 @@ const drawerItems: DrawerItem[] = [
 
 const defaultAllowedPages = ['dashboard', 'transactions', 'analytics', 'categories', 'subscription', 'profile'];
 
-function HamburgerIcon({ color }: { color: string }) {
+function SidebarArrow({ color }: { color: string }) {
   return (
-    <View style={styles.hamburgerLines}>
-      <View style={[styles.hamburgerLine, { backgroundColor: color }]} />
-      <View style={[styles.hamburgerLine, { backgroundColor: color }]} />
-      <View style={[styles.hamburgerLine, { backgroundColor: color }]} />
+    <View style={styles.arrowWrap}>
+      <Text style={[styles.arrowText, { color }]}>{'›'}</Text>
     </View>
   );
 }
@@ -162,7 +160,7 @@ export default function TabsLayout() {
           shadows.card,
         ]}
       >
-        <HamburgerIcon color={colors.primary} />
+        <SidebarArrow color={colors.primary} />
       </Pressable>
 
       {/* ── Floating AI chat button (bottom-right) ── */}
@@ -311,6 +309,8 @@ const styles = StyleSheet.create({
   },
   hamburgerLines: { gap: 5 },
   hamburgerLine: { width: 20, height: 2.5, borderRadius: 2 },
+  arrowWrap: { alignItems: 'center', justifyContent: 'center' },
+  arrowText: { fontSize: 32, fontWeight: '300', lineHeight: 34, marginTop: -2 },
   chatFab: {
     position: 'absolute',
     right: 18,
