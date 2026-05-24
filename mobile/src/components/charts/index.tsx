@@ -49,7 +49,7 @@ const tt = StyleSheet.create({
   box: {
     paddingHorizontal: 10, paddingVertical: 6, borderRadius: 10, borderWidth: 1,
     alignItems: 'center', shadowColor: '#000', shadowOpacity: 0.18,
-    shadowRadius: 6, elevation: 4,
+    shadowRadius: 6, elevation: 10, zIndex: 9999,
   },
   label: { fontSize: 10, marginBottom: 2 },
   value: { fontSize: 13, fontWeight: '700' },
@@ -71,12 +71,16 @@ export function InteractiveBarChart({ data, colors, width, barColor, title }: {
     ...item,
     frontColor: tooltip?.index === i ? (barColor || colors.teal) : (item.frontColor || barColor || colors.primary),
     topLabelComponent: tooltip?.index === i
-      ? () => <Tooltip value={item.value} label={item.label} color={barColor || colors.primary} colors={colors} />
+      ? () => (
+        <View style={{ zIndex: 9999, elevation: 10, marginBottom: 2, alignItems: 'center' }}>
+          <Tooltip value={item.value} label={item.label} color={barColor || colors.primary} colors={colors} />
+        </View>
+      )
       : undefined,
   }));
 
   return (
-    <View>
+    <View style={{ zIndex: 1, overflow: 'visible' }}>
       {title ? <Text style={[s.chartTitle, { color: colors.textPrimary }]}>{title}</Text> : null}
       <BarChart
         data={chartData}
@@ -95,6 +99,7 @@ export function InteractiveBarChart({ data, colors, width, barColor, title }: {
         noOfSections={4}
         isAnimated
         animationDuration={600}
+        yAxisExtraHeight={45}
         onPress={(item: any, index: number) => {
           setTooltip(prev => prev?.index === index ? null : { index, value: item.value, label: item.label });
         }}
@@ -121,9 +126,9 @@ export function InteractiveLineChart({ data, colors, width, lineColor, areaColor
     label: item.label,
     customDataPoint: tooltip?.index === i
       ? () => (
-        <View style={{ alignItems: 'center' }}>
+        <View style={{ alignItems: 'center', zIndex: 9999, elevation: 10 }}>
           <View style={[s.activeDot, { borderColor: lineColor || colors.primary, backgroundColor: colors.bgCard }]} />
-          <View style={s.tooltipAbove}>
+          <View style={[s.tooltipAbove, { zIndex: 9999, elevation: 10 }]}>
             <Tooltip value={item.value} label={item.label} color={lineColor || colors.primary} colors={colors} />
           </View>
         </View>
@@ -134,7 +139,7 @@ export function InteractiveLineChart({ data, colors, width, lineColor, areaColor
   }));
 
   return (
-    <View>
+    <View style={{ zIndex: 1, overflow: 'visible' }}>
       {title ? <Text style={[s.chartTitle, { color: colors.textPrimary }]}>{title}</Text> : null}
       <LineChart
         data={chartData}
@@ -160,6 +165,9 @@ export function InteractiveLineChart({ data, colors, width, lineColor, areaColor
         animationDuration={700}
         dataPointsColor={lineColor || colors.primary}
         dataPointsRadius={4}
+        yAxisExtraHeight={50}
+        initialSpacing={30}
+        endSpacing={30}
         onPress={(item: any, index: number) => {
           setTooltip(prev => prev?.index === index ? null : { index, value: item.value, label: item.label });
         }}
@@ -271,7 +279,11 @@ export function DualBarChart({ data, colors, width, title }: {
       frontColor: tooltip?.index === i && tooltip.type === 'income' ? colors.teal : colors.income,
       spacing: 4,
       topLabelComponent: tooltip?.index === i && tooltip.type === 'income'
-        ? () => <Tooltip value={item.income} label="Income" color={colors.income} colors={colors} />
+        ? () => (
+          <View style={{ zIndex: 9999, elevation: 10, marginBottom: 2, alignItems: 'center' }}>
+            <Tooltip value={item.income} label="Income" color={colors.income} colors={colors} />
+          </View>
+        )
         : undefined,
       onPress: () => setTooltip(prev =>
         prev?.index === i && prev.type === 'income' ? null : { index: i, type: 'income', value: item.income }
@@ -282,7 +294,11 @@ export function DualBarChart({ data, colors, width, title }: {
       frontColor: tooltip?.index === i && tooltip.type === 'expense' ? '#FF8A8A' : colors.expense,
       spacing: i < data.length - 1 ? 16 : 0,
       topLabelComponent: tooltip?.index === i && tooltip.type === 'expense'
-        ? () => <Tooltip value={item.expense} label="Expense" color={colors.expense} colors={colors} />
+        ? () => (
+          <View style={{ zIndex: 9999, elevation: 10, marginBottom: 2, alignItems: 'center' }}>
+            <Tooltip value={item.expense} label="Expense" color={colors.expense} colors={colors} />
+          </View>
+        )
         : undefined,
       onPress: () => setTooltip(prev =>
         prev?.index === i && prev.type === 'expense' ? null : { index: i, type: 'expense', value: item.expense }
@@ -291,7 +307,7 @@ export function DualBarChart({ data, colors, width, title }: {
   });
 
   return (
-    <View>
+    <View style={{ zIndex: 1, overflow: 'visible' }}>
       {title ? <Text style={[s.chartTitle, { color: colors.textPrimary }]}>{title}</Text> : null}
       <View style={[s.dualLegendRow]}>
         <View style={s.dualLegendItem}>
@@ -319,6 +335,7 @@ export function DualBarChart({ data, colors, width, title }: {
         noOfSections={4}
         isAnimated
         animationDuration={600}
+        yAxisExtraHeight={45}
         onPress={(item: any, index: number) => {
           item.onPress?.();
         }}
@@ -331,8 +348,8 @@ export function DualBarChart({ data, colors, width, title }: {
 
 const s = StyleSheet.create({
   chartTitle: { fontSize: 13, fontWeight: '700', marginBottom: 12 },
-  activeDot: { width: 12, height: 12, borderRadius: 6, borderWidth: 2 },
-  tooltipAbove: { position: 'absolute', bottom: 20 },
+  activeDot: { width: 12, height: 12, borderRadius: 6, borderWidth: 2, zIndex: 9999, elevation: 10 },
+  tooltipAbove: { position: 'absolute', bottom: 20, zIndex: 9999, elevation: 10, alignItems: 'center' },
   pieWrap: {},
   pieRow: { flexDirection: 'row', alignItems: 'center', gap: 16 },
   pieLegend: { flex: 1, gap: 8 },

@@ -3,11 +3,15 @@ package com.finance.service;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.finance.model.Transaction;
 import com.finance.model.User;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import org.springframework.beans.factory.annotation.Value;
@@ -17,6 +21,10 @@ import org.springframework.web.client.RestClient;
 
 @Service
 public class FinancialAiService {
+    private static final ZoneId APP_ZONE = ZoneId.of("Asia/Kolkata");
+    private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("dd MMM yyyy");
+    private static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("dd MMM yyyy HH:mm");
+
     private final RestClient restClient;
 
     @Value("${ai.provider:openai}")
@@ -55,26 +63,27 @@ public class FinancialAiService {
 
         String summary = buildTransactionSummary(transactions);
         String userContext = buildUserContext(user);
+        String transactionContext = buildTransactionContext(transactions);
 
         try {
             if ("gemini".equalsIgnoreCase(aiProvider)) {
                 if (geminiApiKey == null || geminiApiKey.isBlank()) {
                     return fallbackReply(message, summary);
                 }
-                return callGemini(message.trim(), summary, userContext);
+                return callGemini(message.trim(), summary, userContext, transactionContext);
             }
 
             if (openAiApiKey == null || openAiApiKey.isBlank()) {
                 return fallbackReply(message, summary);
             }
-            return callOpenAi(message.trim(), summary, userContext);
+            return callOpenAi(message.trim(), summary, userContext, transactionContext);
         } catch (Exception error) {
             return "I could not reach the AI service, but here is your current snapshot: " + summary;
         }
     }
 
     private String answerProfileLookup(String message, User user) {
-        String normalizedMessage = message.toLowerCase();
+        String normalizedMessage = message.toLowerCase(Locale.ROOT);
         boolean asksName = normalizedMessage.contains("my name")
                 || normalizedMessage.contains("who am i")
                 || normalizedMessage.contains("whose finance");
@@ -107,21 +116,11 @@ public class FinancialAiService {
     }
 
     private String answerTransactionLookup(String message, List<Transaction> transactions) {
-        String normalizedMessage = message.toLowerCase();
+        String normalizedMessage = message.toLowerCase(Locale.ROOT).trim();
 
-        if (normalizedMessage.contains("today")) {
-            java.time.LocalDate today = java.time.LocalDate.now(java.time.ZoneId.of("Asia/Kolkata"));
-            List<Transaction> todaysTransactions = transactions.stream()
-                    .filter(transaction -> transaction.getTransactionDate() != null)
-                    .filter(transaction -> transaction.getTransactionDate().equals(today))
-                    .sorted(Comparator.comparing(Transaction::getId, Comparator.nullsLast(Comparator.reverseOrder())))
-                    .toList();
-
-            if (todaysTransactions.isEmpty()) {
-                return "I found no transactions for today.";
-            }
-
-            return "Today's transactions:\n" + formatTransactions(todaysTransactions);
+        Optional<String> periodAnswer = answerPeriodTransactionLookup(normalizedMessage, transactions);
+        if (periodAnswer.isPresent()) {
+            return periodAnswer.get();
         }
 
         Integer requestedCount = extractRequestedCount(normalizedMessage);
@@ -129,7 +128,7 @@ public class FinancialAiService {
                 normalizedMessage.contains("last")
                         || normalizedMessage.contains("recent")
                         || normalizedMessage.contains("latest")
-        )) {
+        ) && !normalizedMessage.contains("day")) {
             List<Transaction> recentTransactions = transactions.stream()
                     .sorted(Comparator
                             .comparing(Transaction::getTransactionDate, Comparator.nullsLast(Comparator.reverseOrder()))
@@ -147,6 +146,42 @@ public class FinancialAiService {
         return null;
     }
 
+    private Optional<String> answerPeriodTransactionLookup(String normalizedMessage, List<Transaction> transactions) {
+        LocalDate today = LocalDate.now(APP_ZONE);
+
+        if (normalizedMessage.contains("today")) {
+            return Optional.of(formatPeriodResponse(
+                    "today",
+                    today,
+                    today,
+                    normalizedMessage,
+                    transactions));
+        }
+
+        if (normalizedMessage.contains("yesterday")) {
+            LocalDate yesterday = today.minusDays(1);
+            return Optional.of(formatPeriodResponse(
+                    "yesterday",
+                    yesterday,
+                    yesterday,
+                    normalizedMessage,
+                    transactions));
+        }
+
+        Integer dayCount = extractRequestedDayCount(normalizedMessage);
+        if (dayCount != null) {
+            LocalDate startDate = today.minusDays(dayCount - 1L);
+            return Optional.of(formatPeriodResponse(
+                    "last " + dayCount + " days",
+                    startDate,
+                    today,
+                    normalizedMessage,
+                    transactions));
+        }
+
+        return Optional.empty();
+    }
+
     private Integer extractRequestedCount(String message) {
         java.util.regex.Matcher matcher = java.util.regex.Pattern.compile("\\b(\\d{1,2})\\b").matcher(message);
         if (!matcher.find()) {
@@ -155,6 +190,87 @@ public class FinancialAiService {
 
         int count = Integer.parseInt(matcher.group(1));
         return Math.max(1, Math.min(count, 10));
+    }
+
+    private Integer extractRequestedDayCount(String message) {
+        java.util.regex.Matcher matcher = java.util.regex.Pattern
+                .compile("\\blast\\s+(\\d{1,2})\\s+day[s]?\\b")
+                .matcher(message);
+        if (!matcher.find()) {
+            return null;
+        }
+
+        int count = Integer.parseInt(matcher.group(1));
+        return Math.max(1, Math.min(count, 30));
+    }
+
+    private String formatPeriodResponse(
+            String label,
+            LocalDate startDate,
+            LocalDate endDate,
+            String normalizedMessage,
+            List<Transaction> transactions) {
+        boolean expensesOnly = normalizedMessage.contains("expense")
+                || normalizedMessage.contains("expenses")
+                || normalizedMessage.contains("spent")
+                || normalizedMessage.contains("spend")
+                || normalizedMessage.contains("spends")
+                || normalizedMessage.contains("spending");
+        boolean incomeOnly = !expensesOnly && (
+                normalizedMessage.contains("income") || normalizedMessage.contains("earned"));
+
+        List<Transaction> matchedTransactions = transactions.stream()
+                .filter(transaction -> transaction.getTransactionDate() != null)
+                .filter(transaction -> !transaction.getTransactionDate().isBefore(startDate)
+                        && !transaction.getTransactionDate().isAfter(endDate))
+                .filter(transaction -> !expensesOnly || "EXPENSE".equalsIgnoreCase(transaction.getType()))
+                .filter(transaction -> !incomeOnly || "INCOME".equalsIgnoreCase(transaction.getType()))
+                .sorted(Comparator
+                        .comparing(Transaction::getTransactionDate, Comparator.nullsLast(Comparator.reverseOrder()))
+                        .thenComparing(Transaction::getId, Comparator.nullsLast(Comparator.reverseOrder())))
+                .toList();
+
+        String dateLabel = startDate.format(DATE_FORMATTER)
+                + (startDate.equals(endDate) ? "" : " to " + endDate.format(DATE_FORMATTER));
+
+        if (matchedTransactions.isEmpty()) {
+            return "I found no " + transactionWord(expensesOnly, incomeOnly)
+                    + " for " + label + " (" + dateLabel + ").";
+        }
+
+        double total = matchedTransactions.stream()
+                .mapToDouble(transaction -> transaction.getAmount() == null ? 0 : transaction.getAmount())
+                .sum();
+
+        if (expensesOnly) {
+            return capitalize(label) + " expenses (" + dateLabel + "): INR " + Math.round(total)
+                    + "\n" + formatTransactions(matchedTransactions);
+        }
+
+        if (incomeOnly) {
+            return capitalize(label) + " income (" + dateLabel + "): INR " + Math.round(total)
+                    + "\n" + formatTransactions(matchedTransactions);
+        }
+
+        return capitalize(label) + " transactions (" + dateLabel + "):\n"
+                + formatTransactions(matchedTransactions);
+    }
+
+    private String transactionWord(boolean expensesOnly, boolean incomeOnly) {
+        if (expensesOnly) {
+            return "expenses";
+        }
+        if (incomeOnly) {
+            return "income transactions";
+        }
+        return "transactions";
+    }
+
+    private String capitalize(String value) {
+        if (value == null || value.isBlank()) {
+            return "";
+        }
+        return Character.toUpperCase(value.charAt(0)) + value.substring(1);
     }
 
     private String formatTransactions(List<Transaction> transactions) {
@@ -171,10 +287,10 @@ public class FinancialAiService {
         return value == null || value.isBlank() ? "No details" : value;
     }
 
-    private String callOpenAi(String message, String summary, String userContext) {
+    private String callOpenAi(String message, String summary, String userContext, String transactionContext) {
         Map<String, Object> requestBody = Map.of(
                 "model", openAiModel,
-                "input", buildPrompt(message, summary, userContext)
+                "input", buildPrompt(message, summary, userContext, transactionContext)
         );
 
         JsonNode response = restClient.post()
@@ -197,11 +313,11 @@ public class FinancialAiService {
         return extractTextFromOpenAiOutput(response);
     }
 
-    private String callGemini(String message, String summary, String userContext) {
+    private String callGemini(String message, String summary, String userContext, String transactionContext) {
         Map<String, Object> requestBody = Map.of(
                 "contents", List.of(
                         Map.of("parts", List.of(
-                                Map.of("text", buildPrompt(message, summary, userContext))
+                                Map.of("text", buildPrompt(message, summary, userContext, transactionContext))
                         ))
                 ),
                 "generationConfig", Map.of(
@@ -221,19 +337,27 @@ public class FinancialAiService {
         return extractGeminiText(response);
     }
 
-    private String buildPrompt(String message, String summary, String userContext) {
+    private String buildPrompt(String message, String summary, String userContext, String transactionContext) {
         return """
                 You are a careful personal finance assistant inside a finance tracker app.
                 Answer naturally and helpfully, but do not invent transactions or amounts.
-                Use only the app context, the user's transaction summary, and the current question.
-                If the summary does not contain enough information, say what data is missing.
+                Use only the app context, the user's transaction summary, the recent transaction context, and the current question.
+                If the provided data is not enough, say exactly what is missing.
                 You may answer questions about the current user's name, membership level, and subscription end date from the app context.
+                Interpret relative time words like today, yesterday, and last N days using the app date.
                 Do not give legal, tax, or investment advice.
 
+                App date: %s
                 App context: %s
                 Transaction summary: %s
+                Recent transaction context: %s
                 User question: %s
-                """.formatted(userContext, summary, message);
+                """.formatted(
+                LocalDate.now(APP_ZONE).format(DATE_FORMATTER),
+                userContext,
+                summary,
+                transactionContext,
+                message);
     }
 
     private String extractTextFromOpenAiOutput(JsonNode response) {
@@ -315,6 +439,28 @@ public class FinancialAiService {
                 + (topCategories.isBlank() ? "" : ", top expense categories " + topCategories);
     }
 
+    private String buildTransactionContext(List<Transaction> transactions) {
+        List<Transaction> recentTransactions = transactions.stream()
+                .filter(transaction -> transaction.getTransactionDate() != null)
+                .sorted(Comparator
+                        .comparing(Transaction::getTransactionDate, Comparator.nullsLast(Comparator.reverseOrder()))
+                        .thenComparing(Transaction::getId, Comparator.nullsLast(Comparator.reverseOrder())))
+                .limit(25)
+                .toList();
+
+        if (recentTransactions.isEmpty()) {
+            return "no transactions available";
+        }
+
+        return recentTransactions.stream()
+                .map(transaction -> transaction.getTransactionDate()
+                        + " | " + nullSafe(transaction.getType())
+                        + " | INR " + Math.round(transaction.getAmount() == null ? 0 : transaction.getAmount())
+                        + " | " + nullSafe(transaction.getCategory())
+                        + " | " + nullSafe(transaction.getDescription()))
+                .collect(Collectors.joining("; "));
+    }
+
     private String buildUserContext(User user) {
         if (user == null) {
             return "current user profile unavailable";
@@ -348,11 +494,11 @@ public class FinancialAiService {
             return "not set";
         }
 
-        return subscriberUntil.format(DateTimeFormatter.ofPattern("dd MMM yyyy HH:mm"));
+        return subscriberUntil.format(DATE_TIME_FORMATTER);
     }
 
     private String fallbackReply(String message, String summary) {
-        String normalizedMessage = message.toLowerCase();
+        String normalizedMessage = message.toLowerCase(Locale.ROOT);
         if (normalizedMessage.contains("budget")) {
             return "AI is not configured yet, but based on your saved data you can start with this snapshot: "
                     + summary + ". Try setting one monthly limit for your biggest expense category first.";

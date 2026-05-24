@@ -143,35 +143,9 @@ export default function ChatScreen() {
   return (
     <KeyboardAvoidingView
       style={[styles.root, { backgroundColor: colors.bgBase }]}
-      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-      keyboardVerticalOffset={Platform.OS === 'ios' ? 0 : 0}
+      behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+      keyboardVerticalOffset={Platform.OS === 'ios' ? 90 : 0}
     >
-
-      <View style={[styles.promptCard, { backgroundColor: colors.bgCard, borderColor: colors.border }, shadows.card]}>
-        <Text style={[styles.promptTitle, { color: colors.textPrimary }]}>Ask about your money</Text>
-        <Text style={[styles.promptSub, { color: colors.textSecondary }]}>
-          The assistant uses your saved profile and transactions from the backend.
-        </Text>
-        <View style={styles.quickGrid}>
-          {quickPrompts.map(prompt => (
-            <Pressable
-              key={prompt}
-              disabled={sending}
-              onPress={() => sendMessage(prompt)}
-              style={({ pressed }) => [
-                styles.quickChip,
-                {
-                  backgroundColor: pressed ? `${colors.primary}22` : colors.bgInput,
-                  borderColor: colors.border,
-                  opacity: sending ? 0.6 : 1,
-                },
-              ]}
-            >
-              <Text style={[styles.quickText, { color: colors.textPrimary }]}>{prompt}</Text>
-            </Pressable>
-          ))}
-        </View>
-      </View>
 
       <FlatList
         ref={listRef}
@@ -180,6 +154,33 @@ export default function ChatScreen() {
         contentContainerStyle={styles.messages}
         showsVerticalScrollIndicator={false}
         onContentSizeChange={scrollToEnd}
+        ListHeaderComponent={
+          <View style={[styles.promptCard, { backgroundColor: colors.bgCard, borderColor: colors.border, marginBottom: 12 }, shadows.card]}>
+            <Text style={[styles.promptTitle, { color: colors.textPrimary }]}>Ask about your money</Text>
+            <Text style={[styles.promptSub, { color: colors.textSecondary }]}>
+              The assistant uses your saved profile and transactions from the backend.
+            </Text>
+            <View style={styles.quickGrid}>
+              {quickPrompts.map(prompt => (
+                <Pressable
+                  key={prompt}
+                  disabled={sending}
+                  onPress={() => sendMessage(prompt)}
+                  style={({ pressed }) => [
+                    styles.quickChip,
+                    {
+                      backgroundColor: pressed ? `${colors.primary}22` : colors.bgInput,
+                      borderColor: colors.border,
+                      opacity: sending ? 0.6 : 1,
+                    },
+                  ]}
+                >
+                  <Text style={[styles.quickText, { color: colors.textPrimary }]}>{prompt}</Text>
+                </Pressable>
+              ))}
+            </View>
+          </View>
+        }
         renderItem={({ item }) => {
           const isUser = item.role === 'user';
           return (

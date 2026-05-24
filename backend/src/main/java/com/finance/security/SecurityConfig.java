@@ -16,6 +16,7 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.stream.Stream;
 
 @Configuration
 public class SecurityConfig {
@@ -26,7 +27,7 @@ public class SecurityConfig {
     @Autowired
     private JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint;
 
-    @Value("${app.cors.allowed-origins:http://localhost:3000}")
+    @Value("${app.cors.allowed-origins:http://localhost:3000,http://localhost:8081}")
     private String allowedOrigins;
 
     @Bean
@@ -65,25 +66,34 @@ public class SecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
         
-        List<String> origins = new ArrayList<>(Arrays.stream(allowedOrigins.split(","))
-            .map(String::trim)
-            .filter(origin -> !origin.isEmpty())
-            .toList());
-        
-        // Explicitly add Expo Web port to guarantee CORS bypass during development
-        if (!origins.contains("http://localhost:8081")) {
-            origins.add("http://localhost:8081");
-        }
-
-        configuration.setAllowedOriginPatterns(origins);
-        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
+        configuration.setAllowedOriginPatterns(getAllowedOriginPatterns());
+        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS", "HEAD"));
         configuration.setAllowedHeaders(Arrays.asList("*"));
+        configuration.setExposedHeaders(Arrays.asList("Authorization", "Content-Type"));
         configuration.setAllowCredentials(true);
         configuration.setMaxAge(3600L);
         
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
         return source;
+    }
+
+    private List<String> getAllowedOriginPatterns() {
+        List<String> configuredOrigins = Arrays.stream(allowedOrigins.split(","))
+            .map(String::trim)
+            .filter(origin -> !origin.isEmpty())
+            .toList();
+
+        return Stream.concat(
+                configuredOrigins.stream(),
+                Stream.of(
+                    "http://localhost:*",
+                    "http://127.0.0.1:*",
+                    "http://[::1]:*"
+                )
+            )
+            .distinct()
+            .toList();
     }
 
     @Bean

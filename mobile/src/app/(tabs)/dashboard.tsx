@@ -91,7 +91,8 @@ export default function DashboardScreen() {
   const [addModal, setAddModal] = useState<'INCOME' | 'EXPENSE' | null>(null);
   const [addDesc, setAddDesc] = useState('');
   const [addAmt, setAddAmt] = useState('');
-  const [addCat, setAddCat] = useState('');
+  const [addCategory, setAddCategory] = useState<Category | null>(null);
+  const [addCategoryDropOpen, setAddCategoryDropOpen] = useState(false);
   const [addSaving, setAddSaving] = useState(false);
 
   const loadData = useCallback(async (isRefresh = false) => {
@@ -166,7 +167,7 @@ export default function DashboardScreen() {
       return d >= start && d < end;
     });
     return {
-      month: start.toLocaleString('en', { month: 'short' }),
+      label: start.toLocaleString('en', { month: 'short' }),
       income: slice.filter(t => t.type === 'INCOME').reduce((s, t) => s + t.amount, 0),
       expense: slice.filter(t => t.type === 'EXPENSE').reduce((s, t) => s + t.amount, 0),
     };
@@ -203,18 +204,24 @@ export default function DashboardScreen() {
   const uniqueCats = Array.from(new Set(transactions.map(t => t.category)));
 
   const closeAddModal = () => {
-    setAddModal(null); setAddDesc(''); setAddAmt(''); setAddCat('');
+    setAddModal(null); setAddDesc(''); setAddAmt('');
+    setAddCategory(null); setAddCategoryDropOpen(false);
   };
 
   const handleSaveTransaction = async () => {
     if (!addDesc.trim() || !addAmt.trim()) return;
+    if (!addCategory) {
+      if (Platform.OS === 'web') window.alert('Please select a category.');
+      return;
+    }
     setAddSaving(true);
     try {
       await addTransaction({
         description: addDesc.trim(),
         amount: parseFloat(addAmt),
         type: addModal!,
-        category: addCat.trim() || 'Other',
+        category: addCategory.name,
+        categoryId: addCategory.id || undefined,
         transactionDate: new Date().toISOString().slice(0, 10),
       });
       closeAddModal();
@@ -425,24 +432,6 @@ export default function DashboardScreen() {
             />
           </View>
 
-          {/* ── EXPENSE CATEGORIES ──────────────────────────────────── */}
-          {catEntries.length > 0 && (
-            <View style={[ss.card, { backgroundColor: colors.bgCard, borderColor: colors.border }]}>
-              <SectionTitle title="🏷️ Expense Categories" colors={colors} />
-              <Text style={[ss.cardSub, { color: colors.textMuted }]}>Where your money goes — tap a slice</Text>
-              <InteractivePieChart
-                data={catEntries.map(([name, amount], i) => ({
-                  value: amount,
-                  color: CAT_COLORS[i % CAT_COLORS.length],
-                  label: name,
-                }))}
-                colors={colors}
-                size={90}
-                centerLabel="Tap slice"
-              />
-            </View>
-          )}
-
           {/* ── RECENT TRANSACTIONS ─────────────────────────────────── */}
           <View style={[ss.card, { backgroundColor: colors.bgCard, borderColor: colors.border }]}>
             <View style={ss.secHdr}>
@@ -536,23 +525,80 @@ export default function DashboardScreen() {
               ))}
             </View>
 
-            {[
-              { label: 'Description', val: addDesc, set: setAddDesc, placeholder: 'e.g. Grocery, Salary…', keyboard: 'default' as const },
-              { label: 'Amount (₹)', val: addAmt, set: setAddAmt, placeholder: '0.00', keyboard: 'decimal-pad' as const },
-              { label: 'Category', val: addCat, set: setAddCat, placeholder: 'e.g. Food, Transport…', keyboard: 'default' as const },
-            ].map(f => (
-              <View key={f.label}>
-                <Text style={[ss.mLabel, { color: colors.textSecondary }]}>{f.label}</Text>
-                <TextInput
-                  style={[ss.mInput, { backgroundColor: colors.bgInput, borderColor: colors.border, color: colors.textPrimary }]}
-                  placeholder={f.placeholder}
-                  placeholderTextColor={colors.textMuted}
-                  value={f.val}
-                  onChangeText={f.set}
-                  keyboardType={f.keyboard}
-                />
+            <Text style={[ss.mLabel, { color: colors.textSecondary }]}>Description</Text>
+            <TextInput
+              style={[ss.mInput, { backgroundColor: colors.bgInput, borderColor: colors.border, color: colors.textPrimary }]}
+              placeholder="e.g. Grocery, Salary…"
+              placeholderTextColor={colors.textMuted}
+              value={addDesc}
+              onChangeText={setAddDesc}
+            />
+
+            <Text style={[ss.mLabel, { color: colors.textSecondary }]}>Amount (₹)</Text>
+            <TextInput
+              style={[ss.mInput, { backgroundColor: colors.bgInput, borderColor: colors.border, color: colors.textPrimary }]}
+              placeholder="0.00"
+              placeholderTextColor={colors.textMuted}
+              value={addAmt}
+              onChangeText={setAddAmt}
+              keyboardType="decimal-pad"
+            />
+
+            <Text style={[ss.mLabel, { color: colors.textSecondary }]}>Category</Text>
+            <TouchableOpacity
+              style={[
+                ss.mDropTrigger,
+                { backgroundColor: colors.bgInput, borderColor: colors.border },
+                addCategoryDropOpen
+                  ? { borderColor: colors.primary, borderBottomLeftRadius: 0, borderBottomRightRadius: 0, marginBottom: 0 }
+                  : { marginBottom: 12 },
+              ]}
+              onPress={() => setAddCategoryDropOpen(o => !o)}
+            >
+              <Text style={addCategory
+                ? [ss.mDropValue, { color: colors.textPrimary }]
+                : [ss.mDropPlaceholder, { color: colors.textMuted }]
+              }>
+                {addCategory
+                  ? `${addCategory.icon || '📁'}  ${addCategory.name}`
+                  : 'Select a category…'}
+              </Text>
+              <Text style={[ss.mDropChevron, { color: colors.textSecondary }]}>{addCategoryDropOpen ? '▲' : '▼'}</Text>
+            </TouchableOpacity>
+
+            {addCategoryDropOpen && (
+              <View style={[ss.mDropList, { backgroundColor: colors.bgCardAlt, borderColor: colors.primary }]}>
+                <ScrollView nestedScrollEnabled style={{ maxHeight: 150 }} showsVerticalScrollIndicator={false}>
+                  {categories.filter(c => c.type === addModal).length === 0 ? (
+                    <Text style={[ss.mDropEmpty, { color: colors.textMuted }]}>No categories for {addModal?.toLowerCase()}</Text>
+                  ) : (
+                    categories.filter(c => c.type === addModal).map(cat => (
+                      <TouchableOpacity
+                        key={cat.id}
+                        style={[
+                          ss.mDropItem,
+                          { borderBottomColor: colors.border },
+                          addCategory?.id === cat.id && { backgroundColor: `${colors.primary}20` },
+                        ]}
+                        onPress={() => { setAddCategory(cat); setAddCategoryDropOpen(false); }}
+                      >
+                        <Text style={ss.mDropItemIcon}>{cat.icon || '📁'}</Text>
+                        <Text style={[
+                          ss.mDropItemTxt,
+                          { color: colors.textSecondary },
+                          addCategory?.id === cat.id && { color: colors.textPrimary, fontWeight: '600' },
+                        ]}>
+                          {cat.name}
+                        </Text>
+                        {addCategory?.id === cat.id && (
+                          <Text style={[ss.mCheckmark, { color: colors.primary }]}>✓</Text>
+                        )}
+                      </TouchableOpacity>
+                    ))
+                  )}
+                </ScrollView>
               </View>
-            ))}
+            )}
 
             <View style={ss.mActions}>
               <TouchableOpacity style={[ss.mCancel, { borderColor: colors.border }]} onPress={closeAddModal}>
@@ -639,7 +685,7 @@ const ss = StyleSheet.create({
 
   // Pie chart wrapper — clips overflow, centers the chart
   pieWrap: { width: CARD_INNER_W, overflow: 'hidden', alignSelf: 'center', marginBottom: 12 },
-  chartWrap: { width: CARD_INNER_W, overflow: 'hidden', alignSelf: 'center' },
+  chartWrap: { width: CARD_INNER_W, overflow: 'visible', alignSelf: 'center' },
   chartStyle: { borderRadius: 12 },
 
   // Donut legend rows
@@ -713,4 +759,20 @@ const ss = StyleSheet.create({
   mCancelTxt: { fontWeight: '700' },
   mSave: { flex: 1, paddingVertical: 14, borderRadius: 12, alignItems: 'center' },
   mSaveTxt: { color: '#fff', fontWeight: '700', fontSize: 15 },
+
+  // Dropdown Styles
+  mDropTrigger: {
+    borderRadius: 10, paddingHorizontal: 14, paddingVertical: 11,
+    flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between',
+    borderWidth: 1,
+  },
+  mDropValue: { fontSize: 14, fontWeight: '500' },
+  mDropPlaceholder: { fontSize: 14 },
+  mDropChevron: { fontSize: 11 },
+  mDropList: { borderWidth: 1, borderTopWidth: 0, borderBottomLeftRadius: 10, borderBottomRightRadius: 10, overflow: 'hidden', marginBottom: 16 },
+  mDropItem: { flexDirection: 'row', alignItems: 'center', paddingHorizontal: 14, paddingVertical: 10, borderBottomWidth: 1 },
+  mDropItemIcon: { fontSize: 16, marginRight: 10 },
+  mDropItemTxt: { flex: 1, fontSize: 14 },
+  mCheckmark: { fontWeight: '700', fontSize: 14 },
+  mDropEmpty: { padding: 14, fontSize: 13, textAlign: 'center' },
 });

@@ -5,7 +5,16 @@ import { getAccessPolicy } from '../../api/subscription';
 import { Fonts, Radii, useTheme } from '../../theme';
 import ChatScreen from './chat';
 
-type IconName = 'dashboard' | 'transactions' | 'analytics' | 'chat' | 'categories' | 'subscription' | 'profile';
+type IconName =
+  | 'dashboard'
+  | 'transactions'
+  | 'analytics'
+  | 'chat'
+  | 'categories'
+  | 'subscription'
+  | 'profile'
+  | 'access'
+  | 'monitoring';
 
 type DrawerItem = {
   label: string;
@@ -21,6 +30,8 @@ const drawerItems: DrawerItem[] = [
   { label: 'Categories', href: '/(tabs)/categories', route: 'categories' },
   { label: 'Subscription', href: '/(tabs)/subscription', route: 'subscription' },
   { label: 'Profile', href: '/(tabs)/profile', route: 'profile' },
+  { label: 'Access Control', href: '/(tabs)/access', route: 'access' },
+  { label: 'Monitoring', href: '/(tabs)/monitoring', route: 'monitoring' },
 ];
 
 const defaultAllowedPages = ['dashboard', 'transactions', 'analytics', 'categories', 'subscription', 'profile'];
@@ -86,6 +97,25 @@ function MenuIcon({ name, active, color }: { name: IconName; active: boolean; co
     return <Text style={[styles.symbolIcon, { color: lineColor }]}>$</Text>;
   }
 
+  if (name === 'access') {
+    return (
+      <View style={styles.lockIcon}>
+        <View style={[styles.lockShackle, { borderColor: lineColor }]} />
+        <View style={[styles.lockBody, { borderColor: lineColor }]} />
+      </View>
+    );
+  }
+
+  if (name === 'monitoring') {
+    return (
+      <View style={styles.monitorIcon}>
+        <View style={[styles.monitorRingLarge, { borderColor: muted }]} />
+        <View style={[styles.monitorRingSmall, { borderColor: lineColor }]} />
+        <View style={[styles.monitorDot, { backgroundColor: lineColor }]} />
+      </View>
+    );
+  }
+
   return (
     <View style={styles.profileIcon}>
       <View style={[styles.profileHead, { borderColor: lineColor }]} />
@@ -145,6 +175,8 @@ export default function TabsLayout() {
         <Tabs.Screen name="categories" />
         <Tabs.Screen name="subscription" />
         <Tabs.Screen name="profile" />
+        <Tabs.Screen name="access" />
+        <Tabs.Screen name="monitoring" />
       </Tabs>
 
       {/* ── Hamburger menu button (top-left) ── */}
@@ -181,12 +213,12 @@ export default function TabsLayout() {
         </Pressable>
       )}
 
-      {/* ── AI Chat Modal Overlay ── */}
       <Modal
         visible={chatOpen}
         transparent
         animationType="slide"
         onRequestClose={() => setChatOpen(false)}
+        statusBarTranslucent={true}
       >
         <View style={styles.chatModalRoot}>
           {/* Tap outside to close */}
@@ -416,6 +448,47 @@ const styles = StyleSheet.create({
   tagIcon: { width: 24, height: 18, borderRadius: 6, borderWidth: 2, transform: [{ rotate: '-12deg' }] },
   tagDot: { width: 5, height: 5, borderRadius: 3, marginLeft: 4, marginTop: 4 },
   symbolIcon: { fontSize: 24, fontWeight: Fonts.extraBold },
+  lockIcon: { alignItems: 'center' },
+  lockShackle: {
+    width: 12,
+    height: 8,
+    borderWidth: 2,
+    borderBottomWidth: 0,
+    borderTopLeftRadius: 7,
+    borderTopRightRadius: 7,
+  },
+  lockBody: {
+    width: 18,
+    height: 12,
+    borderWidth: 2,
+    borderRadius: 4,
+    marginTop: -1,
+  },
+  monitorIcon: {
+    width: 24,
+    height: 24,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  monitorRingLarge: {
+    position: 'absolute',
+    width: 22,
+    height: 22,
+    borderRadius: 11,
+    borderWidth: 2,
+  },
+  monitorRingSmall: {
+    position: 'absolute',
+    width: 14,
+    height: 14,
+    borderRadius: 7,
+    borderWidth: 2,
+  },
+  monitorDot: {
+    width: 4,
+    height: 4,
+    borderRadius: 2,
+  },
   profileIcon: { alignItems: 'center', justifyContent: 'center', gap: 3 },
   profileHead: { width: 11, height: 11, borderRadius: 6, borderWidth: 2 },
   profileBody: { width: 22, height: 11, borderTopLeftRadius: 11, borderTopRightRadius: 11, borderWidth: 2, borderBottomWidth: 0 },
