@@ -1,0 +1,10 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: [
+    'build',
+    '--build-arg', 'REACT_APP_API_BASE_URL=https://finance-backend-782650558798.us-central1.run.app/api',
+    '-t', 'gcr.io/finance-tracker-gcp-9252/finance-frontend:latest',
+    '.'
+  ]
+images:
+- 'gcr.io/finance-tracker-gcp-9252/finance-frontend:latest'
