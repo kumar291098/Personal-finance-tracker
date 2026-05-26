@@ -658,7 +658,7 @@ const sb = StyleSheet.create({
   orbTR: { position: 'absolute', width: 220, height: 220, borderRadius: 110, top: -60, right: -60, opacity: 0.1 },
   orbBL: { position: 'absolute', width: 180, height: 180, borderRadius: 90, bottom: 80, left: -50, opacity: 0.08 },
   scroll: { padding: 20, paddingTop: 52 },
-  pageTitle: { fontSize: 26, fontWeight: Fonts.bold, marginBottom: 20 },
+  pageTitle: { fontSize: 26, fontWeight: Fonts.bold, marginBottom: 20, marginLeft: 54 },
 
   currentPlanCard: {
     borderRadius: Radii.lg,

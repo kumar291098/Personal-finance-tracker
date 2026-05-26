@@ -365,7 +365,7 @@ export default function AnalyticsScreen() {
             <View style={[a.rateBarTrack, { backgroundColor: colors.bgCardAlt }]}>
               <View style={[a.rateBarFill, {
                 width: `${Math.min(Math.max(savingsRate, 0), 100)}%`,
-                backgroundColor: savingsRate >= 0 ? colors.income : colors.expense
+                backgroundColor: colors.income
               }]} />
             </View>
             <Text style={[a.rateValue, { color: savingsRate >= 0 ? colors.income : colors.expense }]}>
@@ -460,7 +460,7 @@ export default function AnalyticsScreen() {
 const a = StyleSheet.create({
   root: { flex: 1 },
   scroll: { padding: 20, paddingTop: 52 },
-  pageTitle: { fontSize: 26, fontWeight: Fonts.bold, marginBottom: 20 },
+  pageTitle: { fontSize: 26, fontWeight: Fonts.bold, marginBottom: 20, marginLeft: 54 },
   pickerContainer: { marginBottom: 20 },
 
   kpiRow: { flexDirection: 'row', gap: 10, marginBottom: 20 },

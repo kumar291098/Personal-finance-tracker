@@ -341,6 +341,7 @@ const s = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginBottom: 20,
+    marginLeft: 54,
   },
   pageTitle: { fontSize: 26, fontWeight: Fonts.bold },
   addBtn: {

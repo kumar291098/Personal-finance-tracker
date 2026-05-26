@@ -500,7 +500,7 @@ export default function ProfileScreen() {
           <Text style={[styles.logoutBtnText, { color: colors.expense }]}>🚪  Logout</Text>
         </TouchableOpacity>
 
-        <Text style={[styles.version, { color: colors.textMuted }]}>Finance Tracker v1.0.0</Text>
+        <Text style={[styles.version, { color: colors.textMuted }]}>Finance Tracker v1.1.0</Text>
         <View style={{ height: 30 }} />
       </ScrollView>
     </View>

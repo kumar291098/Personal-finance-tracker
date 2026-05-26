@@ -471,7 +471,7 @@ export default function TransactionsScreen() {
 const s = StyleSheet.create({
   root: { flex: 1, paddingTop: 52 },
 
-  header: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingHorizontal: 20, marginBottom: 18 },
+  header: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingHorizontal: 20, marginBottom: 18, marginLeft: 54 },
   title: { fontSize: 26, fontWeight: '800' },
   addBtn: { borderRadius: 20, paddingHorizontal: 18, paddingVertical: 10 },
   addBtnTxt: { color: '#fff', fontWeight: '700', fontSize: 14 },

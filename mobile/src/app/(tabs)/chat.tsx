@@ -141,10 +141,8 @@ export default function ChatScreen() {
   };
 
   return (
-    <KeyboardAvoidingView
+    <View
       style={[styles.root, { backgroundColor: colors.bgBase }]}
-      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-      keyboardVerticalOffset={Platform.OS === 'ios' ? 0 : 0}
     >
 
       <FlatList
@@ -245,7 +243,7 @@ export default function ChatScreen() {
           )}
         </Pressable>
       </View>
-    </KeyboardAvoidingView>
+    </View>
   );
 }
 

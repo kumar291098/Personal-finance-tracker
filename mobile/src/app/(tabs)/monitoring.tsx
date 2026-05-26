@@ -380,7 +380,7 @@ const styles = StyleSheet.create({
   root: { flex: 1 },
   center: { alignItems: 'center', justifyContent: 'center' },
   scroll: { padding: 20, paddingTop: 52, paddingBottom: 32 },
-  headerRow: { flexDirection: 'row', alignItems: 'flex-start', gap: 12, marginBottom: 16 },
+  headerRow: { flexDirection: 'row', alignItems: 'flex-start', gap: 12, marginBottom: 16, marginLeft: 54 },
   pageTitle: { fontSize: 26, fontWeight: Fonts.bold, marginBottom: 6 },
   pageSubtitle: { fontSize: 14, lineHeight: 20 },
   refreshBtn: {

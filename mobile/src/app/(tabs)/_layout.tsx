@@ -1,5 +1,5 @@
 import { Tabs, usePathname, useRouter, type Href } from 'expo-router';
-import { Modal, Pressable, StyleSheet, Text, View } from 'react-native';
+import { Modal, Pressable, StyleSheet, Text, View, KeyboardAvoidingView, Platform } from 'react-native';
 import { useEffect, useState } from 'react';
 import { getAccessPolicy } from '../../api/subscription';
 import { Fonts, Radii, useTheme } from '../../theme';
@@ -39,7 +39,7 @@ const defaultAllowedPages = ['dashboard', 'transactions', 'analytics', 'categori
 function SidebarArrow({ color }: { color: string }) {
   return (
     <View style={styles.arrowWrap}>
-      <Text style={[styles.arrowText, { color }]}>{'›'}</Text>
+      <Text style={[styles.arrowText, { color }]}>{'←'}</Text>
     </View>
   );
 }
@@ -220,35 +220,38 @@ export default function TabsLayout() {
         onRequestClose={() => setChatOpen(false)}
         statusBarTranslucent={true}
       >
-        <View style={styles.chatModalRoot}>
+        <KeyboardAvoidingView
+          behavior={Platform.OS === 'ios' ? 'padding' : 'padding'}
+          style={styles.chatModalRoot}
+        >
           {/* Tap outside to close */}
           <Pressable style={styles.chatModalBackdrop} onPress={() => setChatOpen(false)} />
 
-            {/* Chat panel slides up from bottom */}
-            <View style={[styles.chatPanel, { backgroundColor: colors.bg }]}>
-              {/* Header with close button */}
-              <View style={[styles.chatPanelHeader, { backgroundColor: colors.bgCard, borderBottomColor: colors.border }]}>
-                <View style={styles.chatPanelTitleRow}>
-                  <Text style={styles.chatPanelEmoji}>🤖</Text>
-                  <View>
-                    <Text style={[styles.chatPanelTitle, { color: colors.textPrimary }]}>AI Finance Assistant</Text>
-                    <Text style={[styles.chatPanelSub, { color: colors.textMuted }]}>Ask me anything about your finances</Text>
-                  </View>
+          {/* Chat panel slides up from bottom */}
+          <View style={[styles.chatPanel, { backgroundColor: colors.bg }]}>
+            {/* Header with close button */}
+            <View style={[styles.chatPanelHeader, { backgroundColor: colors.bgCard, borderBottomColor: colors.border }]}>
+              <View style={styles.chatPanelTitleRow}>
+                <Text style={styles.chatPanelEmoji}>🤖</Text>
+                <View>
+                  <Text style={[styles.chatPanelTitle, { color: colors.textPrimary }]}>AI Finance Assistant</Text>
+                  <Text style={[styles.chatPanelSub, { color: colors.textMuted }]}>Ask me anything about your finances</Text>
                 </View>
-                <Pressable
-                  onPress={() => setChatOpen(false)}
-                  style={[styles.chatCloseBtn, { backgroundColor: `${colors.expense}18`, borderColor: `${colors.expense}44` }]}
-                >
-                  <Text style={[styles.chatCloseTxt, { color: colors.expense }]}>✕</Text>
-                </Pressable>
               </View>
-
-              {/* Render full chat screen content */}
-              <View style={{ flex: 1 }}>
-                {chatOpen && <ChatScreen />}
-              </View>
+              <Pressable
+                onPress={() => setChatOpen(false)}
+                style={[styles.chatCloseBtn, { backgroundColor: `${colors.expense}18`, borderColor: `${colors.expense}44` }]}
+              >
+                <Text style={[styles.chatCloseTxt, { color: colors.expense }]}>✕</Text>
+              </Pressable>
             </View>
-        </View>
+
+            {/* Render full chat screen content */}
+            <View style={{ flex: 1 }}>
+              {chatOpen && <ChatScreen />}
+            </View>
+          </View>
+        </KeyboardAvoidingView>
       </Modal>
 
       {/* ── Side Drawer ── */}

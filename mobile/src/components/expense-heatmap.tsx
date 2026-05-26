@@ -17,10 +17,10 @@ function fmt(n: number) {
 
 const getCellColor = (amount: number, isDark: boolean, colors: any) => {
   if (amount === 0) return colors.bgCardAlt;
-  if (amount <= 500) return `${colors.primary}33`; // 20% opacity
-  if (amount <= 2000) return `${colors.primary}66`; // 40% opacity
-  if (amount <= 5000) return `${colors.primary}bb`; // 73% opacity
-  return colors.primary; // 100% opacity
+  if (amount <= 500) return `${colors.income}33`; // 20% opacity
+  if (amount <= 2000) return `${colors.income}66`; // 40% opacity
+  if (amount <= 5000) return `${colors.income}bb`; // 73% opacity
+  return colors.income; // 100% opacity
 };
 
 export function ExpenseHeatmap({
@@ -135,10 +135,10 @@ export function ExpenseHeatmap({
       <View style={s.heatmapLegendRow}>
         <Text style={[s.heatmapLegendLabel, { color: colors.textMuted }]}>Less</Text>
         <View style={[s.heatmapLegendCell, { backgroundColor: colors.bgCardAlt }]} />
-        <View style={[s.heatmapLegendCell, { backgroundColor: `${colors.primary}33` }]} />
-        <View style={[s.heatmapLegendCell, { backgroundColor: `${colors.primary}66` }]} />
-        <View style={[s.heatmapLegendCell, { backgroundColor: `${colors.primary}bb` }]} />
-        <View style={[s.heatmapLegendCell, { backgroundColor: colors.primary }]} />
+        <View style={[s.heatmapLegendCell, { backgroundColor: `${colors.income}33` }]} />
+        <View style={[s.heatmapLegendCell, { backgroundColor: `${colors.income}66` }]} />
+        <View style={[s.heatmapLegendCell, { backgroundColor: `${colors.income}bb` }]} />
+        <View style={[s.heatmapLegendCell, { backgroundColor: colors.income }]} />
         <Text style={[s.heatmapLegendLabel, { color: colors.textMuted }]}>More</Text>
       </View>
 

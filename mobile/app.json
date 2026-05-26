@@ -2,7 +2,7 @@
   "expo": {
     "name": "Finance Tracker",
     "slug": "mobile",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "mobile",
@@ -12,14 +12,15 @@
     },
     "android": {
       "package": "com.financetracker.app",
-      "versionCode": 2,
+      "versionCode": 3,
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "usesCleartextTraffic": true
     },
     "web": {
       "output": "static",
@@ -46,8 +47,9 @@
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "2d446cd0-b7d1-4e96-b01f-c66f97c2a926"
+        "projectId": "6a7ddd5b-c371-477a-bcd6-14225ff2c2dc"
       }
-    }
+    },
+    "owner": "avnisha291098"
   }
 }

@@ -436,8 +436,8 @@ const styles = StyleSheet.create({
   root: { flex: 1 },
   center: { alignItems: 'center', justifyContent: 'center' },
   scroll: { padding: 20, paddingTop: 52, paddingBottom: 32 },
-  pageTitle: { fontSize: 26, fontWeight: Fonts.bold, marginBottom: 6 },
-  pageSubtitle: { fontSize: 14, lineHeight: 20, marginBottom: 18 },
+  pageTitle: { fontSize: 26, fontWeight: Fonts.bold, marginBottom: 6, marginLeft: 54 },
+  pageSubtitle: { fontSize: 14, lineHeight: 20, marginBottom: 18, marginLeft: 54 },
   statsRow: { flexDirection: 'row', gap: 10, marginBottom: 16 },
   statCard: {
     flex: 1,

@@ -628,7 +628,7 @@ const ss = StyleSheet.create({
   scroll: { paddingHorizontal: 20, paddingTop: 52, paddingBottom: 40 },
 
   // Header
-  header: { flexDirection: 'row', alignItems: 'center', marginBottom: 20 },
+  header: { flexDirection: 'row', alignItems: 'center', marginBottom: 20, marginLeft: 54 },
   greeting: { fontSize: 18, fontWeight: '800', marginBottom: 2 },
   headerSub: { fontSize: 12 },
   addBtn: { borderRadius: 20, paddingHorizontal: 16, paddingVertical: 9 },
